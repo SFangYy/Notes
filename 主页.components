@@ -1,0 +1,2677 @@
+{
+  "components": [
+    {
+      "id": "043184f2-6941-4be1-9986-c14200cfc549",
+      "type": "multi",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2025-03-26T16:55:05.844Z",
+      "updateAt": "2025-03-26T16:55:05.844Z",
+      "components": [
+        {
+          "componentId": "01efee53-29fd-4c64-b405-4b73b2675892",
+          "layout": {
+            "mobile": {
+              "x": 0,
+              "y": 73,
+              "w": 4,
+              "h": 25
+            },
+            "laptop": {
+              "x": 0,
+              "y": 30,
+              "w": 12,
+              "h": 18
+            }
+          }
+        },
+        {
+          "componentId": "495152b8-9765-454a-9c78-6b9b5a01867b",
+          "layout": {
+            "mobile": {
+              "x": 0,
+              "y": 51,
+              "w": 4,
+              "h": 11
+            },
+            "laptop": {
+              "x": 4,
+              "y": 21,
+              "w": 4,
+              "h": 9
+            }
+          }
+        },
+        {
+          "componentId": "4e1df87e-d28c-485d-9e62-df8bd1f0a9e0",
+          "layout": {
+            "mobile": {
+              "x": 0,
+              "y": 0,
+              "w": 4,
+              "h": 9
+            },
+            "laptop": {
+              "x": 0,
+              "y": 0,
+              "w": 12,
+              "h": 9
+            }
+          }
+        },
+        {
+          "componentId": "1f153887-2d6c-4385-a255-24affdefa0ad",
+          "layout": {
+            "mobile": {
+              "x": 0,
+              "y": 33,
+              "w": 4,
+              "h": 18
+            },
+            "laptop": {
+              "x": 4,
+              "y": 9,
+              "w": 8,
+              "h": 12
+            }
+          }
+        },
+        {
+          "componentId": "393f2806-9bb9-4541-9969-1cea8482eabd",
+          "layout": {
+            "mobile": {
+              "x": 0,
+              "y": 9,
+              "w": 4,
+              "h": 6
+            },
+            "laptop": {
+              "x": 0,
+              "y": 9,
+              "w": 4,
+              "h": 5
+            }
+          }
+        },
+        {
+          "componentId": "a0cc3b40-383d-4ce6-a497-2e086f40c10b",
+          "layout": {
+            "mobile": {
+              "x": 2,
+              "y": 23,
+              "w": 2,
+              "h": 5
+            },
+            "laptop": {
+              "x": 0,
+              "y": 26,
+              "w": 2,
+              "h": 4
+            }
+          }
+        },
+        {
+          "componentId": "8982355b-e0b9-4d00-9e38-f00f0bb69da6",
+          "layout": {
+            "mobile": {
+              "x": 2,
+              "y": 18,
+              "w": 2,
+              "h": 5
+            },
+            "laptop": {
+              "x": 2,
+              "y": 22,
+              "w": 2,
+              "h": 4
+            }
+          }
+        },
+        {
+          "componentId": "9d5681cc-0d6a-48f0-8efa-f3ec353f85bf",
+          "layout": {
+            "mobile": {
+              "x": 0,
+              "y": 18,
+              "w": 2,
+              "h": 5
+            },
+            "laptop": {
+              "x": 0,
+              "y": 18,
+              "w": 2,
+              "h": 4
+            }
+          }
+        },
+        {
+          "componentId": "36cb8aa4-6259-4f73-939e-59d8b3c15ce3",
+          "layout": {
+            "mobile": {
+              "x": 2,
+              "y": 28,
+              "w": 2,
+              "h": 5
+            },
+            "laptop": {
+              "x": 2,
+              "y": 26,
+              "w": 2,
+              "h": 4
+            }
+          }
+        },
+        {
+          "componentId": "631dbafd-c32d-4cbe-b778-2573cf4e617f",
+          "layout": {
+            "mobile": {
+              "x": 0,
+              "y": 62,
+              "w": 4,
+              "h": 11
+            },
+            "laptop": {
+              "x": 8,
+              "y": 21,
+              "w": 4,
+              "h": 9
+            }
+          }
+        },
+        {
+          "componentId": "6b45899a-31b8-4cb3-bccd-e3e53651267f",
+          "layout": {
+            "mobile": {
+              "x": 2,
+              "y": 15,
+              "w": 2,
+              "h": 3
+            },
+            "laptop": {
+              "x": 0,
+              "y": 14,
+              "w": 4,
+              "h": 2
+            }
+          }
+        },
+        {
+          "componentId": "bdd743fc-2aff-4ca6-bd2c-ccebab9891ba",
+          "layout": {
+            "mobile": {
+              "x": 0,
+              "y": 15,
+              "w": 2,
+              "h": 3
+            },
+            "laptop": {
+              "x": 0,
+              "y": 16,
+              "w": 4,
+              "h": 2
+            }
+          }
+        },
+        {
+          "componentId": "72aad999-0a51-4607-8c27-fb2d2ee3683a",
+          "layout": {
+            "mobile": {
+              "x": 0,
+              "y": 23,
+              "w": 2,
+              "h": 5
+            },
+            "laptop": {
+              "x": 2,
+              "y": 18,
+              "w": 2,
+              "h": 4
+            }
+          }
+        },
+        {
+          "componentId": "75ce4ca4-2f3c-4bdb-919f-d3c81188cab5",
+          "layout": {
+            "mobile": {
+              "x": 0,
+              "y": 28,
+              "w": 2,
+              "h": 5
+            },
+            "laptop": {
+              "x": 0,
+              "y": 22,
+              "w": 2,
+              "h": 4
+            }
+          }
+        }
+      ],
+      "layoutType": "grid",
+      "locked": true,
+      "layoutOptions": {}
+    },
+    {
+      "id": "01efee53-29fd-4c64-b405-4b73b2675892",
+      "type": "multi",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2025-03-25T13:04:09.233Z",
+      "updateAt": "2025-03-25T13:04:09.233Z",
+      "components": [
+        {
+          "componentId": "4cf7e5e8-ba25-4296-8c0f-3d11af003d97"
+        },
+        {
+          "componentId": "e3b1322a-4c96-4e13-b5f3-65570311a3ec"
+        },
+        {
+          "componentId": "94804d9f-7776-4f83-8d22-04bcb8a9d1ce"
+        },
+        {
+          "componentId": "eb8207a1-85af-4c96-8da0-dc4e079f8910"
+        },
+        {
+          "componentId": "a1dfba70-e614-42ef-8c9c-2f888f949a92"
+        },
+        {
+          "componentId": "73797456-41f4-4760-89e1-49eb9ca06bd3"
+        },
+        {
+          "componentId": "677b424e-ce96-41ef-b85c-3098199f99f0"
+        }
+      ],
+      "layoutType": "tab",
+      "locked": false,
+      "layoutOptions": {}
+    },
+    {
+      "id": "a1dfba70-e614-42ef-8c9c-2f888f949a92",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "Regular",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showShadow": false,
+      "createAt": "2025-03-25T13:04:36.133Z",
+      "updateAt": "2025-03-25T13:04:36.133Z",
+      "viewType": "table",
+      "newPageNameFormat": "{{date:MMDD HH:mm}}",
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "File Basename",
+          "type": "text",
+          "isShow": true,
+          "wrap": true,
+          "options": {
+            "width": "116.42857360839844",
+            "pinned": "left"
+          },
+          "alias": "File Name"
+        },
+        {
+          "id": "20a2162a-297b-4a44-b852-dd135779c5a0",
+          "name": "parent",
+          "isShow": true,
+          "type": "select",
+          "options": {
+            "items": [
+              {
+                "id": "85b72cda-e45a-4ee0-bd66-8ead94985e19",
+                "value": "Project",
+                "color": "components--color-red"
+              },
+              {
+                "id": "2b85000d-f319-438b-b58f-70ced55f8eda",
+                "value": "Area",
+                "color": "components--color-green"
+              },
+              {
+                "id": "c500ec07-a7d3-4750-bde1-3d54874358a9",
+                "value": "Resource",
+                "color": "components--color-purple"
+              },
+              {
+                "id": "1a5fdcdb-7748-41a6-abf3-6aa321ceb5d1",
+                "value": "Diary",
+                "color": "components--color-yellow"
+              }
+            ],
+            "pinned": null,
+            "width": "73"
+          },
+          "alias": "Parent"
+        },
+        {
+          "id": "cf02fde7-9938-44f7-80a3-c2e4b86b6be5",
+          "name": "branch",
+          "isShow": true,
+          "type": "select",
+          "options": {
+            "items": [
+              {
+                "id": "601c21b3-bfe8-4df9-afc8-77993e69ead9",
+                "value": "学习",
+                "color": "components--color-blue"
+              },
+              {
+                "id": "1a59031f-cda4-4fd4-b166-d2b30e45fb5f",
+                "value": "生活",
+                "color": "components--color-pink"
+              },
+              {
+                "id": "fe431b21-d1f4-462e-a328-8276f65a90b7",
+                "value": "项目",
+                "color": "components--color-orange"
+              }
+            ],
+            "width": "75",
+            "pinned": null
+          },
+          "alias": "branch",
+          "wrap": false
+        },
+        {
+          "id": "6216772f-f550-4b7b-b10d-7ee31763864e",
+          "name": "subfolder",
+          "isShow": true,
+          "type": "formula",
+          "options": {
+            "formula": "getSubfolder(prop('${file.parent}'))",
+            "renderType": "markdown"
+          }
+        },
+        {
+          "id": "b12cee3c-2cdd-40bc-b061-69070f69c56c",
+          "name": "tags",
+          "isShow": true,
+          "type": "multiSelect",
+          "options": {},
+          "wrap": true
+        },
+        {
+          "id": "33aca7e6-b00e-46b6-afc8-ce8dfeab5c1a",
+          "name": "Archived",
+          "isShow": true,
+          "type": "checkbox",
+          "options": {},
+          "alias": "archived"
+        },
+        {
+          "id": "d69f01f1-444b-471a-bc64-81b35b153981",
+          "name": "${file.mtime}",
+          "isShow": true,
+          "type": "datetime",
+          "options": {},
+          "alias": "modified time"
+        },
+        {
+          "id": "d3d655c4-f29e-4a30-aaa0-36097e7fbc91",
+          "name": "${file.ctime}",
+          "isShow": true,
+          "type": "datetime",
+          "options": {},
+          "alias": "created time"
+        },
+        {
+          "id": "977fc4b7-b6d2-4648-8ae6-4f72758fab2e",
+          "name": "🗂️",
+          "isShow": true,
+          "type": "button",
+          "options": {
+            "action": {
+              "type": "runScript",
+              "properties": [],
+              "expression": "migrateFile()"
+            }
+          },
+          "alias": "auto-file"
+        }
+      ],
+      "templates": [
+        {
+          "id": "8b6e3ede-638b-43f4-aa4b-c4d0381b47a9",
+          "path": "TestFolder/Templates/New Project.md",
+          "name": "New Project.md",
+          "type": "templater"
+        },
+        {
+          "id": "a5e523f3-9b5d-4654-946a-e5469077cc04",
+          "path": "TestFolder/Templates/New Area.md",
+          "name": "New Area.md",
+          "type": "templater"
+        },
+        {
+          "id": "494ea934-22c4-4aa2-8ced-8ea0ef32532c",
+          "path": "TestFolder/Templates/New Resource.md",
+          "name": "New Resource.md",
+          "type": "templater"
+        }
+      ],
+      "groups": [],
+      "colorfulGroups": false,
+      "viewOptions": {
+        "openPageIn": "tab",
+        "openPageAfterCreate": true,
+        "items": [],
+        "pinFiltersToMenuBar": false,
+        "showGrid": true,
+        "heightType": "auto",
+        "heightValue": 600
+      },
+      "groupStates": {
+        "sort": "nameAsc",
+        "statics": [],
+        "orders": [],
+        "hiddens": [],
+        "collapseds": []
+      },
+      "newPageLocation": {
+        "location": "01-Projects"
+      },
+      "loadLimitPerPage": 25,
+      "filter": {
+        "id": "3ce56217-e3bd-445c-9749-ee5988f8338f",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "eb5614fc-7545-41cd-8ea2-c67b99e27e14",
+            "type": "filter",
+            "operator": "not_contains",
+            "property": "${file.tags}",
+            "value": "#exclude",
+            "conditions": []
+          },
+          {
+            "id": "86fb2d21-f50e-4976-a963-31f133636773",
+            "type": "group",
+            "operator": "or",
+            "conditions": [
+              {
+                "id": "be0a183b-fa52-4910-8e68-659f1a644821",
+                "type": "filter",
+                "operator": "equals",
+                "property": "${file.extension}",
+                "value": "md",
+                "conditions": []
+              },
+              {
+                "id": "86f7fd58-c082-4d46-be6b-a219b7e4f6d4",
+                "type": "filter",
+                "operator": "equals",
+                "property": "${file.extension}",
+                "value": "canvas",
+                "conditions": []
+              },
+              {
+                "id": "89dc5722-d01c-4eed-a428-4f5d1f450af8",
+                "type": "filter",
+                "operator": "equals",
+                "property": "${file.extension}",
+                "value": "excalidrawlib",
+                "conditions": []
+              }
+            ]
+          },
+          {
+            "id": "2eb4dd5d-ff57-4fe2-ac28-3d58f3208505",
+            "type": "filter",
+            "operator": "not_contains",
+            "property": "${file.parent}",
+            "value": "02-Areas/003-项目/Obsidian Templates",
+            "conditions": []
+          }
+        ]
+      },
+      "sort": {
+        "orders": [
+          {
+            "id": "fcfa6709-4d24-4c30-bf9c-bfea5ff6ab10",
+            "property": "${file.mtime}",
+            "direction": "desc",
+            "disabled": false
+          }
+        ]
+      },
+      "defaultTemplate": "8b6e3ede-638b-43f4-aa4b-c4d0381b47a9"
+    },
+    {
+      "id": "4cf7e5e8-ba25-4296-8c0f-3d11af003d97",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "Projects",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showShadow": false,
+      "createAt": "2025-03-25T13:04:36.133Z",
+      "updateAt": "2025-03-25T13:04:36.133Z",
+      "viewType": "table",
+      "newPageNameFormat": "",
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "File Basename",
+          "type": "text",
+          "isShow": true,
+          "wrap": true,
+          "options": {
+            "width": "156.71429443359375",
+            "pinned": "left"
+          },
+          "alias": "File Name"
+        },
+        {
+          "id": "20a2162a-297b-4a44-b852-dd135779c5a0",
+          "name": "parent",
+          "isShow": true,
+          "type": "select",
+          "options": {
+            "items": [
+              {
+                "id": "85b72cda-e45a-4ee0-bd66-8ead94985e19",
+                "value": "Project",
+                "color": "components--color-red"
+              },
+              {
+                "id": "2b85000d-f319-438b-b58f-70ced55f8eda",
+                "value": "Area",
+                "color": "components--color-green"
+              },
+              {
+                "id": "c500ec07-a7d3-4750-bde1-3d54874358a9",
+                "value": "Resource",
+                "color": "components--color-purple"
+              },
+              {
+                "id": "1a5fdcdb-7748-41a6-abf3-6aa321ceb5d1",
+                "value": "Diary",
+                "color": "components--color-yellow"
+              }
+            ],
+            "pinned": null,
+            "width": "73"
+          },
+          "alias": "Parent"
+        },
+        {
+          "id": "cf02fde7-9938-44f7-80a3-c2e4b86b6be5",
+          "name": "branch",
+          "isShow": true,
+          "type": "select",
+          "options": {
+            "items": [
+              {
+                "id": "601c21b3-bfe8-4df9-afc8-77993e69ead9",
+                "value": "学习",
+                "color": "components--color-blue"
+              },
+              {
+                "id": "1a59031f-cda4-4fd4-b166-d2b30e45fb5f",
+                "value": "生活",
+                "color": "components--color-pink"
+              },
+              {
+                "id": "fe431b21-d1f4-462e-a328-8276f65a90b7",
+                "value": "项目",
+                "color": "components--color-orange"
+              }
+            ],
+            "width": "75",
+            "pinned": null
+          },
+          "alias": "branch",
+          "wrap": false
+        },
+        {
+          "id": "b12cee3c-2cdd-40bc-b061-69070f69c56c",
+          "name": "tags",
+          "isShow": true,
+          "type": "multiSelect",
+          "options": {
+            "width": "156"
+          },
+          "wrap": true
+        },
+        {
+          "id": "a9b1a3e0-80cd-474c-83f9-6edf390c5bde",
+          "name": "Tasks",
+          "isShow": true,
+          "type": "taskList",
+          "options": {
+            "showTaskList": false,
+            "showAllTasks": false,
+            "hideTaskFields": false,
+            "timeRecordStyle": "tasks",
+            "insertPosition": {
+              "position": "TopOfNote",
+              "headingLine": ""
+            },
+            "prefix": "",
+            "suffix": "",
+            "totalValueType": "constant",
+            "color": "components--color-none",
+            "uiType": "progressRing",
+            "total": 100,
+            "width": "169"
+          },
+          "alias": "tasks"
+        },
+        {
+          "id": "1629486d-e1ea-4fa4-a326-b0452b162714",
+          "name": "Archived",
+          "isShow": true,
+          "type": "checkbox",
+          "options": {
+            "width": "94"
+          },
+          "alias": "archived"
+        },
+        {
+          "id": "d69f01f1-444b-471a-bc64-81b35b153981",
+          "name": "${file.mtime}",
+          "isShow": true,
+          "type": "datetime",
+          "options": {
+            "width": "142"
+          },
+          "alias": "modified time"
+        },
+        {
+          "id": "d3d655c4-f29e-4a30-aaa0-36097e7fbc91",
+          "name": "${file.ctime}",
+          "isShow": true,
+          "type": "datetime",
+          "options": {
+            "width": "138"
+          },
+          "alias": "created time"
+        },
+        {
+          "id": "7d996d58-5159-4952-befb-60544507cee8",
+          "name": "🗂️",
+          "isShow": true,
+          "type": "button",
+          "options": {
+            "action": {
+              "type": "runScript",
+              "properties": [],
+              "expression": "migrateFile()"
+            },
+            "width": "87"
+          },
+          "alias": "auto-file"
+        }
+      ],
+      "templates": [
+        {
+          "id": "c027b5fa-af9b-452e-aa56-cecf838bc352",
+          "path": "TestFolder/Templates/New Project.md",
+          "name": "New Project.md",
+          "type": "templater"
+        }
+      ],
+      "groups": [],
+      "colorfulGroups": false,
+      "viewOptions": {
+        "openPageIn": "tab",
+        "openPageAfterCreate": true,
+        "items": [],
+        "pinFiltersToMenuBar": false,
+        "showGrid": true,
+        "heightType": "auto",
+        "heightValue": 600
+      },
+      "groupStates": {
+        "sort": "nameAsc",
+        "statics": [],
+        "orders": [],
+        "hiddens": [],
+        "collapseds": []
+      },
+      "newPageLocation": {
+        "location": "01-Projects"
+      },
+      "loadLimitPerPage": "20",
+      "filter": {
+        "id": "3ce56217-e3bd-445c-9749-ee5988f8338f",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "eb5614fc-7545-41cd-8ea2-c67b99e27e14",
+            "type": "filter",
+            "operator": "not_contains",
+            "property": "${file.tags}",
+            "value": "#exclude",
+            "conditions": []
+          },
+          {
+            "id": "cf4dd34f-c8fb-4f18-b795-608a2f28ea11",
+            "type": "group",
+            "operator": "or",
+            "conditions": [
+              {
+                "id": "371d9305-cbb8-412d-bf77-3405a4801deb",
+                "type": "filter",
+                "operator": "equals",
+                "property": "${file.extension}",
+                "value": "md",
+                "conditions": []
+              },
+              {
+                "id": "63f164f3-63ec-47bc-a968-30a1a63c28bd",
+                "type": "filter",
+                "operator": "equals",
+                "property": "${file.extension}",
+                "value": "components",
+                "conditions": []
+              },
+              {
+                "id": "9e3f4f02-0ec4-46b8-b8a6-c13846a5fcb2",
+                "type": "filter",
+                "operator": "equals",
+                "property": "${file.extension}",
+                "value": "excalidraw",
+                "conditions": []
+              }
+            ]
+          },
+          {
+            "id": "4c3d1121-aedd-49a6-8342-086fbda7ebe3",
+            "type": "group",
+            "operator": "or",
+            "conditions": [
+              {
+                "id": "761ff77f-f5d3-4465-8e30-53a42a750f7e",
+                "type": "filter",
+                "operator": "equals",
+                "property": "parent",
+                "value": "Project",
+                "conditions": []
+              },
+              {
+                "id": "83ea9a24-04c0-48cb-81f4-a052243b32a9",
+                "type": "filter",
+                "operator": "contains",
+                "property": "${file.parent}",
+                "value": "01-Projects",
+                "conditions": []
+              }
+            ]
+          },
+          {
+            "id": "17782843-f67f-4554-8919-b1c247e44c06",
+            "type": "group",
+            "operator": "or",
+            "conditions": [
+              {
+                "id": "af54f9ef-fc0f-4b02-bb0f-a7c895c7bfe5",
+                "type": "filter",
+                "operator": "unchecked",
+                "property": "Archived",
+                "value": "",
+                "conditions": []
+              },
+              {
+                "id": "babfea41-1ace-4c53-afbd-70ba3de4c826",
+                "type": "filter",
+                "operator": "no_value",
+                "property": "Archived",
+                "value": "",
+                "conditions": []
+              }
+            ]
+          },
+          {
+            "id": "1ed1f4e0-9881-4f94-a6f8-f7d2f1275af5",
+            "type": "filter",
+            "operator": "not_contains",
+            "property": "${file.parent}",
+            "value": "02-Areas/003-项目/Obsidian Templates",
+            "conditions": []
+          }
+        ]
+      },
+      "sort": {
+        "orders": [
+          {
+            "id": "fcfa6709-4d24-4c30-bf9c-bfea5ff6ab10",
+            "property": "${file.mtime}",
+            "direction": "desc",
+            "disabled": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "e3b1322a-4c96-4e13-b5f3-65570311a3ec",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "Areas",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showShadow": false,
+      "createAt": "2025-03-25T13:04:36.133Z",
+      "updateAt": "2025-03-25T13:04:36.133Z",
+      "viewType": "table",
+      "newPageNameFormat": "{{date:MMDD HH:mm}}",
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "File Basename",
+          "type": "text",
+          "isShow": true,
+          "wrap": true,
+          "options": {
+            "width": "153",
+            "pinned": "left"
+          },
+          "alias": "File Name"
+        },
+        {
+          "id": "20a2162a-297b-4a44-b852-dd135779c5a0",
+          "name": "parent",
+          "isShow": true,
+          "type": "select",
+          "options": {
+            "items": [
+              {
+                "id": "85b72cda-e45a-4ee0-bd66-8ead94985e19",
+                "value": "Project",
+                "color": "components--color-red"
+              },
+              {
+                "id": "2b85000d-f319-438b-b58f-70ced55f8eda",
+                "value": "Area",
+                "color": "components--color-green"
+              },
+              {
+                "id": "c500ec07-a7d3-4750-bde1-3d54874358a9",
+                "value": "Resource",
+                "color": "components--color-purple"
+              },
+              {
+                "id": "1a5fdcdb-7748-41a6-abf3-6aa321ceb5d1",
+                "value": "Diary",
+                "color": "components--color-yellow"
+              }
+            ],
+            "pinned": null,
+            "width": "73"
+          },
+          "alias": "Parent"
+        },
+        {
+          "id": "cf02fde7-9938-44f7-80a3-c2e4b86b6be5",
+          "name": "branch",
+          "isShow": true,
+          "type": "select",
+          "options": {
+            "items": [
+              {
+                "id": "601c21b3-bfe8-4df9-afc8-77993e69ead9",
+                "value": "学习",
+                "color": "components--color-blue"
+              },
+              {
+                "id": "1a59031f-cda4-4fd4-b166-d2b30e45fb5f",
+                "value": "生活",
+                "color": "components--color-pink"
+              },
+              {
+                "id": "fe431b21-d1f4-462e-a328-8276f65a90b7",
+                "value": "项目",
+                "color": "components--color-orange"
+              }
+            ],
+            "width": "75",
+            "pinned": null
+          },
+          "alias": "branch",
+          "wrap": false
+        },
+        {
+          "id": "b12cee3c-2cdd-40bc-b061-69070f69c56c",
+          "name": "tags",
+          "isShow": true,
+          "type": "multiSelect",
+          "options": {},
+          "wrap": true
+        },
+        {
+          "id": "51a34193-5a44-442f-accb-b2353644d26e",
+          "name": "Archived",
+          "isShow": true,
+          "type": "checkbox",
+          "options": {},
+          "alias": "archived"
+        },
+        {
+          "id": "d69f01f1-444b-471a-bc64-81b35b153981",
+          "name": "${file.mtime}",
+          "isShow": true,
+          "type": "datetime",
+          "options": {},
+          "alias": "modified time"
+        },
+        {
+          "id": "d3d655c4-f29e-4a30-aaa0-36097e7fbc91",
+          "name": "${file.ctime}",
+          "isShow": true,
+          "type": "datetime",
+          "options": {},
+          "alias": "created time"
+        },
+        {
+          "id": "d627fc1b-9017-4334-bcf6-27f00e0de211",
+          "name": "🗂️",
+          "isShow": true,
+          "type": "button",
+          "options": {
+            "action": {
+              "type": "runScript",
+              "properties": [],
+              "expression": "migrateFile()"
+            },
+            "width": "88"
+          },
+          "alias": "auto-file"
+        }
+      ],
+      "templates": [],
+      "groups": [],
+      "colorfulGroups": false,
+      "viewOptions": {
+        "openPageIn": "tab",
+        "openPageAfterCreate": true,
+        "items": [],
+        "pinFiltersToMenuBar": false,
+        "showGrid": true,
+        "heightType": "auto",
+        "heightValue": 600
+      },
+      "groupStates": {
+        "sort": "nameAsc",
+        "statics": [],
+        "orders": [],
+        "hiddens": [],
+        "collapseds": []
+      },
+      "newPageLocation": {
+        "location": "02-Areas"
+      },
+      "loadLimitPerPage": "20",
+      "filter": {
+        "id": "3ce56217-e3bd-445c-9749-ee5988f8338f",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "eb5614fc-7545-41cd-8ea2-c67b99e27e14",
+            "type": "filter",
+            "operator": "not_contains",
+            "property": "${file.tags}",
+            "value": "#exclude",
+            "conditions": []
+          },
+          {
+            "id": "86fb2d21-f50e-4976-a963-31f133636773",
+            "type": "group",
+            "operator": "or",
+            "conditions": [
+              {
+                "id": "be0a183b-fa52-4910-8e68-659f1a644821",
+                "type": "filter",
+                "operator": "equals",
+                "property": "${file.extension}",
+                "value": "md",
+                "conditions": []
+              },
+              {
+                "id": "86f7fd58-c082-4d46-be6b-a219b7e4f6d4",
+                "type": "filter",
+                "operator": "equals",
+                "property": "${file.extension}",
+                "value": "canvas",
+                "conditions": []
+              },
+              {
+                "id": "89dc5722-d01c-4eed-a428-4f5d1f450af8",
+                "type": "filter",
+                "operator": "equals",
+                "property": "${file.extension}",
+                "value": "excalidrawlib",
+                "conditions": []
+              }
+            ]
+          },
+          {
+            "id": "4c3d1121-aedd-49a6-8342-086fbda7ebe3",
+            "type": "group",
+            "operator": "or",
+            "conditions": [
+              {
+                "id": "761ff77f-f5d3-4465-8e30-53a42a750f7e",
+                "type": "filter",
+                "operator": "equals",
+                "property": "parent",
+                "value": "Area",
+                "conditions": []
+              },
+              {
+                "id": "83ea9a24-04c0-48cb-81f4-a052243b32a9",
+                "type": "filter",
+                "operator": "contains",
+                "property": "${file.parent}",
+                "value": "02-Areas",
+                "conditions": []
+              }
+            ]
+          },
+          {
+            "id": "17782843-f67f-4554-8919-b1c247e44c06",
+            "type": "group",
+            "operator": "or",
+            "conditions": [
+              {
+                "id": "af54f9ef-fc0f-4b02-bb0f-a7c895c7bfe5",
+                "type": "filter",
+                "operator": "unchecked",
+                "property": "Archived",
+                "value": "",
+                "conditions": []
+              },
+              {
+                "id": "babfea41-1ace-4c53-afbd-70ba3de4c826",
+                "type": "filter",
+                "operator": "no_value",
+                "property": "Archived",
+                "value": "",
+                "conditions": []
+              }
+            ]
+          },
+          {
+            "id": "134595f2-117a-403d-ae36-251f03863c64",
+            "type": "filter",
+            "operator": "not_contains",
+            "property": "${file.parent}",
+            "value": "02-Areas/003-项目/Obsidian Templates",
+            "conditions": []
+          }
+        ]
+      },
+      "sort": {
+        "orders": [
+          {
+            "id": "fcfa6709-4d24-4c30-bf9c-bfea5ff6ab10",
+            "property": "${file.mtime}",
+            "direction": "desc",
+            "disabled": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "94804d9f-7776-4f83-8d22-04bcb8a9d1ce",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "Resources",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showShadow": false,
+      "createAt": "2025-03-25T13:04:36.133Z",
+      "updateAt": "2025-03-25T13:04:36.133Z",
+      "viewType": "table",
+      "newPageNameFormat": "{{date:MMDD HH:mm}}",
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "File Basename",
+          "type": "text",
+          "isShow": true,
+          "wrap": true,
+          "options": {
+            "width": "153",
+            "pinned": "left"
+          },
+          "alias": "File Name"
+        },
+        {
+          "id": "20a2162a-297b-4a44-b852-dd135779c5a0",
+          "name": "parent",
+          "isShow": true,
+          "type": "select",
+          "options": {
+            "items": [
+              {
+                "id": "85b72cda-e45a-4ee0-bd66-8ead94985e19",
+                "value": "Project",
+                "color": "components--color-red"
+              },
+              {
+                "id": "2b85000d-f319-438b-b58f-70ced55f8eda",
+                "value": "Area",
+                "color": "components--color-green"
+              },
+              {
+                "id": "c500ec07-a7d3-4750-bde1-3d54874358a9",
+                "value": "Resource",
+                "color": "components--color-purple"
+              },
+              {
+                "id": "1a5fdcdb-7748-41a6-abf3-6aa321ceb5d1",
+                "value": "Diary",
+                "color": "components--color-yellow"
+              }
+            ],
+            "pinned": null,
+            "width": "73"
+          },
+          "alias": "Parent"
+        },
+        {
+          "id": "cf02fde7-9938-44f7-80a3-c2e4b86b6be5",
+          "name": "branch",
+          "isShow": true,
+          "type": "select",
+          "options": {
+            "items": [
+              {
+                "id": "601c21b3-bfe8-4df9-afc8-77993e69ead9",
+                "value": "学习",
+                "color": "components--color-blue"
+              },
+              {
+                "id": "1a59031f-cda4-4fd4-b166-d2b30e45fb5f",
+                "value": "生活",
+                "color": "components--color-pink"
+              },
+              {
+                "id": "fe431b21-d1f4-462e-a328-8276f65a90b7",
+                "value": "项目",
+                "color": "components--color-orange"
+              }
+            ],
+            "width": "75",
+            "pinned": null
+          },
+          "alias": "branch",
+          "wrap": false
+        },
+        {
+          "id": "b12cee3c-2cdd-40bc-b061-69070f69c56c",
+          "name": "tags",
+          "isShow": true,
+          "type": "multiSelect",
+          "options": {},
+          "wrap": true
+        },
+        {
+          "id": "43b63c44-f4c3-480a-931c-8a983efabf97",
+          "name": "Archived",
+          "isShow": true,
+          "type": "checkbox",
+          "options": {},
+          "alias": "archived"
+        },
+        {
+          "id": "d3d655c4-f29e-4a30-aaa0-36097e7fbc91",
+          "name": "${file.ctime}",
+          "isShow": true,
+          "type": "datetime",
+          "options": {},
+          "alias": "created time"
+        },
+        {
+          "id": "824d583d-0544-4a4b-ab54-2f93d5f983c7",
+          "name": "🗂️",
+          "isShow": true,
+          "type": "button",
+          "options": {
+            "action": {
+              "type": "runScript",
+              "properties": [],
+              "expression": "migrateFile()"
+            },
+            "width": "86"
+          },
+          "alias": "auto-file"
+        }
+      ],
+      "templates": [
+        {
+          "id": "74143d47-c31a-40e9-a442-67637c067c2d",
+          "path": "TestFolder/Templates/New Resource.md",
+          "name": "New Resource.md",
+          "type": "templater"
+        }
+      ],
+      "groups": [],
+      "colorfulGroups": false,
+      "viewOptions": {
+        "openPageIn": "tab",
+        "openPageAfterCreate": true,
+        "items": [],
+        "pinFiltersToMenuBar": false,
+        "showGrid": true,
+        "heightType": "auto",
+        "heightValue": 600
+      },
+      "groupStates": {
+        "sort": "nameAsc",
+        "statics": [],
+        "orders": [],
+        "hiddens": [],
+        "collapseds": []
+      },
+      "newPageLocation": {
+        "location": "03-Resources"
+      },
+      "loadLimitPerPage": "20",
+      "filter": {
+        "id": "3ce56217-e3bd-445c-9749-ee5988f8338f",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "eb5614fc-7545-41cd-8ea2-c67b99e27e14",
+            "type": "filter",
+            "operator": "not_contains",
+            "property": "${file.tags}",
+            "value": "#exclude",
+            "conditions": []
+          },
+          {
+            "id": "86fb2d21-f50e-4976-a963-31f133636773",
+            "type": "group",
+            "operator": "or",
+            "conditions": [
+              {
+                "id": "be0a183b-fa52-4910-8e68-659f1a644821",
+                "type": "filter",
+                "operator": "equals",
+                "property": "${file.extension}",
+                "value": "md",
+                "conditions": []
+              },
+              {
+                "id": "86f7fd58-c082-4d46-be6b-a219b7e4f6d4",
+                "type": "filter",
+                "operator": "equals",
+                "property": "${file.extension}",
+                "value": "canvas",
+                "conditions": []
+              },
+              {
+                "id": "89dc5722-d01c-4eed-a428-4f5d1f450af8",
+                "type": "filter",
+                "operator": "equals",
+                "property": "${file.extension}",
+                "value": "excalidrawlib",
+                "conditions": []
+              },
+              {
+                "id": "28b7eeef-72a0-4e05-9443-460f54b88cdb",
+                "type": "filter",
+                "operator": "equals",
+                "property": "${file.extension}",
+                "value": "pdf",
+                "conditions": []
+              }
+            ]
+          },
+          {
+            "id": "4c3d1121-aedd-49a6-8342-086fbda7ebe3",
+            "type": "group",
+            "operator": "or",
+            "conditions": [
+              {
+                "id": "761ff77f-f5d3-4465-8e30-53a42a750f7e",
+                "type": "filter",
+                "operator": "equals",
+                "property": "parent",
+                "value": "Resource",
+                "conditions": []
+              },
+              {
+                "id": "83ea9a24-04c0-48cb-81f4-a052243b32a9",
+                "type": "filter",
+                "operator": "contains",
+                "property": "${file.parent}",
+                "value": "03-Resources",
+                "conditions": []
+              }
+            ]
+          },
+          {
+            "id": "17782843-f67f-4554-8919-b1c247e44c06",
+            "type": "group",
+            "operator": "or",
+            "conditions": [
+              {
+                "id": "af54f9ef-fc0f-4b02-bb0f-a7c895c7bfe5",
+                "type": "filter",
+                "operator": "unchecked",
+                "property": "Archived",
+                "value": "",
+                "conditions": []
+              },
+              {
+                "id": "babfea41-1ace-4c53-afbd-70ba3de4c826",
+                "type": "filter",
+                "operator": "no_value",
+                "property": "Archived",
+                "value": "",
+                "conditions": []
+              }
+            ]
+          },
+          {
+            "id": "77a00b85-3620-4a56-aa53-61c9a9ffb2b3",
+            "type": "filter",
+            "operator": "not_contains",
+            "property": "${file.parent}",
+            "value": "02-Areas/003-项目/Obsidian Templates",
+            "conditions": []
+          }
+        ]
+      },
+      "sort": {
+        "orders": [
+          {
+            "id": "fcfa6709-4d24-4c30-bf9c-bfea5ff6ab10",
+            "property": "${file.ctime}",
+            "direction": "desc",
+            "disabled": false
+          }
+        ]
+      },
+      "defaultTemplate": "74143d47-c31a-40e9-a442-67637c067c2d"
+    },
+    {
+      "id": "eb8207a1-85af-4c96-8da0-dc4e079f8910",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "Archived",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showShadow": false,
+      "createAt": "2025-03-25T13:04:36.133Z",
+      "updateAt": "2025-03-25T13:04:36.133Z",
+      "viewType": "table",
+      "newPageNameFormat": "{{date:MMDD HH:mm}}",
+      "properties": [
+        {
+          "id": "20a2162a-297b-4a44-b852-dd135779c5a0",
+          "name": "parent",
+          "isShow": false,
+          "type": "select",
+          "options": {
+            "items": [
+              {
+                "id": "85b72cda-e45a-4ee0-bd66-8ead94985e19",
+                "value": "Project",
+                "color": "components--color-red"
+              },
+              {
+                "id": "2b85000d-f319-438b-b58f-70ced55f8eda",
+                "value": "Area",
+                "color": "components--color-green"
+              },
+              {
+                "id": "c500ec07-a7d3-4750-bde1-3d54874358a9",
+                "value": "Resource",
+                "color": "components--color-purple"
+              },
+              {
+                "id": "1a5fdcdb-7748-41a6-abf3-6aa321ceb5d1",
+                "value": "Diary",
+                "color": "components--color-yellow"
+              }
+            ],
+            "pinned": "left",
+            "width": "73"
+          },
+          "alias": "Parent"
+        },
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "File Basename",
+          "type": "text",
+          "isShow": true,
+          "wrap": true,
+          "options": {
+            "width": "105.85713195800781",
+            "pinned": "left"
+          },
+          "alias": "File Name"
+        },
+        {
+          "id": "5c540800-5ed5-44b1-aa70-39d543523fdf",
+          "name": "${file.parent}",
+          "isShow": false,
+          "type": "text",
+          "options": {}
+        },
+        {
+          "id": "cf02fde7-9938-44f7-80a3-c2e4b86b6be5",
+          "name": "branch",
+          "isShow": true,
+          "type": "select",
+          "options": {
+            "items": [
+              {
+                "id": "601c21b3-bfe8-4df9-afc8-77993e69ead9",
+                "value": "学习",
+                "color": "components--color-blue"
+              },
+              {
+                "id": "1a59031f-cda4-4fd4-b166-d2b30e45fb5f",
+                "value": "生活",
+                "color": "components--color-pink"
+              },
+              {
+                "id": "fe431b21-d1f4-462e-a328-8276f65a90b7",
+                "value": "项目",
+                "color": "components--color-orange"
+              }
+            ],
+            "width": "75",
+            "pinned": null
+          },
+          "alias": "branch",
+          "wrap": false
+        },
+        {
+          "id": "b12cee3c-2cdd-40bc-b061-69070f69c56c",
+          "name": "tags",
+          "isShow": true,
+          "type": "multiSelect",
+          "options": {},
+          "wrap": true
+        },
+        {
+          "id": "ceb816ce-1713-4a09-8931-5e5996a7a572",
+          "name": "Archived",
+          "isShow": true,
+          "type": "checkbox",
+          "options": {
+            "width": "93"
+          },
+          "alias": "archived"
+        },
+        {
+          "id": "d69f01f1-444b-471a-bc64-81b35b153981",
+          "name": "${file.mtime}",
+          "isShow": true,
+          "type": "datetime",
+          "options": {},
+          "alias": "modified time"
+        },
+        {
+          "id": "d3d655c4-f29e-4a30-aaa0-36097e7fbc91",
+          "name": "${file.ctime}",
+          "isShow": true,
+          "type": "datetime",
+          "options": {},
+          "alias": "created time"
+        },
+        {
+          "id": "0e12fa0b-8365-4c00-a2e7-05d4fdd49620",
+          "name": "🗂️",
+          "isShow": true,
+          "type": "button",
+          "options": {
+            "action": {
+              "type": "runScript",
+              "properties": [],
+              "expression": "migrateFile()"
+            },
+            "width": "99"
+          },
+          "alias": "auto-file"
+        }
+      ],
+      "templates": [
+        {
+          "id": "69f9d744-835e-4b95-9938-ba224bf1d86a",
+          "path": "TestFolder/Templates/New Project.md",
+          "name": "New Project.md",
+          "type": "templater"
+        },
+        {
+          "id": "6cef4716-f3c2-473e-8e04-bb08c5b0a9ef",
+          "path": "TestFolder/Templates/New Area.md",
+          "name": "New Area.md",
+          "type": "templater"
+        },
+        {
+          "id": "715f0f08-bc3d-4caf-9ff9-e9cbc1c18b53",
+          "path": "TestFolder/Templates/New Resource.md",
+          "name": "New Resource.md",
+          "type": "templater"
+        }
+      ],
+      "groups": [],
+      "colorfulGroups": false,
+      "viewOptions": {
+        "openPageIn": "tab",
+        "openPageAfterCreate": true,
+        "items": [],
+        "pinFiltersToMenuBar": false,
+        "showGrid": true,
+        "heightType": "auto",
+        "heightValue": 600
+      },
+      "groupStates": {
+        "sort": "manual",
+        "format": "none",
+        "statics": [
+          "Resource",
+          "Area",
+          "Project"
+        ],
+        "orders": [
+          "Project",
+          "Area",
+          "Resource",
+          "__$uncategorizedGroup"
+        ],
+        "hiddens": [
+          "__$uncategorizedGroup"
+        ],
+        "collapseds": [
+          "__$uncategorizedGroup"
+        ]
+      },
+      "newPageLocation": {
+        "location": ""
+      },
+      "loadLimitPerPage": "30",
+      "filter": {
+        "id": "3ce56217-e3bd-445c-9749-ee5988f8338f",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "eb5614fc-7545-41cd-8ea2-c67b99e27e14",
+            "type": "filter",
+            "operator": "not_contains",
+            "property": "${file.tags}",
+            "value": "#exclude",
+            "conditions": []
+          },
+          {
+            "id": "86fb2d21-f50e-4976-a963-31f133636773",
+            "type": "group",
+            "operator": "or",
+            "conditions": [
+              {
+                "id": "be0a183b-fa52-4910-8e68-659f1a644821",
+                "type": "filter",
+                "operator": "equals",
+                "property": "${file.extension}",
+                "value": "md",
+                "conditions": []
+              },
+              {
+                "id": "86f7fd58-c082-4d46-be6b-a219b7e4f6d4",
+                "type": "filter",
+                "operator": "equals",
+                "property": "${file.extension}",
+                "value": "canvas",
+                "conditions": []
+              },
+              {
+                "id": "89dc5722-d01c-4eed-a428-4f5d1f450af8",
+                "type": "filter",
+                "operator": "equals",
+                "property": "${file.extension}",
+                "value": "excalidrawlib",
+                "conditions": []
+              },
+              {
+                "id": "4466a3cc-c862-4f15-a811-e23f5109f923",
+                "type": "filter",
+                "operator": "equals",
+                "property": "${file.extension}",
+                "value": "pdf",
+                "conditions": []
+              }
+            ]
+          },
+          {
+            "id": "bd21b7f1-d9f4-48b8-b268-0cda2fe84ac3",
+            "type": "group",
+            "operator": "or",
+            "conditions": [
+              {
+                "id": "6c7b5993-0774-483a-86f6-f1a4a8bae3e9",
+                "type": "filter",
+                "operator": "contains",
+                "property": "${file.parent}",
+                "value": "04-Archives",
+                "conditions": []
+              },
+              {
+                "id": "8654f37f-2515-49e9-8938-44854281f31b",
+                "type": "filter",
+                "operator": "checked",
+                "property": "Archived",
+                "value": "",
+                "conditions": []
+              }
+            ]
+          }
+        ]
+      },
+      "sort": {
+        "orders": [
+          {
+            "id": "fcfa6709-4d24-4c30-bf9c-bfea5ff6ab10",
+            "property": "${file.mtime}",
+            "direction": "desc",
+            "disabled": false
+          }
+        ]
+      },
+      "groupBy": "parent"
+    },
+    {
+      "id": "73797456-41f4-4760-89e1-49eb9ca06bd3",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "Calendar",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showShadow": false,
+      "createAt": "2025-03-25T15:13:16.772Z",
+      "updateAt": "2025-03-25T15:13:16.772Z",
+      "viewType": "calendar",
+      "newPageNameFormat": "{{date: YYYY-MM-DD}}",
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "File Basename",
+          "type": "text",
+          "isShow": true,
+          "wrap": true,
+          "options": {}
+        },
+        {
+          "id": "8049fc77-dfbe-4be6-934c-04a40d713a2e",
+          "name": "${file.mtime}",
+          "isShow": false,
+          "type": "datetime",
+          "options": {}
+        }
+      ],
+      "templates": [
+        {
+          "id": "8556662d-2059-4768-9e79-7436c3caaad4",
+          "path": "TestFolder/Templates/Daily Notes.md",
+          "name": "Daily Notes.md",
+          "type": "templater"
+        }
+      ],
+      "groups": [],
+      "colorfulGroups": false,
+      "viewOptions": {
+        "openPageIn": "tab",
+        "openPageAfterCreate": true,
+        "itemSize": "components--page-card-medium",
+        "showPropertyName": false,
+        "showAllProperties": false,
+        "items": [],
+        "cover": {
+          "type": "none",
+          "source": "default",
+          "fit": "contains",
+          "layout": "components--page-card-cover-landscape",
+          "position": "top",
+          "sourceValue": "## "
+        },
+        "pinFiltersToMenuBar": false,
+        "showGrid": false,
+        "heightType": "auto",
+        "heightValue": 600,
+        "calendarViewType": "month",
+        "cardColorFrom": "property",
+        "cardColorProperty": "total words",
+        "dateProperty": "${file.basename}",
+        "endDateProperty": ""
+      },
+      "groupStates": {
+        "sort": "nameAsc",
+        "statics": [],
+        "orders": [],
+        "hiddens": [],
+        "collapseds": []
+      },
+      "newPageLocation": {
+        "location": "日志/Daily Notes"
+      },
+      "defaultTemplate": "8556662d-2059-4768-9e79-7436c3caaad4"
+    },
+    {
+      "id": "677b424e-ce96-41ef-b85c-3098199f99f0",
+      "type": "attachments",
+      "titleAlign": "center",
+      "tabTitle": "Attachments",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2025-03-25T15:30:55.775Z",
+      "updateAt": "2025-03-25T15:30:55.775Z",
+      "attachmentSource": "All",
+      "attachmentType": "All",
+      "fileExensions": [],
+      "specifiedFilePath": "",
+      "sortField": "createTime",
+      "sortDirection": "desc",
+      "title": ""
+    },
+    {
+      "id": "495152b8-9765-454a-9c78-6b9b5a01867b",
+      "type": "chart",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2025-03-26T17:00:35.212Z",
+      "updateAt": "2025-03-26T17:00:35.212Z",
+      "chartType": "heatmap",
+      "filter": {
+        "id": "aac9e1a3-9f11-4d85-9e0d-83a634254813",
+        "type": "group",
+        "operator": "and",
+        "conditions": []
+      },
+      "labelProperty": "${file.basename}",
+      "labelFormat": "$none",
+      "valueProperty": "total words",
+      "valuePrecision": 0,
+      "sortField": "xAxisValue",
+      "sortOrder": "asc",
+      "maxHeight": 50,
+      "chartColorSet": "default",
+      "chartLabelPosition": "top",
+      "showDataValue": false,
+      "valueScaleStartFromZero": true,
+      "smoothLine": false,
+      "fillArea": false,
+      "options": {
+        "minValue": 1,
+        "maxValue": 20000,
+        "cellSize": 20,
+        "numberOfSegments": 8,
+        "showSplitLine": false,
+        "hideChartLabel": true,
+        "firstDayOfWeek": 1,
+        "dateRange": {
+          "type": "latest",
+          "latestValue": "90",
+          "latestUnit": "day"
+        }
+      },
+      "title": "Words Pulse"
+    },
+    {
+      "id": "4e1df87e-d28c-485d-9e62-df8bd1f0a9e0",
+      "type": "time",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2025-03-26T17:32:00.844Z",
+      "updateAt": "2025-03-26T17:32:00.844Z",
+      "showLunar": false,
+      "hideDateInfo": false,
+      "hideSeconds": true,
+      "hideProgress": true,
+      "backgroundImage": {
+        "url": "0-Extras/attachments/66.jpg",
+        "fit": "cover",
+        "blurDegree": 1
+      }
+    },
+    {
+      "id": "393f2806-9bb9-4541-9969-1cea8482eabd",
+      "type": "dateProgress",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2025-03-26T19:12:35.097Z",
+      "updateAt": "2025-03-26T19:12:35.097Z",
+      "showDateIndicator": true,
+      "showProgressIndicator": false,
+      "startDateTimeType": "$specifiedDateTime",
+      "endDateTimeType": "$specifiedDateTime",
+      "uiType": "bar",
+      "title": "课程",
+      "startDateTime": "2025-03-09 03:13:00",
+      "endDateTime": "2025-04-30 03:14:00"
+    },
+    {
+      "id": "a0cc3b40-383d-4ce6-a497-2e086f40c10b",
+      "type": "count",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2025-03-27T01:57:26.375Z",
+      "updateAt": "2025-03-27T01:57:26.375Z",
+      "countValueAlign": "center",
+      "contentPrefix": "",
+      "contentSuffix": "",
+      "countType": "number",
+      "precision": 0,
+      "query": {
+        "valueType": "totalRecords",
+        "value": 100,
+        "filter": {
+          "id": "2993c3af-5405-4382-92d8-bd6455fdb377",
+          "type": "group",
+          "operator": "and",
+          "conditions": [
+            {
+              "id": "e54d45fc-4a3f-4e56-b782-415dd29f3622",
+              "type": "filter",
+              "operator": "equals",
+              "property": "${file.extension}",
+              "value": "canvas",
+              "conditions": []
+            }
+          ]
+        },
+        "sort": {
+          "orders": [
+            {
+              "id": "57b8d663-ca83-432e-98b1-616eadc8819a",
+              "property": "${file.mtime}",
+              "direction": "desc",
+              "disabled": false
+            }
+          ]
+        }
+      },
+      "totalQuery": {
+        "valueType": "constant",
+        "value": 100,
+        "filter": {
+          "id": "df513b63-7683-447b-9c26-892b0a61c01a",
+          "type": "group",
+          "operator": "and",
+          "conditions": []
+        },
+        "sort": {
+          "orders": []
+        }
+      },
+      "title": "Canvas"
+    },
+    {
+      "id": "8982355b-e0b9-4d00-9e38-f00f0bb69da6",
+      "type": "count",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2025-03-27T01:59:15.864Z",
+      "updateAt": "2025-03-27T01:59:15.864Z",
+      "countValueAlign": "center",
+      "contentPrefix": "",
+      "contentSuffix": "",
+      "countType": "number",
+      "precision": 0,
+      "query": {
+        "valueType": "totalRecords",
+        "value": 100,
+        "filter": {
+          "id": "2993c3af-5405-4382-92d8-bd6455fdb377",
+          "type": "group",
+          "operator": "and",
+          "conditions": [
+            {
+              "id": "0d43c78c-4149-4414-8d83-e732d68256eb",
+              "type": "filter",
+              "operator": "equals",
+              "property": "${file.extension}",
+              "value": "md",
+              "conditions": []
+            },
+            {
+              "id": "7ecedc63-fe21-44c7-b0da-b015f8c2c2f1",
+              "type": "filter",
+              "operator": "has_value",
+              "property": "mindmap-plugin",
+              "value": null,
+              "conditions": []
+            }
+          ]
+        },
+        "sort": {
+          "orders": [
+            {
+              "id": "ea46e19e-c9b0-4aee-bcf0-18f7191af4d7",
+              "property": "${file.mtime}",
+              "direction": "desc",
+              "disabled": false
+            }
+          ]
+        }
+      },
+      "totalQuery": {
+        "valueType": "constant",
+        "value": 100,
+        "filter": {
+          "id": "df513b63-7683-447b-9c26-892b0a61c01a",
+          "type": "group",
+          "operator": "and",
+          "conditions": []
+        },
+        "sort": {
+          "orders": []
+        }
+      },
+      "title": "Mindmaps"
+    },
+    {
+      "id": "36cb8aa4-6259-4f73-939e-59d8b3c15ce3",
+      "type": "count",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2025-03-27T02:04:38.835Z",
+      "updateAt": "2025-03-27T02:04:38.835Z",
+      "countValueAlign": "center",
+      "contentPrefix": "",
+      "contentSuffix": "",
+      "countType": "number",
+      "precision": 0,
+      "query": {
+        "valueType": "totalRecords",
+        "value": 100,
+        "filter": {
+          "id": "2311c59d-84f9-48d9-b743-1a07c430773a",
+          "type": "group",
+          "operator": "and",
+          "conditions": [
+            {
+              "id": "41bc7858-828b-432e-b355-4d851cf82b45",
+              "type": "filter",
+              "operator": "equals",
+              "property": "${file.extension}",
+              "value": "excalidrawlib",
+              "conditions": []
+            }
+          ]
+        },
+        "sort": {
+          "orders": [
+            {
+              "id": "bdd63358-f889-45ac-9f78-cb9423e06047",
+              "property": "${file.mtime}",
+              "direction": "desc",
+              "disabled": false
+            }
+          ]
+        }
+      },
+      "totalQuery": {
+        "valueType": "constant",
+        "value": 100,
+        "filter": {
+          "id": "2755e08a-274f-4c0a-84ec-cb276c94d628",
+          "type": "group",
+          "operator": "and",
+          "conditions": []
+        },
+        "sort": {
+          "orders": []
+        }
+      },
+      "title": "Excalidraws"
+    },
+    {
+      "id": "631dbafd-c32d-4cbe-b778-2573cf4e617f",
+      "type": "chart",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2025-03-27T02:07:18.954Z",
+      "updateAt": "2025-03-27T02:07:18.954Z",
+      "chartType": "pie",
+      "filter": {
+        "id": "53f1fbd9-2f44-4cc3-9288-729d97cc62d2",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "891eefc1-9140-4153-bfb2-ce3ed9ddf830",
+            "type": "filter",
+            "operator": "not_contains",
+            "property": "${file.tags}",
+            "value": "#exclude",
+            "conditions": []
+          },
+          {
+            "id": "3780847c-70c6-4ec1-b2ae-355c4e3c1770",
+            "type": "filter",
+            "operator": "equals",
+            "property": "${file.extension}",
+            "value": "md",
+            "conditions": []
+          }
+        ]
+      },
+      "labelProperty": "branch",
+      "labelFormat": "$none",
+      "valueProperty": "$file_count",
+      "valuePrecision": 0,
+      "sortField": "xAxisValue",
+      "sortOrder": "asc",
+      "maxHeight": 300,
+      "chartColorSet": "default",
+      "chartLabelPosition": "left",
+      "showDataValue": true,
+      "valueScaleStartFromZero": true,
+      "smoothLine": false,
+      "fillArea": false,
+      "options": {},
+      "title": "Branches"
+    },
+    {
+      "id": "6b45899a-31b8-4cb3-bccd-e3e53651267f",
+      "type": "button",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showShadow": false,
+      "createAt": "2025-03-27T02:13:15.333Z",
+      "updateAt": "2025-03-27T02:13:15.333Z",
+      "text": "Thino",
+      "buttonType": "common",
+      "clickActions": [
+        {
+          "type": "CallCommand",
+          "id": "ffc29e6c-07b4-4a2b-a0ab-579ea68e479a",
+          "options": {
+            "commandId": "obsidian-memos:open-thino-in-center",
+            "commandName": "Thino: Open thino in center window"
+          }
+        }
+      ],
+      "checkActions": [],
+      "uncheckActions": [],
+      "isChecked": false,
+      "fullWidth": true,
+      "icon": "Lightbulb"
+    },
+    {
+      "id": "bdd743fc-2aff-4ca6-bd2c-ccebab9891ba",
+      "type": "button",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showShadow": false,
+      "createAt": "2025-03-27T02:19:25.510Z",
+      "updateAt": "2025-03-27T02:19:25.510Z",
+      "text": "Tasks Kanban",
+      "buttonType": "common",
+      "clickActions": [
+        {
+          "type": "OpenFile",
+          "id": "baad31b8-4f73-4d47-b03c-d91f1c0de155",
+          "options": {
+            "filePath": "02-Areas/003-项目/Obsidian Components/复合任务看板.components",
+            "fileName": "复合任务看板.components",
+            "openPageIn": "modal"
+          }
+        }
+      ],
+      "checkActions": [],
+      "uncheckActions": [],
+      "isChecked": false,
+      "fullWidth": true,
+      "icon": "ClipboardCheck"
+    },
+    {
+      "id": "9d5681cc-0d6a-48f0-8efa-f3ec353f85bf",
+      "type": "count",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2025-03-27T01:59:15.864Z",
+      "updateAt": "2025-03-27T01:59:15.864Z",
+      "countValueAlign": "center",
+      "contentPrefix": "",
+      "contentSuffix": "",
+      "countType": "number",
+      "precision": 0,
+      "query": {
+        "valueType": "totalRecords",
+        "value": 100,
+        "filter": {
+          "id": "2993c3af-5405-4382-92d8-bd6455fdb377",
+          "type": "group",
+          "operator": "and",
+          "conditions": [
+            {
+              "id": "f77a21df-69d9-4c6b-bdd6-2e8cc332dda1",
+              "type": "group",
+              "operator": "or",
+              "conditions": [
+                {
+                  "id": "99debb8a-750b-4226-8658-eedb40dc2e8c",
+                  "type": "filter",
+                  "operator": "equals",
+                  "property": "${file.extension}",
+                  "value": "md",
+                  "conditions": []
+                },
+                {
+                  "id": "33219dca-c77b-4e7e-8845-6daaee0edad9",
+                  "type": "filter",
+                  "operator": "equals",
+                  "property": "${file.extension}",
+                  "value": "excalidrawlib",
+                  "conditions": []
+                },
+                {
+                  "id": "90fd5671-86d4-406e-b6a7-842b373ecd2f",
+                  "type": "filter",
+                  "operator": "equals",
+                  "property": "${file.extension}",
+                  "value": "canvas",
+                  "conditions": []
+                }
+              ]
+            },
+            {
+              "id": "8f5dc13b-e703-4679-a179-9a03d9403668",
+              "type": "group",
+              "operator": "or",
+              "conditions": [
+                {
+                  "id": "27ff00d9-a54e-44e4-9687-72a16e6cb0ed",
+                  "type": "filter",
+                  "operator": "contains",
+                  "property": "${file.path}",
+                  "value": "01-Projects",
+                  "conditions": []
+                },
+                {
+                  "id": "9c794ed1-da45-4c1f-872f-bda37223196b",
+                  "type": "filter",
+                  "operator": "equals",
+                  "property": "parent",
+                  "value": "Project",
+                  "conditions": []
+                }
+              ]
+            },
+            {
+              "id": "05dd6422-8f81-41c4-bab5-e6ce30f43119",
+              "type": "group",
+              "operator": "or",
+              "conditions": [
+                {
+                  "id": "b1602a86-8cc7-46be-8480-bd5080d1c6d1",
+                  "type": "filter",
+                  "operator": "unchecked",
+                  "property": "Archived",
+                  "value": "",
+                  "conditions": []
+                },
+                {
+                  "id": "aa5741eb-7682-4050-810c-b381fed60ac2",
+                  "type": "filter",
+                  "operator": "no_value",
+                  "property": "Archived",
+                  "value": "",
+                  "conditions": []
+                }
+              ]
+            }
+          ]
+        },
+        "sort": {
+          "orders": [
+            {
+              "id": "ea46e19e-c9b0-4aee-bcf0-18f7191af4d7",
+              "property": "${file.mtime}",
+              "direction": "desc",
+              "disabled": false
+            }
+          ]
+        }
+      },
+      "totalQuery": {
+        "valueType": "constant",
+        "value": 100,
+        "filter": {
+          "id": "df513b63-7683-447b-9c26-892b0a61c01a",
+          "type": "group",
+          "operator": "and",
+          "conditions": []
+        },
+        "sort": {
+          "orders": []
+        }
+      },
+      "title": "Projects"
+    },
+    {
+      "id": "72aad999-0a51-4607-8c27-fb2d2ee3683a",
+      "type": "count",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2025-03-27T01:59:15.864Z",
+      "updateAt": "2025-03-27T01:59:15.864Z",
+      "countValueAlign": "center",
+      "contentPrefix": "",
+      "contentSuffix": "",
+      "countType": "number",
+      "precision": 0,
+      "query": {
+        "valueType": "totalRecords",
+        "value": 100,
+        "filter": {
+          "id": "2993c3af-5405-4382-92d8-bd6455fdb377",
+          "type": "group",
+          "operator": "and",
+          "conditions": [
+            {
+              "id": "f77a21df-69d9-4c6b-bdd6-2e8cc332dda1",
+              "type": "group",
+              "operator": "or",
+              "conditions": [
+                {
+                  "id": "99debb8a-750b-4226-8658-eedb40dc2e8c",
+                  "type": "filter",
+                  "operator": "equals",
+                  "property": "${file.extension}",
+                  "value": "md",
+                  "conditions": []
+                },
+                {
+                  "id": "33219dca-c77b-4e7e-8845-6daaee0edad9",
+                  "type": "filter",
+                  "operator": "equals",
+                  "property": "${file.extension}",
+                  "value": "excalidrawlib",
+                  "conditions": []
+                },
+                {
+                  "id": "90fd5671-86d4-406e-b6a7-842b373ecd2f",
+                  "type": "filter",
+                  "operator": "equals",
+                  "property": "${file.extension}",
+                  "value": "canvas",
+                  "conditions": []
+                }
+              ]
+            },
+            {
+              "id": "8f5dc13b-e703-4679-a179-9a03d9403668",
+              "type": "group",
+              "operator": "or",
+              "conditions": [
+                {
+                  "id": "27ff00d9-a54e-44e4-9687-72a16e6cb0ed",
+                  "type": "filter",
+                  "operator": "contains",
+                  "property": "${file.path}",
+                  "value": "02-Areas",
+                  "conditions": []
+                },
+                {
+                  "id": "9c794ed1-da45-4c1f-872f-bda37223196b",
+                  "type": "filter",
+                  "operator": "equals",
+                  "property": "parent",
+                  "value": "Area",
+                  "conditions": []
+                }
+              ]
+            },
+            {
+              "id": "05dd6422-8f81-41c4-bab5-e6ce30f43119",
+              "type": "group",
+              "operator": "or",
+              "conditions": [
+                {
+                  "id": "b1602a86-8cc7-46be-8480-bd5080d1c6d1",
+                  "type": "filter",
+                  "operator": "unchecked",
+                  "property": "Archived",
+                  "value": "",
+                  "conditions": []
+                },
+                {
+                  "id": "aa5741eb-7682-4050-810c-b381fed60ac2",
+                  "type": "filter",
+                  "operator": "no_value",
+                  "property": "Archived",
+                  "value": "",
+                  "conditions": []
+                }
+              ]
+            }
+          ]
+        },
+        "sort": {
+          "orders": [
+            {
+              "id": "ea46e19e-c9b0-4aee-bcf0-18f7191af4d7",
+              "property": "${file.mtime}",
+              "direction": "desc",
+              "disabled": false
+            }
+          ]
+        }
+      },
+      "totalQuery": {
+        "valueType": "constant",
+        "value": 100,
+        "filter": {
+          "id": "df513b63-7683-447b-9c26-892b0a61c01a",
+          "type": "group",
+          "operator": "and",
+          "conditions": []
+        },
+        "sort": {
+          "orders": []
+        }
+      },
+      "title": "Areas"
+    },
+    {
+      "id": "75ce4ca4-2f3c-4bdb-919f-d3c81188cab5",
+      "type": "count",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2025-03-27T01:59:15.864Z",
+      "updateAt": "2025-03-27T01:59:15.864Z",
+      "countValueAlign": "center",
+      "contentPrefix": "",
+      "contentSuffix": "",
+      "countType": "number",
+      "precision": 0,
+      "query": {
+        "valueType": "totalRecords",
+        "value": 100,
+        "filter": {
+          "id": "2993c3af-5405-4382-92d8-bd6455fdb377",
+          "type": "group",
+          "operator": "and",
+          "conditions": [
+            {
+              "id": "f77a21df-69d9-4c6b-bdd6-2e8cc332dda1",
+              "type": "group",
+              "operator": "or",
+              "conditions": [
+                {
+                  "id": "99debb8a-750b-4226-8658-eedb40dc2e8c",
+                  "type": "filter",
+                  "operator": "equals",
+                  "property": "${file.extension}",
+                  "value": "md",
+                  "conditions": []
+                },
+                {
+                  "id": "33219dca-c77b-4e7e-8845-6daaee0edad9",
+                  "type": "filter",
+                  "operator": "equals",
+                  "property": "${file.extension}",
+                  "value": "excalidrawlib",
+                  "conditions": []
+                },
+                {
+                  "id": "90fd5671-86d4-406e-b6a7-842b373ecd2f",
+                  "type": "filter",
+                  "operator": "equals",
+                  "property": "${file.extension}",
+                  "value": "canvas",
+                  "conditions": []
+                }
+              ]
+            },
+            {
+              "id": "8f5dc13b-e703-4679-a179-9a03d9403668",
+              "type": "group",
+              "operator": "or",
+              "conditions": [
+                {
+                  "id": "27ff00d9-a54e-44e4-9687-72a16e6cb0ed",
+                  "type": "filter",
+                  "operator": "contains",
+                  "property": "${file.path}",
+                  "value": "03-Resources",
+                  "conditions": []
+                },
+                {
+                  "id": "9c794ed1-da45-4c1f-872f-bda37223196b",
+                  "type": "filter",
+                  "operator": "equals",
+                  "property": "parent",
+                  "value": "Resource",
+                  "conditions": []
+                }
+              ]
+            },
+            {
+              "id": "05dd6422-8f81-41c4-bab5-e6ce30f43119",
+              "type": "group",
+              "operator": "or",
+              "conditions": [
+                {
+                  "id": "b1602a86-8cc7-46be-8480-bd5080d1c6d1",
+                  "type": "filter",
+                  "operator": "unchecked",
+                  "property": "Archived",
+                  "value": "",
+                  "conditions": []
+                },
+                {
+                  "id": "aa5741eb-7682-4050-810c-b381fed60ac2",
+                  "type": "filter",
+                  "operator": "no_value",
+                  "property": "Archived",
+                  "value": "",
+                  "conditions": []
+                }
+              ]
+            }
+          ]
+        },
+        "sort": {
+          "orders": [
+            {
+              "id": "ea46e19e-c9b0-4aee-bcf0-18f7191af4d7",
+              "property": "${file.mtime}",
+              "direction": "desc",
+              "disabled": false
+            }
+          ]
+        }
+      },
+      "totalQuery": {
+        "valueType": "constant",
+        "value": 100,
+        "filter": {
+          "id": "df513b63-7683-447b-9c26-892b0a61c01a",
+          "type": "group",
+          "operator": "and",
+          "conditions": []
+        },
+        "sort": {
+          "orders": []
+        }
+      },
+      "title": "Resources"
+    },
+    {
+      "id": "1f153887-2d6c-4385-a255-24affdefa0ad",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "Diary",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showShadow": false,
+      "createAt": "2025-03-27T03:09:56.350Z",
+      "updateAt": "2025-03-27T03:09:56.350Z",
+      "viewType": "gallary",
+      "newPageNameFormat": "{{date: YYYY-MM-DD}}",
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "File Basename",
+          "type": "text",
+          "isShow": true,
+          "wrap": false,
+          "options": {}
+        },
+        {
+          "id": "cc34ac55-feb3-4ed0-b268-d4102e323b21",
+          "name": "📝记录",
+          "isShow": true,
+          "type": "formula",
+          "options": {
+            "formula": "extractHeadingContent('## 📝记录：', false, true)",
+            "renderType": "markdown"
+          }
+        },
+        {
+          "id": "d4566f8c-bcb3-4a39-97ad-0c1b7597ff8b",
+          "name": "total stats",
+          "isShow": true,
+          "type": "formula",
+          "options": {
+            "prefix": "",
+            "suffix": " edits",
+            "totalValueType": "constant",
+            "color": "components--color-none",
+            "uiType": "number",
+            "total": 100,
+            "formula": "ifElse(prop('total edits'), prop('total edits') + ' edits, ', '') + ifElse(prop('total words'), prop('total words') + ' words', '')"
+          }
+        },
+        {
+          "id": "5750a86e-b700-46dd-a8d3-e86d6207d696",
+          "name": "total words",
+          "isShow": false,
+          "type": "number",
+          "options": {
+            "prefix": "",
+            "suffix": " words",
+            "totalValueType": "constant",
+            "color": "components--color-none",
+            "uiType": "number",
+            "total": 100
+          }
+        }
+      ],
+      "templates": [],
+      "groups": [],
+      "colorfulGroups": false,
+      "viewOptions": {
+        "openPageIn": "modal",
+        "openPageAfterCreate": true,
+        "itemSize": "components--page-card-small",
+        "showPropertyName": false,
+        "showAllProperties": false,
+        "items": [],
+        "cover": {
+          "type": "none",
+          "source": "property",
+          "fit": "contains",
+          "layout": "components--page-card-cover-landscape",
+          "position": "left",
+          "sourceValue": "## 📝记录："
+        },
+        "pinFiltersToMenuBar": false,
+        "showGrid": false,
+        "heightType": "auto",
+        "heightValue": 600,
+        "dateProperty": "${file.basename}",
+        "calendarViewType": "month"
+      },
+      "groupStates": {
+        "sort": "nameAsc",
+        "statics": [],
+        "orders": [],
+        "hiddens": [],
+        "collapseds": []
+      },
+      "newPageLocation": {
+        "location": "Daily Notes"
+      },
+      "loadLimitPerPage": "30",
+      "filter": {
+        "id": "78c6dc0d-aae5-48e5-83bf-adae9a6c2036",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "1064996b-80c8-4bd4-9b01-f3bcd6a05939",
+            "type": "filter",
+            "operator": "equals",
+            "property": "${file.extension}",
+            "value": "md",
+            "conditions": []
+          },
+          {
+            "id": "c5de56f4-9986-404a-b19d-252924c8c64b",
+            "type": "filter",
+            "operator": "contains",
+            "property": "${file.parent}",
+            "value": "Daily Notes",
+            "conditions": []
+          }
+        ]
+      },
+      "sort": {
+        "orders": [
+          {
+            "id": "4662f8bf-7ed2-4f60-b46e-dd9e8b4c3b39",
+            "property": "${file.basename}",
+            "direction": "desc",
+            "disabled": false
+          }
+        ]
+      }
+    }
+  ],
+  "rootComponentId": "043184f2-6941-4be1-9986-c14200cfc549"
+}
