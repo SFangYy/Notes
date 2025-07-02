@@ -1,17 +1,16 @@
 ---
-Project: ["学习"]
+Project: ["LearnAI"]
 title: 
 description: 
 source: 
 author: 
 tags: 
-created: 2025-06-02 | 19:38
+created: 2025-07-01 | 14:41
 parent: Resource
 branch: 
-cssclasses:
-  - show-property
 ---
-# Code
+# Resources
+
 ## 创建docker镜像
 - 根据dockerfile创建镜像
 ```
@@ -22,6 +21,8 @@ docker build -t myapp:dev -f Dockerfile.dev .
 ## 根据镜像创建容器
 ```
 docker run -it --network host 镜像名
+
+docker run -d -p 51202:51202 -p 5901:5901 --name my-remote-desktop ubuntu-desktop-vnc
 ```
 ## 容器的管理
 ```
