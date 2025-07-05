@@ -12,9 +12,10 @@ branch:
 # Resources
 1. define docker file, this file will put at last
 2. build docker image by
-	- `docker build -t ubuntu-desktop-vnc .`
+	- `docker build -t picker-basic-env -f Dockerfile .`
+	- `docker build -t vcs_env -f Dockerfile.full .`
 3. run docker container
-	- `docker run -it -p 2222:22 -p 5901:5901 --name my-vnc -v /home/sfangyy/work:/home/user/Document/work  my-env`
+	- `docker run -d -p 2223:22 -p 5902:5901 --name my_vnc -v /home/sfangyy/work:/home/sfangyy/Documents/work -v /home/sfangyy/Documents/vcs_verdi2018:/home/sfangyy/synopsys/Synopsys2024 --hostname sfangyy --mac-address 02:42:ac:11:00:02 vcs_env`
 		- `-p`: port mapping last is container port
 		- '-v': file mapping last is container file path
 4. use by ssh
@@ -36,70 +37,152 @@ source myenv/bin/activate
 this is a basic ,include vnc ssh,and other dev tools
 ```dockerfile
 # 使用 Ubuntu 22.04 作为基础镜像
+# Use Ubuntu 22.04 as the base image
 FROM ubuntu:22.04
 
-# 设置环境变量，避免交互式安装
+# Set non-interactive installation
 ENV DEBIAN_FRONTEND=noninteractive
-ENV HOME=/home/sfangyy
 
-# 安装必要的软件包：桌面环境、VNC服务器、SSH服务器、sudo、字体等
+# Set the locale
+ENV LANG=C.UTF-8
+ENV LANGUAGE=C.UTF-8
+ENV LC_ALL=C.UTF-8
+# Use https for apt repositories
+RUN apt update && \
+    apt install -y --no-install-recommends apt-transport-https ca-certificates && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+RUN sed -i 's|http|https|g' /etc/apt/sources.list 
+
+# Set the timezone to France
+ENV TZ=Asia/Shanghai
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends tzdata && \
+    ln -fs /usr/share/zoneinfo/$TZ /etc/localtime && \
+    dpkg-reconfigure --frontend noninteractive tzdata && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Install dependencies
 RUN apt-get update && apt-get install -y \
-    xfce4 xfce4-goodies \
-    tightvncserver \
-    openssh-server \
+    ca-certificates \
+    build-essential \
+    git \
     sudo \
+    wget \
+    curl \
+    vim \
+    software-properties-common \
+    python3 \
+    python3-pip \
+    python3-dev \
+    python3-venv \
+    libpcre3-dev \
+    pkg-config \
+    libfl-dev \
+    bison \  
+    flex \
+    gperf \
+    clang \
+    g++ \
+    zlib1g-dev \
+    openssh-server \
+    gnupg \
+    autoconf \
+    automake \
+    libtool \
+    openjdk-17-jdk \
+    libpcre2-dev \
     net-tools \
-    iputils-ping \
-    # 添加必要的字体包，解决VNC启动时的字体缺失问题
-    xfonts-base \
-    xfonts-utils \
-    xfonts-scalable \
-    # 确保D-Bus和X相关的库已安装
-    libxkbcommon0 \
-    dbus-x11 \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+    dos2unix \
+    lsb \
+    openssh-server \
+    tigervnc-standalone-server \
+    xfce4 xfce4-goodies \
+    lightdm  \
+    help2man && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
-# 创建用户 sfangyy 并设置密码
+# Install SWIG (4.2.1)d
+RUN git clone https://github.com/swig/swig.git -b v4.2.1 --depth=1 /tmp/swig && \
+    cd /tmp/swig && \
+    ./autogen.sh && \
+    ./configure --prefix=/usr/local && \
+    make -j$(nproc) && \
+    make install && \
+    rm -rf /tmp/swig
+
+# Set up Kitware repository and install the latest CMake
+RUN wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | \
+    gpg --dearmor - | tee /usr/share/keyrings/kitware-archive-keyring.gpg >/dev/null && \
+    echo 'deb [signed-by=/usr/share/keyrings/kitware-archive-keyring.gpg] https://apt.kitware.com/ubuntu/ jammy main' | \
+    tee /etc/apt/sources.list.d/kitware.list >/dev/null && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends cmake && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Install Verilator (5.0 series latest version, e.g. v5.018)
+RUN git clone https://github.com/verilator/verilator -b v5.018 --depth=1 /tmp/verilator && \
+    cd /tmp/verilator && \
+    autoconf && \
+    ./configure --prefix=/usr/local && \
+    make -j$(nproc) && make test && \
+    make install && \
+    rm -rf /tmp/verilator
+
+# Verify Dependency installations
+RUN swig -version && \
+    cmake --version && \
+    verilator --version && \
+    java --version && \
+    python3 --version
+
+# Install Picker
+ENV BUILD_XSPCOMM_SWIG=python,java
+RUN mkdir /workspace && \
+    cd /workspace && \
+    git clone https://github.com/XS-MLVP/picker.git --depth=1 && \
+    wget https://github.com/chipsalliance/verible/releases/download/v0.0-3979-g786edf03/verible-v0.0-3979-g786edf03-linux-static-x86_64.tar.gz && \
+    tar -xzf verible-v0.0-3979-g786edf03-linux-static-x86_64.tar.gz -C /usr/local/ --strip-components=1 && \
+    rm verible-v0.0-3979-g786edf03-linux-static-x86_64.tar.gz && \
+    cd picker && make init && \
+    make -j$(nproc) && \
+    make install && \
+    make clean && \
+    chmod 755 /usr/local/bin -R 
+
+# set user and password
 RUN useradd -m -s /bin/bash sfangyy && \
     echo "sfangyy:192837" | chpasswd && \
-    usermod -aG sudo sfangyy
+    adduser sfangyy sudo && \
+    echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
+    chown sfangyy:sfangyy -R /workspace && \
+    chmod 755 /workspace
 
-# 配置SSH允许密码认证
-RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config && \
-    sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config && \
-    sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config && \
-    sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+# Set SSH autostart
+RUN mkdir /var/run/sshd && \
+    echo 'root:root' | chpasswd && \
+    echo 'sfangyy:192837' | chpasswd && \
+    sed -i 's|#PermitRootLogin prohibit-password|PermitRootLogin yes|' /etc/ssh/sshd_config && \
+    sed -i 's|#PasswordAuthentication yes|PasswordAuthentication yes|' /etc/ssh/sshd_config && \
+    sed -i 's|#PermitEmptyPasswords no|PermitEmptyPasswords yes|' /etc/ssh/sshd_config && \
+    sed -i 's|#Port 22|Port 51202|' /etc/ssh/sshd_config && \
+    # only listen on localhost
+    sed -i 's|#ListenAddress|ListenAddress 127.0.0.1 #|' /etc/ssh/sshd_config && \
+    ssh-keygen -A
 
-# 暴露SSH和VNC端口
-EXPOSE 22
-EXPOSE 5901
-
-# 配置VNC服务器 (VNC密码和xstartup脚本)
+# Switch to the new user
 USER sfangyy
-RUN mkdir -p $HOME/.vnc && \
-    echo "192837" | vncpasswd -f > $HOME/.vnc/passwd && \
-    chmod 600 $HOME/.vnc/passwd && \
-    echo '#!/bin/bash' > $HOME/.vnc/xstartup && \
-    echo 'xrdb $HOME/.Xresources' >> $HOME/.vnc/xstartup && \
-    echo 'startxfce4 &' >> $HOME/.vnc/xstartup && \
-    chmod +x $HOME/.vnc/xstartup && \
-    # 确保 dbus-launch 在启动 xfce4 之前运行，解决桌面环境启动问题
-    sed -i 's/startxfce4 &/dbus-launch --exit-with-session startxfce4 &/' $HOME/.vnc/xstartup
-
-# 切换回root用户以便启动服务
-USER root
-
-# 拷贝并设置启动脚本
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-RUN chmod +x /usr/local/bin/entrypoint.sh
-
-# 定义容器启动时执行的命令
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+# Set the default shell to bash
+SHELL ["/bin/bash", "-c"]
+# Set working directory
+WORKDIR /workspace
 ```
 
 - this is a advance env, include some picker and vcs dev tools in this
-```dockerfile
+```dockerfil]e
 # Use your existing base image as the starting point
 FROM picker-basic-env:latest
 # Use your existing base image as the starting point
@@ -112,14 +195,32 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Install SSH and VNC server, XFCE4 desktop environment, and LightDM
 # Assuming Debian/Ubuntu base image. Adjust for Alpine (apk) or CentOS/RHEL (yum/dnf).
-RUN apt-get update && \
-    apt-get install -y openssh-server tigervnc-standalone-server xfce4 xfce4-goodies lightdm && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
 
 # Configure SSH for the 'user' user
 #RUN mkdir /var/run/sshd
 # Disable password authentication entirely for SSH for better security if using keys
+RUN apt-get update && apt-get install -y \
+    # 对应 libXScrnSaver.x86_64 / libXScrnSaver
+    libxss1 \
+    # 对应 xcb-util 及其相关库
+    libxcb-ewmh-dev \
+    libxcb-image0 \
+    libxcb-keysyms1 \
+    libxcb-render-util0 \
+    # 对应 libXext
+    libxext6 \
+    # 对应 libXrender
+    libxrender1 \
+    # 对应 libXtst
+    libxtst6 \
+    # 对应 libXi
+    libxi6 \
+    # 对应 libXrandr
+    libxrandr2 \
+    dc \
+    libnuma1
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 # Ensure the .ssh directory exists and has correct permissions for 'user'
 # Assuming 'user' exists and is named 'user' with home directory /home/user
@@ -128,25 +229,25 @@ RUN sed -i 's|^Port .*|Port 22|' /etc/ssh/sshd_config && \
 # Configure VNC for the 'user' user
 # Create a VNC password for 'user'. Replace 'your_vnc_password' with a strong password.
 # The VNC password is still necessary for VNC connections.
-RUN mkdir -p /home/user/.vnc && \
-    echo "192837" | vncpasswd -f > /home/user/.vnc/passwd && \
-    chmod 600 /home/user/.vnc/passwd && \
-    chown -R user:user /home/user/.vnc
+RUN mkdir -p /home/sfangyy/.vnc && \
+    echo "192837" | vncpasswd -f > /home/sfangyy/.vnc/passwd && \
+    chmod 600 /home/sfangyy/.vnc/passwd && \
+    chown -R sfangyy:sfangyy /home/sfangyy/.vnc
 
 # Ensure the .Xauthority file can be created and is owned by 'user'
 # This is crucial for X session authentication
-RUN touch /home/user/.Xauthority && \
-    chmod 600 /home/user/.Xauthority && \
-    chown user:user /home/user/.Xauthority
+RUN touch /home/sfangyy/.Xauthority && \
+    chmod 600 /home/sfangyy/.Xauthority && \
+    chown sfangyy:sfangyy /home/sfangyy/.Xauthority
 
 # Create xstartup script for XFCE4, which vncserver will use by default
-COPY xstartup /home/user/.vnc/xstartup
-RUN chmod +x /home/user/.vnc/xstartup && \
-    chown user:user /home/user/.vnc/xstartup 
+COPY xstartup /home/sfangyy/.vnc/xstartup
+RUN chmod +x /home/sfangyy/.vnc/xstartup && \
+    chown sfangyy:sfangyy /home/sfangyy/.vnc/xstartup 
 
 # Set the VNC display number (e.g., :1) and geometry
 ENV DISPLAY=:1
-ENV VNC_GEOMETRY=1280x800
+ENV VNC_GEOMETRY=1920x1080
 ENV VNC_DEPTH=24
 
 # Create a startup script for SSH and VNC
@@ -159,132 +260,3 @@ EXPOSE 22 5901
 # Run the entrypoint script when the container launches
 CMD ["/usr/local/bin/entrypoint.sh"]
 ```
-
-```
-# Use your existing base image as the starting point
-FROM picker-basic-env:latest
-# Use your existing base image as the starting point
-
-# Ensure we are running as root for package installations
-USER root
-
-# Set environment variables for non-interactive installations
-ENV DEBIAN_FRONTEND=noninteractive
-
-# Install SSH and VNC server, XFCE4 desktop environment, and LightDM
-# Assuming Debian/Ubuntu base image. Adjust for Alpine (apk) or CentOS/RHEL (yum/dnf).
-RUN apt-get update && \
-    apt-get install -y openssh-server tigervnc-standalone-server xfce4 xfce4-goodies lightdm && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
-# Configure SSH for the 'user' user
-#RUN mkdir /var/run/sshd
-# Disable password authentication entirely for SSH for better security if using keys
-
-# Ensure the .ssh directory exists and has correct permissions for 'user'
-# Assuming 'user' exists and is named 'user' with home directory /home/user
-RUN sed -i 's|^Port .*|Port 22|' /etc/ssh/sshd_config && \
-    sed -i 's|^ListenAddress .*|ListenAddress 0.0.0.0|' /etc/ssh/sshd_config
-# Configure VNC for the 'user' user
-# Create a VNC password for 'user'. Replace 'your_vnc_password' with a strong password.
-# The VNC password is still necessary for VNC connections.
-RUN mkdir -p /home/user/.vnc && \
-    echo "192837" | vncpasswd -f > /home/user/.vnc/passwd && \
-    chmod 600 /home/user/.vnc/passwd && \
-    chown -R user:user /home/user/.vnc
-
-# Ensure the .Xauthority file can be created and is owned by 'user'
-# This is crucial for X session authentication
-RUN touch /home/user/.Xauthority && \
-    chmod 600 /home/user/.Xauthority && \
-    chown user:user /home/user/.Xauthority
-
-# Create xstartup script for XFCE4, which vncserver will use by default
-COPY xstartup /home/user/.vnc/xstartup
-RUN chmod +x /home/user/.vnc/xstartup && \
-    chown user:user /home/user/.vnc/xstartup 
-
-# Set the VNC display number (e.g., :1) and geometry
-ENV DISPLAY=:1
-ENV VNC_GEOMETRY=1280x800
-ENV VNC_DEPTH=24
-
-# Create a startup script for SSH and VNC
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-RUN chmod +x /usr/local/bin/entrypoint.sh
-
-# Expose the ports for SSH (22) and VNC (5901 for display :1)
-EXPOSE 22 5901
-
-# Run the entrypoint script when the container launches
-CMD ["/usr/local/bin/entrypoint.sh"]
-```
-
-- entrypoint.sh
-	- this is a start vnc script
-```
-#!/bin/bash
-
-# 确保SSH服务所需的目录存在，解决SSH启动问题
-mkdir -p /run/sshd
-
-# 启动SSH服务
-/usr/sbin/sshd
-
-# --- VNC 配置和启动 ---
-
-# 确保VNC相关目录和文件具有正确的权限和所有权
-mkdir -p /home/sfangyy/.vnc
-chown sfangyy:sfangyy /home/sfangyy/.vnc
-chmod 700 /home/sfangyy/.vnc
-
-# 再次确认VNC密码文件是否存在并设置权限
-if [ ! -f /home/sfangyy/.vnc/passwd ]; then
-    echo "192837" | su - sfangyy -c "vncpasswd -f > /home/sfangyy/.vnc/passwd"
-    su - sfangyy -c "chmod 600 /home/sfangyy/.vnc/passwd"
-fi
-
-# 以sfangyy用户身份执行VNC会话启动前的配置
-su - sfangyy -c '
-# 确保VNC的xstartup脚本存在且可执行
-if [ ! -f "$HOME/.vnc/xstartup" ]; then
-    echo "#!/bin/bash" > "$HOME/.vnc/xstartup"
-    echo "xrdb $HOME/.Xresources" >> "$HOME/.vnc/xstartup"
-    echo "startxfce4 &" >> "$HOME/.vnc/xstartup"
-    chmod +x "$HOME/.vnc/xstartup"
-fi
-# 再次确认xstartup中包含dbus-launch，防止重复添加
-if ! grep -q "dbus-launch" "$HOME/.vnc/xstartup"; then
-    sed -i "s/startxfce4 &/dbus-launch --exit-with-session startxfce4 &/" "$HOME/.vnc/xstartup"
-fi
-
-# 为X程序设置DISPLAY环境变量
-export DISPLAY=:1
-# 确保.Xauthority文件存在，由sfangyy拥有并具有正确权限，解决xauth相关错误
-xauth_path="$HOME/.Xauthority"
-if [ ! -f "$xauth_path" ]; then
-    touch "$xauth_path"
-fi
-# 显式设置所有权和权限，防止“not writable”错误
-chown sfangyy:sfangyy "$xauth_path"
-chmod 600 "$xauth_path"
-
-# 添加Xauthority条目，防止认证问题
-xauth add :1 . $(mcookie)
-'
-
-# 终止所有可能存在的VNC服务器进程，确保从干净状态启动
-su - sfangyy -c "vncserver -kill :1 || true"
-
-# 启动VNC服务器
-# 移除 -localhost no 选项，让VNC监听所有接口，解决“Unrecognized option: no”
-# TightVNCServer 默认不带 -localhost 选项时会监听所有接口
-su - sfangyy -c "vncserver :1 -geometry 1280x800 -depth 24 -rfbauth $HOME/.vnc/passwd"
-
-# 保持容器在前台运行，以便SSH和VNC服务持续工作
-tail -f /dev/null
-```
-
-llI
-
