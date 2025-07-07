@@ -1,7 +1,7 @@
 ---
-Project: ["UVM"]
+Project: ["LearnTools"]
 cssclasses: ["iotoTDL"]
-aimAndPlan: "[[UVM-A&P]]"
+aimAndPlan: "[[LearnTools-A&P]]"
 tags: 
 parent: Project
 branch: 
@@ -10,9 +10,7 @@ cssclasses: []
 ---
 ## Input (LEARN)
 
-- [ ] [[config_db]]
-- [x] [[config synopsys env]]
-- [ ] [[sequence]]
+- [ ] [[act]]
 
 ## Output (THINK)
 

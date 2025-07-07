@@ -2,8 +2,28 @@
 Project: ["LearnIOTO"]
 ---
 # Resources
+1. add git remote repo
+	- `git remote add upstream https://github.com/EdenQwQ/nixos.git`
+2. list remote repo 
+```
+origin	https://github.com/SFangYy/nixos (fetch)
+origin	https://github.com/SFangYy/nixos (push)
+upstream	https://github.com/EdenQwQ/nixos.git (fetch)
+upstream	https://github.com/EdenQwQ/nixos.git (push)
+```
 
-╭─ …/nixos    kxy_device  »(1)!(2)++(1)?(1) 󰋑                                                                                                                                                   13:07 󰧱 
+3. update repo
+	- `git fetch upstream`
+## nixos 
+1. if conflict with flake.lock,you can delete it first,
+	- `rm -rf flake.lock `
+2. then genteate flake.lock by after git add 
+```
+git add . 
+home-manager switch --flake .
+nix flake update 
+```
+─ …/nixos    kxy_device  »(1)!(2)++(1)?(1) 󰋑                                                                                                                                                   13:07 󰧱 
 ╰─   git remote add upstream https://github.com/EdenQwQ/nixos.git
 
 ╭─ …/nixos    kxy_device  »(1)!(2)++(1)?(1) 󰋑                                                                                                                                                   13:09 󰧱 
@@ -60,8 +80,3 @@ home/programs/browser/zen.nix
 
 ╭─ …/nixos    kxy_device  =++(18)⇡(1)                                                                                                                                                           13:28 󰧱 
 ╰─   git add .
-
-## nixos 
-rm -rf flake.lock 
-
-nix flake update 
