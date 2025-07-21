@@ -1,7 +1,7 @@
 ---
-Project: ["LearnTools"]
+Project: ["BuildPdb"]
 cssclasses: ["iotoTDL"]
-aimAndPlan: "[[LearnTools-A&P]]"
+aimAndPlan: "[[BuildPdb-A&P]]"
 tags: 
 parent: Project
 branch: 
@@ -10,7 +10,7 @@ cssclasses: []
 ---
 ## Input (LEARN)
 
-- [ ] [[act]]
+- [ ] [[compile old version gcc]]
 
 ## Output (THINK)
 

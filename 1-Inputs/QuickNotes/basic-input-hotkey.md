@@ -1,7 +1,7 @@
 ---
 Project: ["LearnIOTO"]
 ---
- # QuickNote s
+ - [ ] # QuickNote s
 
 
 ## create note
