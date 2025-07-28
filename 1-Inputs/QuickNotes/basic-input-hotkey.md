@@ -1,5 +1,15 @@
 ---
-Project: ["LearnIOTO"]
+Project:
+  - LearnTools
+title: 
+description: 
+source: 
+author: 
+tags:
+  - IOTO
+created: 2025-07-28 | 22:44
+parent: Resource
+branch:
 ---
  - [ ] # QuickNote s
 
