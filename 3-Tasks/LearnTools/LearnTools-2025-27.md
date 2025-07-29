@@ -12,7 +12,7 @@ cssclasses: []
 
 - [ ] [[Markdown&PPT]]
 - [x] [[git revert]]
-- [ ] [[nixos-ban-format-file]]
+- [x] [[nixos-ban-format-file]]
 - [x] [[vim hot key]]
 - [x] [[yazi tools]]
 

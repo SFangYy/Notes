@@ -1,0 +1,70 @@
+{
+  "id": "b09ca870-30b2-4faf-bfac-fbd66a32662b",
+  "fields": [
+    {
+      "id": "a8fde7d7-c465-47bc-80b0-80ece16bdfaa",
+      "label": "tags",
+      "type": "select",
+      "multiple": false,
+      "options": [
+        {
+          "id": "5088e202-65b2-42ef-bdc2-4d7db060991e",
+          "label": "娱乐",
+          "value": ""
+        },
+        {
+          "id": "4c4c83de-d9b7-49e4-8b2f-b46b4210e64e",
+          "label": "学习",
+          "value": ""
+        },
+        {
+          "id": "ac5a10ce-9740-4917-af0e-42b53719ecc9",
+          "label": "食物",
+          "value": ""
+        }
+      ],
+      "defaultValue": "食物"
+    },
+    {
+      "id": "abd8267c-b88b-4f95-8d64-3dc1d1a627b1",
+      "label": "type",
+      "type": "select",
+      "options": [
+        {
+          "id": "4fadef7a-68da-4777-985b-13a1a33f82b9",
+          "label": "cost",
+          "value": ""
+        },
+        {
+          "id": "e8b34e7d-6721-48e3-8c0b-0ecb4f1b0e49",
+          "label": "input",
+          "value": ""
+        }
+      ],
+      "defaultValue": "cost"
+    },
+    {
+      "id": "291edfa3-d18e-4e9a-95e4-4861b2dc8e8a",
+      "label": "内容",
+      "type": "text"
+    },
+    {
+      "id": "e0d2b0f4-cb0c-4b8f-a28d-d41ec728aa7e",
+      "label": "金额",
+      "type": "text"
+    }
+  ],
+  "actions": [
+    {
+      "id": "1e6a92eb-8ab8-4fe5-872b-403d27023470",
+      "type": "insertText",
+      "targetFolder": "",
+      "fileName": "",
+      "filePath": "2-Areas/009-daily/{{date: YYYY-MM-DD}}.md",
+      "position": "bottomBelowTitle",
+      "heading": "### 3.1 Today Cost",
+      "content": "- {{time}} {{@金额}} {{@type}} {{@tags}} {{@内容}}"
+    }
+  ],
+  "autoSubmit": false
+}

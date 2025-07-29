@@ -15,7 +15,10 @@ cssclasses: []
 	- 插件: `workspace plus ` 
 		- 用于管理工作区,并设置快捷键切换不同工作区
 		- [[basic-input-hotkey]]
-- [ ] 将日程管理设置为private仓库
+- [x] 将日程管理设置为private仓库
+- [ ] [[记账管理]]
+	- 记录
+	- 汇总
 
 - [ ] [[vim hot key]]
 	- 添加快速注释n行

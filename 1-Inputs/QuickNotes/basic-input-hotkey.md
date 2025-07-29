@@ -11,7 +11,6 @@ created: 2025-07-28 | 22:44
 parent: Resource
 branch:
 ---
- - [ ] # QuickNote s
 
 
 ## create note
