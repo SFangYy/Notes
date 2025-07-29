@@ -2656,7 +2656,7 @@
             "type": "filter",
             "operator": "contains",
             "property": "${file.parent}",
-            "value": "Daily Notes",
+            "value": "2-Areas/009-daily",
             "conditions": []
           }
         ]

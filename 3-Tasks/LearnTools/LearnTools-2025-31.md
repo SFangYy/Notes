@@ -23,6 +23,9 @@ cssclasses: []
 - [ ] [[vim hot key]]
 	- 添加快速注释n行
 
+- [x] [[a7c2设置指南]]
+- [ ] [[创意外观]]
+
 ## Output (THINK)
 
 - [ ] 
