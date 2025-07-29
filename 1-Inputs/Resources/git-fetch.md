@@ -1,10 +1,21 @@
 ---
-Project: ["LearnIOTO"]
+Project:
+  - LearnTools
+title: act
+description: 
+source: 
+author: 
+tags:
+  - git
+created: 2025-07-07 | 10:54
+parent: Resource
+branch:
 ---
 # Resources
 1. add git remote repo
 	- `git remote add upstream https://github.com/EdenQwQ/nixos.git`
 2. list remote repo 
+	- `git remote -v`
 ```
 origin	https://github.com/SFangYy/nixos (fetch)
 origin	https://github.com/SFangYy/nixos (push)
@@ -14,6 +25,11 @@ upstream	https://github.com/EdenQwQ/nixos.git (push)
 
 3. update repo
 	- `git fetch upstream`
+
+4. merge update
+	- `git merge upstream/main`
+
+before merge remote version you should commit your local change first
 ## nixos 
 1. if conflict with flake.lock,you can delete it first,
 	- `rm -rf flake.lock `

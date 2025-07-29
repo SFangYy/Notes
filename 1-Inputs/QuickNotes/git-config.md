@@ -1,5 +1,15 @@
 ---
-Project: ["LearnIOTO"]
+Project:
+  - LearnTools
+title: act
+description: 
+source: 
+author: 
+tags:
+  - git
+created: 2025-07-07 | 10:54
+parent: Resource
+branch:
 ---
 # QuickNotes
 

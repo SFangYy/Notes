@@ -1,13 +1,15 @@
 ---
-Project: ["LearnTools"]
+Project:
+  - LearnTools
 title: 
 description: 
 source: 
 author: 
-tags: 
+tags:
+  - git
 created: 2025-07-02 | 10:49
 parent: Resource
-branch: 
+branch:
 ---
 # Resources
 if you push a error commit to  ,you can revert it first and then commit a new ,and then push it

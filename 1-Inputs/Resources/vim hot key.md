@@ -10,6 +10,10 @@ parent: Resource
 branch: 
 ---
 # Resources
+## some useful hotkey 
+- `:bd`: delete current buffer 
+- `Ctrl + h/l`: move a shiftwidth
+- 
 ```
 { config, pkgs, lib, ... }:
 

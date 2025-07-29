@@ -1,17 +1,38 @@
 ---
-Project: ["BuildPdb"]
+Project:
+  - BuildPdb
 title: 
 description: 
 source: 
 author: 
-tags: 
+tags:
+  - git
 created: 2025-07-07 | 22:16
 parent: Resource
-branch: 
+branch:
 ---
 # Resources
-## add submodules
+## 1. add submodules
 
+git submodule add https://github.com/你的用戶名/你的私有倉庫.git path/to/submodule
+git commit -m "添加私有子倉庫"
+git push
+
+### exit
+### example 
+add exist obsidian config rep to Note
+
+```
+╰─   ls -a .obsidian
+.git .gitignore  xxx
+
+git submodule add git@github.com:SFangYy/obconfig.git .obsidian
+Adding existing repo at '.obsidian' to the index
+
+╰─   cat .gitmodules 
+[submodule ".obsidian"]
+	path = .obsidian
+	url = git@github.com:SFangYy/obconfig.git
 
 ## use submodules
 

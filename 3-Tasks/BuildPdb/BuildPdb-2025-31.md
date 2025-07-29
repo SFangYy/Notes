@@ -9,13 +9,18 @@ Archived:
 cssclasses: []
 ---
 ## Input (LEARN)
-
-- [x] [[act]]
-- [x] [[Makefile]]
-- [x] [[linux awk]]
-- [x] [[git-submodule]]
-- [x] [[git branch]]
-[[C++ symbol]]
+- careate a base pdb to pull request 
+	- no use 
+		- csr 
+		- asm
+		- dasm
+		- wave 
+	- use 
+		- xui
+		- difftest
+		- dut
+		- 
+- [ ] 
 
 ## Output (THINK)
 

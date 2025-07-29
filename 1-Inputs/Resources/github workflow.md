@@ -1,13 +1,15 @@
 ---
-Project: ["BuildPdb"]
+Project:
+  - BuildPdb
 title: 
 description: 
 source: 
 author: 
-tags: 
+tags:
+  - git
 created: 2025-06-30 | 11:15
 parent: Resource
-branch: 
+branch:
 ---
 # Resources
 

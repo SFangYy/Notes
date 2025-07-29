@@ -10,7 +10,7 @@ aimAndPlan: "[[LearnIOTO-A&P]]"
 - Git
 	- [x] [[git-fetch]]
 	- [x] [[git-config]]
-	- [x] [[git-submodules]]
+	- [x] [[git-submodule]]
 - linux
 	- [x]  [[compress]]
 ## Output (THINK)
