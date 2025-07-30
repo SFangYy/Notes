@@ -3,7 +3,7 @@ let prefix = tp.file.folder(true).split("/").last();
 _%>
 
 <%*
-if (prefix.includes("Resources")) { _%>
+if (prefix.includes("00")) { _%>
 <%- tp.file.include("[[My-TP-Input-Resources]]") -%>
 <%* } _%>
 

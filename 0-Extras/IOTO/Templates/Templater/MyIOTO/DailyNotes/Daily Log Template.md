@@ -7,9 +7,10 @@ week: <%moment(tp.file.title).format("gggg-[W]ww") %>
 read: 
 write: 
 log: 
-workout:
+workout: 
+cssclasses:
+  - hideProperties
 ---
-
 ## Links
 - [[2-Areas/009-daily/5.Yearly Log/<%moment(tp.file.title).format("YYYY")%>|Yearly Log]]
 - [[2-Areas/009-daily/<%tp.date.now("YYYY-MM-DD", -1, tp.file.title, "YYYY-MM-DD")%>|<%tp.date.now("MM-DD", -1, tp.file.title, "YYYY-MM-DD")%>]]<--<%moment(tp.file.title).format("MM-DD")%>-->[[2-Areas/009-daily/<%tp.date.now("YYYY-MM-DD", 1, tp.file.title, "YYYY-MM-DD")%>|<%tp.date.now("MM-DD", 1, tp.file.title, "YYYY-MM-DD")%>]]

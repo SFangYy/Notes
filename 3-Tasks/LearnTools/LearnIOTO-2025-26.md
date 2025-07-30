@@ -6,7 +6,7 @@ aimAndPlan: "[[LearnIOTO-A&P]]"
 ## Input (LEARN)
 - IOTO 
 	- [x] [[basic-input-hotkey]]
-	- [ ] [[Sync-and-fetch]]
+	- [x] [[Sync-and-fetch]]
 - Git
 	- [x] [[git-fetch]]
 	- [x] [[git-config]]
