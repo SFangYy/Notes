@@ -1,20 +1,19 @@
 ---
 tags:
   - daily-log
-  - <%moment(tp.file.title).format("YYYY-MM-DD")%>
   - <%moment(tp.file.title).format("gggg-[W]ww")%>
 date: <%moment(tp.file.title).format("YYYY-MM-DD")%>
 week: <%moment(tp.file.title).format("gggg-[W]ww") %>
 read: 
 write: 
 log: 
-workout: 
+workout:
 ---
 
 ## Links
-- [[5.Yearly Log/<%moment(tp.file.title).format("YYYY")%>|Yearly Log]]
-- [[1.Daily Log/<%tp.date.now("YYYY-MM-DD", -1, tp.file.title, "YYYY-MM-DD")%>|<%tp.date.now("MM-DD", -1, tp.file.title, "YYYY-MM-DD")%>]]<--<%moment(tp.file.title).format("MM-DD")%>-->[[1.Daily Log/<%tp.date.now("YYYY-MM-DD", 1, tp.file.title, "YYYY-MM-DD")%>|<%tp.date.now("MM-DD", 1, tp.file.title, "YYYY-MM-DD")%>]]
-- [[5.Yearly Log/<%moment(tp.file.title).format("YYYY")%>|<%moment(tp.file.title).format("YYYY")%>]]/[[3.Monthly Log/<%moment(tp.file.title).format("gggg-MM")%>|<%moment(tp.file.title).format("MM")%>]], [[2.Weekly Log/<%moment(tp.file.title).format("gggg-[W]ww") %>|W<%moment(tp.file.title).format("ww") %>]]
+- [[2-Areas/009-daily/5.Yearly Log/<%moment(tp.file.title).format("YYYY")%>|Yearly Log]]
+- [[2-Areas/009-daily/<%tp.date.now("YYYY-MM-DD", -1, tp.file.title, "YYYY-MM-DD")%>|<%tp.date.now("MM-DD", -1, tp.file.title, "YYYY-MM-DD")%>]]<--<%moment(tp.file.title).format("MM-DD")%>-->[[2-Areas/009-daily/<%tp.date.now("YYYY-MM-DD", 1, tp.file.title, "YYYY-MM-DD")%>|<%tp.date.now("MM-DD", 1, tp.file.title, "YYYY-MM-DD")%>]]
+- [[2-Areas/009-daily/5.Yearly Log/<%moment(tp.file.title).format("YYYY")%>|<%moment(tp.file.title).format("YYYY")%>]]/[[2-Areas/009-daily/3.Monthly Log/<%moment(tp.file.title).format("gggg-MM")%>|<%moment(tp.file.title).format("MM")%>]], [[2-Areas/009-daily/2.Weekly Log/<%moment(tp.file.title).format("gggg-[W]ww") %>|W<%moment(tp.file.title).format("ww") %>]]
 - [[4.Future log/FutureLog|Future Log]]
 
 ## 1. Major Work TODOs
@@ -44,33 +43,29 @@ if (day === lastDayOfMonth) {
 }
 %>
 
-## 3. Notes & ideas
-
-
-## 4. Time Blocks
-### Day Block Planner
-- [ ] 9:00 - 10:00 Morning
-- [ ] 10:00 - 11:00 Deep activity
-- [ ] 11:00 - 12:00 workout
-- [ ] 12:00 - 13:30 Deep activity
-- [ ] 13:30 - 15:00 Deep activity
-- [ ] 15:00 - 16:30 Deep activity
-- [ ] 16:30 - 17:30 Dinner
-- [ ] 17:30 - 18:30 Rest
-- [ ] 18:30 - 19:30 Shallow activity
-- [ ] 19:30 - 21:00 Shallow activity
-- [ ] 21:00 - 22:00 Shallow activity
+## 3. Time Blocks
+### 3.1 Today Cost
+- [ ] today cost is recorded
+### 3.2 Habit Tracker
+- [ ] Manage Work
+- [ ] Exercise
+- [ ] Read
+### 3.3 Day Planner
+- [ ] 9:00 - 10:00 Manage Today Work
+- [ ] 10:00 - 11:30 Deep activity
+- [ ] 11:30 - 13:30 reset
+- [ ] 13:30 - 17:30 Deep activity
+- [ ] 17:30 - 18:30 Dinner
+- [ ] 18:30 - 19:00 Rest
+- [ ] 19:00 - 21:00 Shallow activity
+- [ ] 21:00 - 22:00 go home & exercise
 - [ ] 22:00 - 23:00 Shallow activity
 - [ ] 23:00 - 24:00 Tear down
-
-### Reminders
-- [ ] Plan next day (<%* tR+="@"%><%tp.date.now("YYYY-MM-DD", 0, tp.file.title, "YYYY-MM-DD")%> 19:30)
-- [ ] Review today (<%* tR+="@"%><%tp.date.now("YYYY-MM-DD", 0, tp.file.title, "YYYY-MM-DD")%> 22:30)
+## 4. Notes & ideas
 
 
 **Bullet Formats**
 - Basic bullets
-	- [ ] todo (- [ ])
 	- [/] incomplete (half completed) (- [/])
 	- [x] done (- [x])
 	- [-] canceled (- [-])

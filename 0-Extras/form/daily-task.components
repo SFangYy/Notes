@@ -1,0 +1,224 @@
+{
+  "components": [
+    {
+      "id": "3ced0409-26b3-4226-ae08-4a3ef9192be7",
+      "type": "multi",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2025-07-29T18:18:32.825Z",
+      "updateAt": "2025-07-29T18:18:32.825Z",
+      "components": [
+        {
+          "componentId": "4d1190b4-220f-4adc-9ce4-9c3b82cff763",
+          "layout": {
+            "mobile": {
+              "x": 0,
+              "y": 0,
+              "w": 4,
+              "h": 4
+            },
+            "laptop": {
+              "x": 0,
+              "y": 0,
+              "w": 4,
+              "h": 4
+            }
+          }
+        },
+        {
+          "componentId": "93eb02b9-931b-47e7-90b4-61f7e3ff3810",
+          "layout": {
+            "mobile": {
+              "x": 0,
+              "y": 4,
+              "w": 4,
+              "h": 4
+            },
+            "laptop": {
+              "x": 0,
+              "y": 0,
+              "w": 4,
+              "h": 4
+            }
+          }
+        },
+        {
+          "componentId": "09bd7b21-ae15-4efa-a05b-c95a8cdf59d0",
+          "layout": {
+            "mobile": {
+              "x": 0,
+              "y": 0,
+              "w": 4,
+              "h": 4
+            },
+            "laptop": {
+              "x": 0,
+              "y": 0,
+              "w": 4,
+              "h": 4
+            }
+          }
+        }
+      ],
+      "layoutType": "tab",
+      "locked": false,
+      "layoutOptions": {}
+    },
+    {
+      "id": "4d1190b4-220f-4adc-9ce4-9c3b82cff763",
+      "type": "dataview",
+      "titleAlign": "center",
+      "tabTitle": "IOTO",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2025-07-29T18:19:13.226Z",
+      "updateAt": "2025-07-29T18:19:13.226Z",
+      "query": "let tags = '{{test}}'\n// 1. 将变量的值修改为您要查询的实际标签\nconst file = app.workspace.getActiveFile(); \n\nlet searchTag = '#IOTO';\n\n// 2. 在查询语句的 contains 函数中，为变量加上双引号\nlet query = `\nTASK\nFROM \"2-Areas/009-daily\"\nWHERE contains(tags, \"#${tags}\") AND file.day >= date(2025-07-01) AND file.day <= date(2025-07-30)\nGROUP BY file.link\n`\n// 执行查询\nawait dv.execute(query);",
+      "queryType": "dataviewjs",
+      "maxHeight": 300,
+      "dynamicParamComponents": [
+        {
+          "id": "e243c536-276e-4b36-b3c4-4d0c636fb826",
+          "type": "text",
+          "name": "task_tag",
+          "defaultValue": "",
+          "placeholder": "",
+          "fromProperty": ""
+        },
+        {
+          "id": "9a59823e-bae9-4374-8452-1e83a0f63c4c",
+          "type": "propertyValueSuggestions",
+          "name": "test",
+          "defaultValue": "IOTO",
+          "placeholder": "",
+          "fromProperty": "tags",
+          "options": []
+        }
+      ]
+    },
+    {
+      "id": "93eb02b9-931b-47e7-90b4-61f7e3ff3810",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showShadow": false,
+      "createAt": "2025-07-29T18:24:50.090Z",
+      "updateAt": "2025-07-29T18:24:50.090Z",
+      "viewType": "kanban",
+      "newPageNameFormat": "{{date:YYYYMMDDHHmmss}} ",
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "File Basename",
+          "type": "text",
+          "isShow": true,
+          "wrap": false,
+          "options": {}
+        },
+        {
+          "id": "3b4f3892-a08f-4dae-85f3-75a3e44ebc9e",
+          "name": "tasks",
+          "isShow": true,
+          "type": "taskList",
+          "options": {
+            "showTaskList": true,
+            "showAllTasks": false,
+            "hideTaskFields": false,
+            "timeRecordStyle": "none",
+            "insertPosition": {
+              "position": "BottomOfNote",
+              "headingLine": ""
+            }
+          }
+        }
+      ],
+      "templates": [],
+      "groups": [],
+      "colorfulGroups": false,
+      "viewOptions": {
+        "openPageIn": "tab",
+        "openPageAfterCreate": true,
+        "itemSize": "components--page-card-small",
+        "showPropertyName": false,
+        "showAllProperties": false,
+        "items": [],
+        "cover": {
+          "type": "none",
+          "source": "property",
+          "fit": "contains",
+          "layout": "components--page-card-cover-landscape",
+          "position": "top"
+        },
+        "pinFiltersToMenuBar": false,
+        "showGrid": false,
+        "heightType": "auto",
+        "heightValue": 600
+      },
+      "groupStates": {
+        "sort": "nameAsc",
+        "format": "none",
+        "statics": [],
+        "orders": [],
+        "hiddens": [],
+        "collapseds": []
+      },
+      "filter": {
+        "id": "4b047bff-e7ba-4d8a-96f1-996e51e71056",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "8107f8b2-2dfc-418b-82cf-cd1774077876",
+            "type": "filter",
+            "operator": "contains",
+            "property": "${file.path}",
+            "value": "2-Areas/009-daily",
+            "conditions": []
+          }
+        ]
+      },
+      "groupBy": "date"
+    },
+    {
+      "id": "09bd7b21-ae15-4efa-a05b-c95a8cdf59d0",
+      "type": "dataview",
+      "titleAlign": "center",
+      "tabTitle": "work",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2025-07-29T18:19:13.226Z",
+      "updateAt": "2025-07-29T18:19:13.226Z",
+      "query": "let tags = '{{test}}'\n// 1. 将变量的值修改为您要查询的实际标签\nlet searchTag = '#IOTO';\n\n// 2. 在查询语句的 contains 函数中，为变量加上双引号\nlet query = `\nTASK\nFROM \"2-Areas/009-daily\"\nWHERE contains(tags, \"#${tags}\") AND file.day >= date(2025-07-01) AND file.day <= date(2025-07-30)\nGROUP BY file.link\n`\n// 执行查询\nawait dv.execute(query);",
+      "queryType": "dataviewjs",
+      "maxHeight": 300,
+      "dynamicParamComponents": [
+        {
+          "id": "e243c536-276e-4b36-b3c4-4d0c636fb826",
+          "type": "text",
+          "name": "task_tag",
+          "defaultValue": "",
+          "placeholder": "",
+          "fromProperty": ""
+        },
+        {
+          "id": "9a59823e-bae9-4374-8452-1e83a0f63c4c",
+          "type": "propertyValueSuggestions",
+          "name": "test",
+          "defaultValue": "work",
+          "placeholder": "",
+          "fromProperty": "tags",
+          "options": []
+        }
+      ],
+      "title": "work"
+    }
+  ],
+  "rootComponentId": "3ced0409-26b3-4226-ae08-4a3ef9192be7"
+}
