@@ -1,6 +1,17 @@
 ---
-Project: ["LearnIOTO"]
+Project:
+  - BuildPdb
+title: 
+description: this file tell you how to fetch remote repo update
+source: 
+author: 
+tags:
+  - git
+created: 2025-07-07 | 22:16
+parent: Resource
+branch:
 ---
+
 # QuickNotes
 1. add uptream rep
 2. list rep

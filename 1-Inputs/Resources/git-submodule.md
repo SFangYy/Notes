@@ -2,7 +2,7 @@
 Project:
   - BuildPdb
 title: 
-description: 
+description: this file tell you how set and update a submodule
 source: 
 author: 
 tags:
@@ -18,18 +18,29 @@ git submodule add https://github.com/你的用戶名/你的私有倉庫.git path
 git commit -m "添加私有子倉庫"
 git push
 
-### exit
+### exist repo
+if you want to change a exist folder in a repo to a submodule 
+like`002-Area/009-repo`,you should 
+1. 从暂存区移除路径
+2. 清理工作目录
+3. 重新添加子模块
+```
+git rm -r --cached 2-Areas/009-daily
+rm -rf 2-Areas/009-daily
+git submodule add git@github.com:SFangYy/Daily-Notes.git 2-Areas/009-daily
+```
+
 ### example 
 add exist obsidian config rep to Note
 
 ```
-╰─   ls -a .obsidian
+ls -a .obsidian
 .git .gitignore  xxx
 
 git submodule add git@github.com:SFangYy/obconfig.git .obsidian
 Adding existing repo at '.obsidian' to the index
 
-╰─   cat .gitmodules 
+cat .gitmodules 
 [submodule ".obsidian"]
 	path = .obsidian
 	url = git@github.com:SFangYy/obconfig.git
@@ -44,25 +55,32 @@ Git 子模块的设计理念是让主仓库精确地指向子模块的某个特�
 3. checkout 
 
 ```
-╰─   git checkout pdb
+
+
+## 2. update submodule
+
+更新到追踪分支的最新提交：
+当 gitmodules 文件配置了 branch 选项后，你可以运行：
+
+```Bash
+git submodule update --remote # 这会更新所有追踪远程分支的子模块
+# 或者只更新特定的子模块：
+git submodule update --remote path/to/your/submodule
+
+```
+执行此命令后，Git 会拉取子模块远程分支的最新提交，并更新主仓库中子模块的引用。你同样需要 git add 和 git commit 主仓库的更改。
+
+```bash
+git checkout pdb
 branch 'pdb' set up to track 'origin/pdb'.
 Switched to a new branch 'pdb'
 
-╭─ …/pdb1    pdb   󰋑                                                                                                                                               14:02 󰧱 
-╰─   cp ../release_pdb.yml .github/workflows/
-
-
-╰─   nvim .github/workflows/release_pdb.yml
-
-╰─   git submodule update --init --recursive difftest
+git submodule update --init --recursive difftest
 Submodule 'difftest' (https://github.com/OpenXiangShan/difftest.git) registered for path 'difftest'
 Cloning into '/home/sfangyy/work/pdb1/difftest'...
 Submodule path 'difftest': checked out '2cbbfbc05945e37548b44c293913b638e38e0e40'
 
-╭─ …/pdb1    pdb  ?(1) 󰋑                                                                                                                                           14:03 󰧱 
-╰─   z difftest/
-
-╭─ …/difftest    HEAD                                                                                                                                                    14:04 󰧱 
+z difftest/
 git fetch origin master
 From https://github.com/OpenXiangShan/difftest
  * branch              master     -> FETCH_HEAD
@@ -70,17 +88,16 @@ From https://github.com/OpenXiangShan/difftest
 git reset --hard  cf7e
 HEAD is now at cf7e5105 fix(squash): exclude squashEnable update for FPGA (#634)
 
-╭─ …/difftest    HEAD                                                                                                                                                    14:04 󰧱 
-╰─   z ..
-
-
-╰─   git add .
-
-╭─ …/pdb1    pdb  ++(2) 󰋑                                                                                                                                          14:04 󰧱 
-╰─   git commit -m 'add build xspdb ci'
-[pdb 5aee4a319] add build xspdb ci
+git add .
+git commit -m 'add build xspdb ci'
+pdb 5aee4a319 add build xspdb ci
  2 files changed, 68 insertions(+), 1 deletion(-)
  create mode 100644 .github/workflows/release_pdb.yml
+ 
+```
+
+
+
 ```
 `git submodule update --init difftest `
 
