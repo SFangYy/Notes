@@ -21,6 +21,10 @@ cssclasses: []
 		- dut
 		- 
 - [ ] [[makefile-template]]
+- [ ] [[动态链接和静态链接]]
+- [ ] [[修改pdb项目结构]]
+- [ ] [[常见python项目组织形式]]
+- [ ] [[vim快速删除行首元素]]
 
 ## Output (THINK)
 

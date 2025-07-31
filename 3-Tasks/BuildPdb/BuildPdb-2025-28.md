@@ -11,7 +11,7 @@ cssclasses: []
 ## Input (LEARN)
 
 - [x] [[act]]
-- [x] [[Makefile]]
+- [x] [[Makefile-转译]]
 - [x] [[linux awk]]
 - [x] [[git-submodule]]
 - [x] [[git branch]]
