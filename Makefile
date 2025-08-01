@@ -15,11 +15,11 @@ config:
 	@echo "\n==> 2. 正在提交并推送主仓库..."
 	cd .obsidian 
 	# 添加所有改动（包括更新后的子模块引用）
-	@git add .
+	@cd .obsidian && git add .
 	# 提交config仓库
-	@git commit -m "$(m)"
+	@@cd .obsidian && git commit -m "$(m)"
 	# 推送config仓库
-	@git push
+	@@cd .obsidian && git push
 	@echo "\n==> config操作完成！"
 
 # 'push' 是我们的主要任务
