@@ -39,6 +39,74 @@ git add .
 home-manager switch --flake .
 nix flake update 
 ```
+
+## updare diffteest
+```
+git remote add upstream https://github.com/OpenXiangShan/difftest.git
+
+git remote -v
+
+git fetch upstream
+
+git merge upstream/master
+
+# handle corrept
+
+git commit
+
+
+```
+
+git merge upstream/master 时有报错说文件有冲突，要怎么处理呢
+
+当执行 `git merge upstream/master` 遇到文件冲突时，可以按照以下步骤解决：
+
+### 1. 首先查看冲突状态
+
+bash
+
+git status
+
+这会显示哪些文件有冲突（标记为"both modified"）
+
+### 2. 打开冲突文件手动解决
+
+冲突部分会被标记为：
+
+text
+
+<<<<<<< HEAD
+你的本地修改内容
+=======
+上游的修改内容
+>>>>>>> upstream/master
+
+手动编辑文件：
+
+1. 删除 `<<<<<<<`，`=======` 和 `>>>>>>>` 这些标记行
+    
+2. 保留你想要的内容（或合并两者）
+    
+3. 保存文件
+    
+
+### 3. 标记冲突已解决
+
+对每个解决完冲突的文件执行：
+
+```bash
+
+git add <文件名>
+```
+
+### 4. 完成合并
+
+
+```bash
+
+git commit
+```
+
 ─ …/nixos    kxy_device  »(1)!(2)++(1)?(1) 󰋑                                                                                                                                                   13:07 󰧱 
 ╰─   git remote add upstream https://github.com/EdenQwQ/nixos.git
 
