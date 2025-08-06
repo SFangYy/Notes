@@ -1,5 +1,5 @@
 <%*
-const ml = new (tp.user.IOTOMultiLangs())();
+const ml = new (tp.user.IOTOMultiLangs(tp))(tp);
 const {IOTOFrameworkPath, useUserTemplate} = app.plugins.plugins["ioto-settings"].settings;
 const defaultPath = `${IOTOFrameworkPath}/Templates/Templater/OBIOTO/IOTO${ml.t("IOTOAuxiliaries")}`;
 const customPath = `${IOTOFrameworkPath}/Templates/Templater/MyIOTO/${ml.t("IOTOAuxiliaries")}`;

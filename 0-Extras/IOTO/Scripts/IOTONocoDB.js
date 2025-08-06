@@ -4,7 +4,7 @@
  */
 function IOTONocoDB(tp) {
   const IOTOUtility = tp.user.IOTOUtility(tp, app);
-  const ml = new (tp.user.IOTOMultiLangs())();
+  const ml = new (tp.user.IOTOMultiLangs(tp))();
   return class MyNocoDB extends IOTOUtility {
     /**
      * Creates an instance of MyNocoDB
@@ -268,51 +268,46 @@ function IOTONocoDB(tp) {
       };
     }
 
-    /**
-     * Gets the sync setting value by priority
-     * Priority order: note frontmatter > folder sync table setting > default setting > fallback value
-     * @param {string} settingPropertyName - Setting property name
-     * @param {Object} note - Note object, contains frontmatter property
-     * @param {string} folder - Folder path
-     * @param {*} fallbackValue - Fallback value if all other settings are not found
-     * @returns {*} The found setting value, or the fallback value if none found
-     */
-    getSyncSettingByLevel(settingPropertyName, note, folder, fallbackValue) {
-      // Get the note's setting
-      const noteSetting = note?.frontmatter?.[settingPropertyName];
-      const fallbackValueIsArray = Array.isArray(fallbackValue);
+    getNoteSyncSetting(settingPropertyName, note) {
+      return note?.frontmatter?.[settingPropertyName];
+    }
 
-      // Check the note's setting
-      if (
-        noteSetting !== undefined &&
-        (typeof fallbackValue === "boolean" ||
-          (fallbackValueIsArray && noteSetting !== null))
-      ) {
+    getTableSyncSetting(settingPropertyName, folder) {
+      const table = this.findSyncTable(folder);
+      return table?.[settingPropertyName];
+    }
+
+    getGlobalSyncSetting(settingPropertyName) {
+      return this.syncSettings[settingPropertyName];
+    }
+
+    getSyncSettingByLevel(settingPropertyName, note, folder, fallbackValue) {
+      const noteSetting = this.getNoteSyncSetting(settingPropertyName, note);
+      const tableSetting = this.getTableSyncSetting(
+        settingPropertyName,
+        folder
+      );
+      const globalSetting = this.getGlobalSyncSetting(settingPropertyName);
+
+      const fallbackValueIsArray = Array.isArray(fallbackValue);
+      const checkSetting = (setting) => {
+        return (
+          setting !== undefined &&
+          (typeof fallbackValue === "boolean" ||
+            (fallbackValueIsArray && setting !== null))
+        );
+      };
+
+      if (checkSetting(noteSetting)) {
         return noteSetting;
       }
-
-      // Get and check the table's setting
-      const table = this.findSyncTable(folder);
-      const tableSetting = table?.[settingPropertyName];
-      if (
-        tableSetting !== undefined &&
-        (typeof fallbackValue === "boolean" ||
-          (fallbackValueIsArray && tableSetting !== null))
-      ) {
+      if (checkSetting(tableSetting)) {
         return tableSetting;
       }
-
-      // Get and check the global setting
-      const globalSetting = this.syncSettings[settingPropertyName];
-      if (
-        globalSetting !== undefined &&
-        (typeof fallbackValue === "boolean" ||
-          (fallbackValueIsArray && globalSetting !== null))
-      ) {
+      if (checkSetting(globalSetting)) {
         return globalSetting;
       }
 
-      // Return the setting value in the order of priority, until the default value
       return noteSetting || tableSetting || globalSetting || fallbackValue;
     }
 
@@ -325,6 +320,41 @@ function IOTONocoDB(tp) {
       );
 
       return (responseValue = String(responseValue) === "true");
+    }
+
+    combineArraySyncSettings(settingPropertyName, note, folder) {
+      let noteSetting = this.getNoteSyncSetting(settingPropertyName, note);
+      let tableSetting = this.getTableSyncSetting(settingPropertyName, folder);
+      let globalSetting = this.getGlobalSyncSetting(settingPropertyName);
+
+      if (noteSetting === undefined) {
+        noteSetting = [];
+      }
+      if (tableSetting === undefined) {
+        tableSetting = [];
+      }
+      if (globalSetting === undefined) {
+        globalSetting = [];
+      }
+
+      if (!Array.isArray(noteSetting)) {
+        throw new Error(
+          `Setting '${settingPropertyName}' in note frontmatter must be an array.`
+        );
+      }
+      if (!Array.isArray(tableSetting)) {
+        throw new Error(
+          `Setting '${settingPropertyName}' in table config must be an array.`
+        );
+      }
+      if (!Array.isArray(globalSetting)) {
+        throw new Error(
+          `Setting '${settingPropertyName}' in global sync settings must be an array.`
+        );
+      }
+
+      const combined = [...globalSetting, ...tableSetting, ...noteSetting];
+      return [...new Set(combined)];
     }
   };
 }

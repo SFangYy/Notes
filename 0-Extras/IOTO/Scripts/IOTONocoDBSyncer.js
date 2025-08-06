@@ -1,7 +1,7 @@
 function IOTONocoDBSyncer(tp) {
   const IOTOUtility = tp.user.IOTOUtility(tp, app);
   const OBNote = tp.user.IOTOObNoteMaker();
-  const ml = new (tp.user.IOTOMultiLangs())();
+  const ml = new (tp.user.IOTOMultiLangs(tp))();
 
   return class NocoDBSyncer extends IOTOUtility {
     /**
@@ -323,6 +323,7 @@ function IOTONocoDBSyncer(tp) {
             record.fields[this.recordFieldsNames.path] +
             "/" +
             record.fields[this.recordFieldsNames.title];
+
           const syncMode = this.getSyncModeByLevel(
             null,
             record.fields[this.recordFieldsNames.path]
@@ -499,7 +500,7 @@ function IOTONocoDBSyncer(tp) {
 
         await this.setSyncEnviromentForFolder(path);
 
-        if (!this.updateNotesInOB) {
+        if (this.updateNotesInOB) {
           await this.listRecordsInNocoDB(path, false);
         }
 
@@ -536,7 +537,7 @@ function IOTONocoDBSyncer(tp) {
       const syncMode = this.getSyncModeByLevel(note, note.folder);
       // Check sync settings
       if (syncMode === "title") {
-        if (!this.updateNotesInOB) {
+        if (this.updateNotesInOB) {
           await this.listRecordsInNocoDB(note.folder, false);
         }
 
@@ -563,7 +564,7 @@ function IOTONocoDBSyncer(tp) {
       const foundRecord = await this.checkRecordInNocoDB(
         note.frontmatter[this.recordIdPropertyName]
       );
-      console.dir(foundRecord);
+
       await (foundRecord
         ? this.updateDbRecordForNote(note)
         : this.createDbRecordForNote(note));
@@ -572,12 +573,27 @@ function IOTONocoDBSyncer(tp) {
     async createDbRecordForNote(note) {
       const syncContent = this.getSyncContentByLevel(note, note.folder);
 
+      const useComputedTitleInDb = this.getUseComputedTitleInDbByLevel(
+        note,
+        note.folder
+      );
+
       await note.prepareNoteSyncData(
         false,
         syncContent,
         this.isSyncFullContent(),
         this.nocodb.contentMaxLength
       );
+
+      if (useComputedTitleInDb) {
+        if (
+          note.syncData &&
+          note.syncData.fields &&
+          note.syncData.fields[this.recordFieldsNames.title]
+        ) {
+          delete note.syncData.fields[this.recordFieldsNames.title];
+        }
+      }
 
       await this.prepareNoteCustomSyncFields(note);
 
@@ -601,12 +617,26 @@ function IOTONocoDBSyncer(tp) {
     async updateDbRecordForNote(note) {
       let update = true;
       const syncContent = this.getSyncContentByLevel(note, note.folder);
+
+      const useComputedTitleInDb = this.getUseComputedTitleInDbByLevel(
+        note,
+        note.folder
+      );
       await note.prepareNoteSyncData(
         update,
         syncContent,
         this.isSyncFullContent(),
         this.nocodb.contentMaxLength
       );
+      if (useComputedTitleInDb) {
+        if (
+          note.syncData &&
+          note.syncData.fields &&
+          note.syncData.fields[this.recordFieldsNames.title]
+        ) {
+          delete note.syncData.fields[this.recordFieldsNames.title];
+        }
+      }
 
       await this.prepareNoteCustomSyncFields(note);
 
@@ -628,7 +658,7 @@ function IOTONocoDBSyncer(tp) {
       this.showNotice(ml.t("SyncingNoteInFolder", { folderName: folder }));
       // Set sync environment
       await this.setSyncEnviromentForFolder(folder);
-      if (!this.updateNotesInOB) {
+      if (this.updateNotesInOB) {
         await this.listRecordsInNocoDB(folder, includesSubfolder);
       }
       await this.processFilesAndSync(files);
@@ -663,12 +693,25 @@ function IOTONocoDBSyncer(tp) {
         }
 
         const syncContent = this.getSyncContentByLevel(note, note.folder);
+        const useComputedTitleInDb = this.getUseComputedTitleInDbByLevel(
+          note,
+          note.folder
+        );
         await note.prepareNoteSyncData(
           shouldUpdate,
           syncContent,
           this.isSyncFullContent(),
           this.nocodb.contentMaxLength
         );
+        if (useComputedTitleInDb) {
+          if (
+            note.syncData &&
+            note.syncData.fields &&
+            note.syncData.fields[this.recordFieldsNames.title]
+          ) {
+            delete note.syncData.fields[this.recordFieldsNames.title];
+          }
+        }
 
         await this.prepareNoteCustomSyncFields(note);
 
@@ -749,12 +792,22 @@ function IOTONocoDBSyncer(tp) {
         []
       );
 
-      const fmFetchFields = this.getSyncSettingByLevel(
-        this.iotoConfig.syncSettingProperties.fmFetchFields,
+      const fmFetchFieldsOverrideMode = this.getBooleanSyncSettingByLevel(
+        this.iotoConfig.syncSettingProperties.fmFetchFieldsOverrideMode,
         note,
         note.folder,
-        []
+        false
       );
+
+      const fmFetchFieldsKey =
+        this.iotoConfig.syncSettingProperties.fmFetchFields;
+      const fmFetchFields = fmFetchFieldsOverrideMode
+        ? this.nocodb.combineArraySyncSettings(
+            fmFetchFieldsKey,
+            note,
+            note.folder
+          )
+        : this.getSyncSettingByLevel(fmFetchFieldsKey, note, note.folder, []);
 
       const isSeparateMode = this.getSeparateModeByLevel(note.folder);
 
@@ -1090,6 +1143,15 @@ function IOTONocoDBSyncer(tp) {
         note,
         folder,
         "id"
+      );
+    }
+
+    getUseComputedTitleInDbByLevel(note, folder) {
+      return this.getSyncSettingByLevel(
+        this.iotoConfig.syncSettingProperties.useComputedTitleInDb,
+        note,
+        folder,
+        false
       );
     }
 

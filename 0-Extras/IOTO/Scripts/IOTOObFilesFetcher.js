@@ -1,6 +1,6 @@
 function IOTOObFilesFetcher(tp) {
   const IOTOUtility = tp.user.IOTOUtility(tp, app);
-  const ml = new (tp.user.IOTOMultiLangs())();
+  const ml = new (tp.user.IOTOMultiLangs(tp))();
   return class ObFilesFetcher extends IOTOUtility {
     constructor(tp, app) {
       super(tp, app);
@@ -183,7 +183,7 @@ function IOTOObFilesFetcher(tp) {
       for (const file of files) {
         const cache = this.app.metadataCache.getFileCache(file);
         if (cache?.tags) {
-          cache.tags.forEach((tagObj) => tags.add(tagObj.tag.slice(1))); // 去掉 # 符号
+          cache.tags.forEach((tagObj) => tags.add(tagObj.tag.slice(1)));
         }
 
         if (cache?.frontmatter?.tags) {

@@ -1,31 +1,43 @@
-function IOTOMultiLangs() {
+function IOTOMultiLangs(tp) {
   return class IOTOMultiLangs {
     static instance = null;
 
     static getInstance() {
       if (!IOTOMultiLangs.instance) {
-        IOTOMultiLangs.instance = new IOTOMultiLangs();
+        IOTOMultiLangs.instance = new IOTOMultiLangs(tp);
       }
       return IOTOMultiLangs.instance;
     }
 
-    constructor() {
+    constructor(tp) {
       if (IOTOMultiLangs.instance) {
         return IOTOMultiLangs.instance;
       }
+      this.iotoRunningLanguage = this.getIOTORunningLanguage(tp);
       this._dict = {
         en: this.enDict(),
         "zh-cn": this.zhcnDict(),
         "zh-tw": this.zhtwDict(),
       };
-      this._local = moment.locale();
+      this._local =
+        this.iotoRunningLanguage === "ob"
+          ? moment.locale()
+          : this.iotoRunningLanguage;
       IOTOMultiLangs.instance = this;
+    }
+
+    getIOTORunningLanguage(tp) {
+      // 优化：增加健壮性，防止插件未安装或设置不存在时报错
+      return (
+        tp?.app?.plugins?.plugins?.["ioto-update"]?.settings
+          ?.iotoRunningLanguage || "ob"
+      );
     }
 
     enDict() {
       return {
         IOTO: "IOTO",
-        DefaultTDLTemplate: "TP-任务-创建任务列表",
+        DefaultTDLTemplate: "My-TP-Task-CreateTaskTDL",
         Hello: "Hello %friend%",
         "1. Search and Replace in Active File":
           "1. Search and Replace in Active File",

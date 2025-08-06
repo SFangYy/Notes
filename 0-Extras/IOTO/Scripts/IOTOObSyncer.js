@@ -6,7 +6,7 @@
 function IOTOObSyncer(tp) {
   const ObFilesFetcher = tp.user.IOTOObFilesFetcher(tp);
 
-  const ml = new (tp.user.IOTOMultiLangs())();
+  const ml = new (tp.user.IOTOMultiLangs(tp))();
 
   return class MyObSyncer {
     /**
@@ -39,7 +39,6 @@ function IOTOObSyncer(tp) {
      * @returns {Promise<string|null>} Returns the selected view ID or null
      */
     async syncWithNocoDB(fetchOnly = false) {
-      // 根据 fetchOnly 参数决定同步方式
       return fetchOnly
         ? await this.onlyFetchFromNocoDB()
         : await this.twoWaySyncWithNocoDB();
@@ -57,7 +56,6 @@ function IOTOObSyncer(tp) {
           throw new Error(mt.t("NoAvailableTables"));
         }
 
-        // 构建选项数组
         const actionChoices = tables.map((t, index) => ({
           label: `${index + 1}. ${ml.t("GetFilesFromSourceToOB", {
             sourceName: t.sourceName,
@@ -65,7 +63,6 @@ function IOTOObSyncer(tp) {
           value: t.viewID,
         }));
 
-        // 显示选择器并获取用户选择
         const choice = await this.tp.system.suggester(
           actionChoices.map((c) => c.label),
           actionChoices.map((c) => c.value)
@@ -75,7 +72,6 @@ function IOTOObSyncer(tp) {
           return null;
         }
 
-        // 执行同步操作
         await this.nocoDBSyncer.createOrUpdateNotesInOBFromSourceTable(choice);
 
         return choice;
@@ -95,7 +91,6 @@ function IOTOObSyncer(tp) {
      * @returns {Promise<void>}
      */
     async twoWaySyncWithNocoDB() {
-      // 定义基础同步选项
       const syncOptions = {
         choices: [
           {
@@ -176,7 +171,6 @@ function IOTOObSyncer(tp) {
         ],
       };
 
-      // 定义数据库更新选项
       const updateOptions = {
         choices: [
           {
@@ -251,7 +245,6 @@ function IOTOObSyncer(tp) {
           false
         );
 
-      // 合并所有选项
       const allChoices = justUpdateFromDB
         ? [...updateOptions.choices]
         : [...syncOptions.choices, ...updateOptions.choices];
@@ -262,7 +255,7 @@ function IOTOObSyncer(tp) {
         this.folder,
         []
       );
-      // 将选项ID字符串转换为整数
+
       const choicesFilterArrayInt = choicesFilterArray.map((id) =>
         parseInt(id)
       );
@@ -272,7 +265,6 @@ function IOTOObSyncer(tp) {
           ? allChoices.filter((c) => choicesFilterArrayInt.includes(c.id))
           : allChoices;
 
-      // 显示选择器并执行选择的操作
       const choice = await this.tp.system.suggester(
         chosedChoices.map((c, index) => `${index + 1}. ${c.label}`),
         chosedChoices.map((c) => c.id)
@@ -280,7 +272,6 @@ function IOTOObSyncer(tp) {
 
       if (!choice) return;
 
-      // 查找并执行对应操作
       const selectedAction = allChoices.find((c) => c.id === choice)?.action;
       if (selectedAction) {
         await selectedAction();
@@ -306,7 +297,6 @@ function IOTOObSyncer(tp) {
      */
     async syncActiveFileToDB() {
       try {
-        // 同步文件到数据库
         await this.nocoDBSyncer.syncFileToDB(this.activeFile);
       } catch (error) {
         console.error(ml.t("SyncFileError"), error);
@@ -457,15 +447,13 @@ function IOTOObSyncer(tp) {
     }
 
     async syncSearchResultsToDB() {
-      // 获取搜索关键词
       const searchQuery = await this.obFilesFetcher.getSearchQueryFromUser();
 
-      // 如果没有搜索关键词则直接返回
       if (!searchQuery) {
         this.nocoDBSyncer.showNotice(ml.t("InputSearchQuery"));
         return;
       }
-      // 执行搜索
+
       let files = await this.obFilesFetcher.searchFilesInVault(searchQuery);
 
       if (!files?.length) {
@@ -473,10 +461,8 @@ function IOTOObSyncer(tp) {
         return;
       }
 
-      // 过滤出IOTO相关的文件
       files = this.obFilesFetcher.filterOutIOTOFiles(files);
 
-      // 同步搜索结果到数据库
       await this.nocoDBSyncer.syncFilesToDB(files);
     }
 
@@ -499,14 +485,9 @@ function IOTOObSyncer(tp) {
       }
     }
 
-    /**
-     * 从数据库更新当前活动文件的内容
-     * 根据同步模式(title/id)获取数据库中对应记录
-     * 并用数据库中的内容更新本地文件
-     */
     async updateDBToActiveFile() {
       const notice = this.showNotice(ml.t("PreparingToGetData"));
-      // 设置当前文件夹的API URL
+
       await this.nocoDBSyncer.nocodb.setApiUrlForFolder(
         this.folder,
         "download"
@@ -520,21 +501,18 @@ function IOTOObSyncer(tp) {
         "download"
       );
 
-      // 使用标题去获取记录ID
       if (!Boolean(activeNoteSyncID)) {
-        // 获取数据库中所有记录
         await this.nocoDBSyncer.listRecordsInNocoDB(this.folder, false);
-        // 根据标题查找对应记录的索引
+
         const titleIndex = this.nocoDBSyncer.recordsInDBByTitle.indexOf(
           this.activeNote.title
         );
 
-        // 如果找到对应记录,获取记录ID
         if (titleIndex !== -1) {
           activeNoteSyncID = this.nocoDBSyncer.recordsInDB[titleIndex];
         }
       }
-      // 如果找到记录ID,获取记录详情
+
       if (activeNoteSyncID) {
         const record = await this.nocoDBSyncer.retriveRecordInNocoDB(
           activeNoteSyncID
@@ -543,7 +521,6 @@ function IOTOObSyncer(tp) {
           records.push(record);
         }
 
-        // 用获取到的记录更新本地文件
         await this.nocoDBSyncer.updateNotesFromRecords(records, false, true);
       } else {
         this.nocoDBSyncer.showNotice(ml.t("NoMatchingNote"));
@@ -557,7 +534,7 @@ function IOTOObSyncer(tp) {
       let records = await this.nocoDBSyncer.getRecordsForLinksInFile(
         this.activeFile
       );
-      // 如果没有找到记录则提示并返回
+
       if (!records?.length) {
         notice.hide();
         return;

@@ -1,6 +1,6 @@
 function IOTOFeishuSyncer(tp) {
   let NocoDBSyncer = tp.user.IOTONocoDBSyncer(tp);
-  const ml = new (tp.user.IOTOMultiLangs())();
+  const ml = new (tp.user.IOTOMultiLangs(tp))();
   return class FeishuSyncer extends NocoDBSyncer {
     constructor(nocodb, tp, app, updateNotesInOB = true) {
       super(nocodb, tp, app, updateNotesInOB);
@@ -39,7 +39,6 @@ function IOTOFeishuSyncer(tp) {
         return response.status === 200 && response.json.code === 0;
       } catch (error) {
         console.error(error);
-        //new this.tp.obsidian.Notice(`当前笔记在数据库中不存在`, 2000);
         return false;
       }
     }

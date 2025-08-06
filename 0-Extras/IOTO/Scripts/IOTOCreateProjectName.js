@@ -1,24 +1,34 @@
 async function IOTOCreateProjectName(targetPath, projectNameFormat) {
-    const {projectNameSource, outcomeFolder} = app.plugins.plugins["ioto-settings"].settings;
-    const isFirstLevel = "first" == projectNameSource;
-    const projectFolderName = isFirstLevel || targetPath.startsWith(outcomeFolder) ? targetPath.split("/").slice(1).first() : targetPath.split("/").last();
-    let projectName;
-    switch (projectNameFormat) {
-        case "firstDash":
-            projectName = projectFolderName.includes("-") ? 
-                projectFolderName.split("-").slice(1).join("-") : 
-                projectFolderName;
-            break;
+  const { projectNameSource, outcomeFolder } =
+    app.plugins.plugins["ioto-settings"].settings;
+  const isFirstLevel = projectNameSource === "first";
 
-        case "lastDash":
-            projectName = projectFolderName.split("-").last();
-            break;
+  const pathParts = targetPath.split("/").filter(Boolean);
+  let projectFolderName;
 
-        default:
-            projectName = projectFolderName;
-            break;
-    }
-    return projectName;
+  if (isFirstLevel || targetPath.startsWith(outcomeFolder)) {
+    projectFolderName = pathParts[1] || "";
+  } else {
+    projectFolderName = pathParts[pathParts.length - 1] || "";
+  }
+
+  let projectName = projectFolderName;
+
+  if (projectNameFormat === "firstDash") {
+    const dashIndex = projectFolderName.indexOf("-");
+    projectName =
+      dashIndex !== -1
+        ? projectFolderName.slice(dashIndex + 1)
+        : projectFolderName;
+  } else if (projectNameFormat === "lastDash") {
+    const lastDashIndex = projectFolderName.lastIndexOf("-");
+    projectName =
+      lastDashIndex !== -1
+        ? projectFolderName.slice(lastDashIndex + 1)
+        : projectFolderName;
+  }
+
+  return projectName;
 }
 
 module.exports = IOTOCreateProjectName;

@@ -1,12 +1,11 @@
 <%*
 const {outcomeFolder, taskFolder, LTDListOutcomeSectionHeading, useUserTemplate, addLinkToCurrentTDL, defaultTDLDateFormat, outcomeSelectorExcludesPaths, outcomeSelectorShowOptionOrder, outcomeSelectorShowBasePath, outcomeSelectorFolderOptionTemplate, outcomeSelectorIncludeParentFolder, outcomeProjectDefaultSubFolders, newOutcomeNoteFollowUpAction, outcomeNoteNamePrefix, outcomeNoteNamePostfix, outcomeNoteDefaultExcalidrawTemplate, defaultTDLHeadingLevel, newOutcomeNoteAddedToTDLFollowUpAction} = app.plugins.plugins["ioto-settings"].settings;
 
-const ml = new (tp.user.IOTOMultiLangs())();
-
+const ml = new (tp.user.IOTOMultiLangs(tp))(tp);
 
 const outcomesFolderSettings = {
 
-	isOutcomeSelector: true,
+    isOutcomeSelector: true,
 
     folderPath: outcomeFolder,
 
@@ -23,28 +22,27 @@ const outcomesFolderSettings = {
 const noteTemplate = await tp.user.IOTOLoadTemplate(tp, tR, this.app, ml.t("IOTODefaultOutcomeNoteTemplate"), false);
 
 const outcomesNoteSettings ={
-	template: noteTemplate,
-    defaultNewNoteFollowUpAction: parseInt(newOutcomeNoteFollowUpAction),
-    noteNamePrefix: outcomeNoteNamePrefix,
-    assignedNoteName: tp.file.selection() ? tp.file.selection() : "",
-    noteNamePostfix: outcomeNoteNamePostfix,
-    defaultExcalidrawTemplate: outcomeNoteDefaultExcalidrawTemplate,
+template: noteTemplate,
+defaultNewNoteFollowUpAction: parseInt(newOutcomeNoteFollowUpAction),
+noteNamePrefix: outcomeNoteNamePrefix,
+assignedNoteName: tp.file.selection() ? tp.file.selection() : "",
+noteNamePostfix: outcomeNoteNamePostfix,
+defaultExcalidrawTemplate: outcomeNoteDefaultExcalidrawTemplate,
 
 }
 
 const newNoteLink = await tp.user.IOTOCreateOrOpenNote(tp, tR, await tp.user.IOTOGetFolderOption(tp, outcomesFolderSettings), outcomesNoteSettings);
 
-
 if(addLinkToCurrentTDL) {
-		const addLinkToTDLSettings = {
-		taskFolder: taskFolder,
-		targetHeading: LTDListOutcomeSectionHeading,
-		headingLevel: defaultTDLHeadingLevel,
-		tdlDateFormat: defaultTDLDateFormat,
-		followUpAction: parseInt(newOutcomeNoteAddedToTDLFollowUpAction)
-	}
-		tR += await tp.user.IOTOAddLinkToTDL(tp, newNoteLink, addLinkToTDLSettings);
-	} else {
-		tR += newNoteLink;
+const addLinkToTDLSettings = {
+taskFolder: taskFolder,
+targetHeading: LTDListOutcomeSectionHeading,
+headingLevel: defaultTDLHeadingLevel,
+tdlDateFormat: defaultTDLDateFormat,
+followUpAction: parseInt(newOutcomeNoteAddedToTDLFollowUpAction)
+}
+tR += await tp.user.IOTOAddLinkToTDL(tp, newNoteLink, addLinkToTDLSettings);
+} else {
+tR += newNoteLink;
 }
 _%>

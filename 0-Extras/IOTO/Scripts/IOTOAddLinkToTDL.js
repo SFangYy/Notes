@@ -1,24 +1,21 @@
 async function IOTOAddLinkToTDL(tp, tR, settings) {
   if (!tR) return tR;
-  const ml = new (tp.user.IOTOMultiLangs())();
+  const ml = new (tp.user.IOTOMultiLangs(tp))(tp);
   let { taskFolder, targetHeading, tdlDateFormat, followUpAction } = settings;
   const {
     taskSelectorShowOptionOrder,
     taskSelectorShowBasePath,
-    taskSelectorExcludesPaths,
     taskSelectorFolderOptionTemplate,
-    projectNameFormat,
   } = tp.app.plugins.plugins["ioto-settings"].settings;
 
   const activeFile = tp.config.active_file;
-  const activeNote = tp.user.IOTONoteMaker(tp, activeFile);
   const activeCache = tp.app.metadataCache.getFileCache(activeFile);
   const activeFileFM = activeCache?.frontmatter;
   const doNotAddToTDL = activeFileFM?.doNotAddToTDL;
 
   if (doNotAddToTDL) return tR;
 
-  let project = activeFileFM?.Project;
+  const project = activeFileFM?.Project;
 
   const activeFileName = activeFile.basename;
 
@@ -33,47 +30,8 @@ async function IOTOAddLinkToTDL(tp, tR, settings) {
 
   let projectPath = "";
   let currentTDL = "";
-  let message = "";
   let tdlFile = null;
   let isEmptyTaskList = false;
-
-  const missingProject = !project || !project.length;
-
-  if (missingProject) {
-    message = ml.t(
-      "You have not specified a project for this note. Please select a project for this note."
-    );
-    new tp.obsidian.Notice(message, 6000);
-    projectPath = await tp.user.IOTOGetFolderOption(tp, {
-      folderPath: taskFolder,
-      excludesPaths: taskSelectorExcludesPaths
-        ? taskSelectorExcludesPaths.trim().split("\n")
-        : [],
-      showBasePathInOption: taskSelectorShowBasePath,
-      optionContentTemplate: "{{folder}}",
-      showOptionOrder: taskSelectorShowOptionOrder,
-    });
-
-    if (projectPath) {
-      project = await tp.user.IOTOCreateProjectName(
-        projectPath,
-        projectNameFormat
-      );
-      let tempFMDict = Object.assign(activeNote.fmDict, {
-        Project: [project],
-        cssclasses: ["iotoTDL"],
-      });
-      await activeNote.prepareNoteFm(tempFMDict);
-      await activeNote.prepareNoteContent();
-      await tp.app.vault.modify(
-        activeNote.file,
-        activeNote.fm + "\n" + activeNote.content
-      );
-      await new Promise((r) => setTimeout(r, 100)); //wait for metadata to update, steal from obsidian excalidraw
-    } else {
-      return tR;
-    }
-  }
 
   currentTDL = project + "-" + tp.date.now(tdlDateFormat);
 

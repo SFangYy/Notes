@@ -25,9 +25,9 @@ function IOTOObNoteMaker() {
       this.tags = this.cache ? tp.obsidian.getAllTags(this.cache) || [] : [];
       this.tags = this.tags.map((tag) => tag.replace("#", ""));
       this.tags = Array.from(new Set(this.tags));
-
-      let basicURL = `obsidian://open?vault=${this.vault}&file=${file.path}`;
-      this.obsidianURI = encodeURI(basicURL);
+      this.obsidianURI = `obsidian://open?vault=${encodeURIComponent(
+        this.vault
+      )}&file=${encodeURIComponent(file.path)}`;
       let YAMLCooker = tp.user.IOTOYAMLCooker();
       this.yamlCooker = new YAMLCooker(tp);
       this.outlinks = this.getOutlinks();
@@ -67,7 +67,6 @@ function IOTOObNoteMaker() {
     ) {
       await this.prepareNoteContent();
 
-      // 构建基础字段数据
       const baseFields = {
         [this.recordFieldsNames.title]: this.title,
         [this.recordFieldsNames.path]: this.folder,
@@ -83,7 +82,6 @@ function IOTOObNoteMaker() {
           : this.updateTime,
       };
 
-      // 根据同步设置和内容长度处理内容字段
       if (syncContent) {
         if (this.content.length >= maxContentLength) {
           baseFields[this.recordFieldsNames.content] = this.content.slice(
@@ -97,7 +95,6 @@ function IOTOObNoteMaker() {
         }
       }
 
-      // 根据同步设置和内容长度处理内容字段
       if (syncFullContent) {
         if (this.fullContent.length >= maxContentLength) {
           baseFields[this.recordFieldsNames.fullContent] =
@@ -109,10 +106,8 @@ function IOTOObNoteMaker() {
         }
       }
 
-      // 构建同步数据对象
       this.syncData = { fields: baseFields };
 
-      // 如果是更新操作,添加记录ID
       if (update) {
         const recordId =
           this.noteRecordID ||
@@ -124,32 +119,25 @@ function IOTOObNoteMaker() {
     }
 
     async addCustomSyncFields(customFields) {
-      // 如果没有自定义字段则直接返回
       if (!customFields) {
         return;
       }
 
-      // 使用 reduce 方法处理自定义字段
       const processedFields = Object.keys(customFields).reduce((acc, key) => {
-        // 优先从 frontmatter 中获取值
         if (this.frontmatter?.hasOwnProperty(key)) {
           acc[key] = this.frontmatter[key];
-        }
-        // 其次从 dvPage 中获取值
-        else if (this.dvPage?.hasOwnProperty(key)) {
+        } else if (this.dvPage?.hasOwnProperty(key)) {
           const value = this.dvPage[key];
-          // 处理数组类型的值
+
           acc[key] = Array.isArray(value)
             ? value.filter(Boolean).map(String)
             : value;
         } else {
-          // 最后使用默认值
           acc[key] = customFields[key];
         }
         return acc;
       }, {});
 
-      // 合并处理后的字段到同步数据中
       this.syncData.fields = {
         ...this.syncData.fields,
         ...processedFields,
@@ -163,17 +151,13 @@ function IOTOObNoteMaker() {
       if (!extractTagLinesFields) return;
       const contentLines = this.content.split("\n");
       const extractLinesHasTag = (lines, tag) => {
-        // 返回包含指定 tag 的所有行，而不仅仅是以 tag 开头的行
-        // 先筛选包含指定标签的行，再移除行中所有标签
         return lines
           .filter((line) => line.includes(`#${tag}`))
           .map((line) => line.replace(/#[\p{L}\p{N}_\-\/]+/gu, "").trim());
       };
 
-      // 将提取的内容添加到syncData中
       for (const [key, value] of Object.entries(extractTagLinesFields)) {
         if (value) {
-          // 获取当前字段的值,如果不存在则初始化为空数组
           let currentFieldValue = this.syncData.fields[value] || [];
           const extracted = extractLinesHasTag(contentLines, key);
           const merged = [...currentFieldValue, ...extracted].filter(Boolean);
@@ -192,38 +176,33 @@ function IOTOObNoteMaker() {
       extractKeyPointsFields,
       extractKeyPointsAsText
     ) {
-      // 如果没有提供提取关键点字段的配置,直接返回
       if (!extractKeyPointsFields) return;
 
-      // 定义正则表达式模式,用于匹配不同类型的Markdown语法
       const regexPatterns = {
-        highlights: /\=\=([^\=]+)\=\=/g, // 高亮语法 ==text==
-        italics: /(?<![*_])(?:\*([^*\n]+)\*|_([^_\n]+)_)(?![*_])/g, // 斜体语法 *text* 或 _text_
-        strongs: /\*\*([^\*]+)\*\*/g, // 粗体语法 **text**
-        underlines: /<u>(.*?)<\/u>/gs, // 下划线语法 <u>text</u>
-        bold: /(?<!\*)\*\*([^\*]+)\*\*(?!\*)/g, // 粗体语法 **text**
-        bolds: /(?<!\*)\*\*([^\*]+)\*\*(?!\*)/g, // 粗体语法 **text**
-        boldItalics: /(?<!\*)\*\*\*([^\*]+)\*\*\*(?!\*)/g, // 粗体斜体语法 ***text***
-        singleQuotes: /\n\n^\> ([^>\n]+)$\n\n/gm, // 引用语法 > text
-        inlineCodes: /`(.*?)`/g, // 行内代码语法 `text`
-        deletions: /~~(.*?)~~/g, // 删除线语法 ~~text~~
-        links: /\[[^\]]+\]\([^)]+\)/g, // 链接语法 [text](url)
-        urls: /https?:\/\/[^\s\)]+/g, // 网址
+        highlights: /\=\=([^\=]+)\=\=/g,
+        italics: /(?<![*_])(?:\*([^*\n]+)\*|_([^_\n]+)_)(?![*_])/g,
+        strongs: /\*\*([^\*]+)\*\*/g,
+        underlines: /<u>(.*?)<\/u>/gs,
+        bold: /(?<!\*)\*\*([^\*]+)\*\*(?!\*)/g,
+        bolds: /(?<!\*)\*\*([^\*]+)\*\*(?!\*)/g,
+        boldItalics: /(?<!\*)\*\*\*([^\*]+)\*\*\*(?!\*)/g,
+        singleQuotes: /\n\n^\> ([^>\n]+)$\n\n/gm,
+        inlineCodes: /`(.*?)`/g,
+        deletions: /~~(.*?)~~/g,
+        links: /\[[^\]]+\]\([^)]+\)/g,
+        urls: /https?:\/\/[^\s\)]+/g,
       };
 
-      // 辅助函数:根据正则模式提取匹配的文本内容
       const extractText = (pattern) => {
         const matches = [];
         let match;
-        // 循环匹配所有符合模式的文本
+
         while ((match = pattern.exec(this.content))) {
-          matches.push(match[1] || match[2] || match[0]); // 获取捕获组或完整匹配
+          matches.push(match[1] || match[2] || match[0]);
         }
         return matches;
       };
 
-      // 处理所有正则模式并生成匹配结果对象
-      // 为每个模式创建两个键:原始键名和去掉's'的单数形式键名
       const matchTexts = Object.fromEntries(
         Object.entries(regexPatterns).flatMap(([key, pattern]) => [
           [key, extractText(pattern)],
@@ -231,23 +210,17 @@ function IOTOObNoteMaker() {
         ])
       );
 
-      // 将提取的内容添加到syncData中
-      // 遍历提取关键点字段的配置
       for (const [key, value] of Object.entries(extractKeyPointsFields)) {
-        // 如果配置了目标字段
         if (value) {
-          // 获取当前字段的值,如果不存在则初始化为空数组
           let currentFieldValue = this.syncData.fields[value] || [];
-          // 优化：避免重复 concat 操作，提升可读性和健壮性
+
           const extracted = matchTexts[key] || [];
           const merged = [...currentFieldValue, ...extracted].filter(Boolean);
           if (extractKeyPointsAsText) {
-            // 合并已有内容和新提取内容，去除空字符串，最后用换行拼接
             this.syncData.fields[value] = merged.length
               ? merged.join("\n\n")
               : "";
           } else {
-            // 合并为数组，去除空字符串
             this.syncData.fields[value] = merged;
           }
         }
@@ -260,7 +233,6 @@ function IOTOObNoteMaker() {
       const content = this.fullContent;
       const blocks = metadata?.blocks || {};
 
-      // 定义一个通用函数来处理区块提取和内容映射
       const extractBlockContent = (blocks, keyword) => {
         const filteredBlocks = Object.fromEntries(
           Object.entries(blocks).filter(([key]) =>
@@ -284,10 +256,8 @@ function IOTOObNoteMaker() {
         return blockContent;
       };
 
-      // 将提取的内容添加到syncData中
       for (const [key, value] of Object.entries(extractBlocksFields)) {
         if (value) {
-          // 获取当前字段的值,如果不存在则初始化为空数组
           let currentFieldValue = this.syncData.fields[value] || [];
           const extracted = Object.values(extractBlockContent(blocks, key));
           const merged = [...currentFieldValue, ...extracted].filter(Boolean);
@@ -316,7 +286,6 @@ function IOTOObNoteMaker() {
         let targetHeadingLevel = 0;
 
         for (const line of lines) {
-          // 检测标题行
           const headingMatch = line.match(/^(#+)\s*(.*)/);
           if (headingMatch) {
             const currentLevel = headingMatch[1].length;
@@ -327,12 +296,10 @@ function IOTOObNoteMaker() {
                 ? currentText === headingText
                 : currentText.includes(headingText)
             ) {
-              // 找到目标标题
               if (currentSection) {
-                // 保存前一个section
                 sections.push(currentSection);
               }
-              // 开始新的section
+
               currentSection = {
                 heading: line,
                 content: [],
@@ -341,26 +308,21 @@ function IOTOObNoteMaker() {
               targetHeadingLevel = currentLevel;
             } else if (currentSection) {
               if (currentLevel <= targetHeadingLevel) {
-                // 遇到同级或更高级别的标题，表示当前section结束
                 sections.push(currentSection);
                 currentSection = null;
               } else {
-                // 当前section中的子标题内容
                 currentSection.content.push(line);
               }
             }
           } else if (currentSection) {
-            // 当前section的普通内容
             currentSection.content.push(line);
           }
         }
 
-        // 添加最后一个section
         if (currentSection) {
           sections.push(currentSection);
         }
 
-        // 将所有匹配的section内容合并
         const combinedContent = sections.map((section) =>
           [section.heading, section.content.join("\n").trim()].join("\n")
         );
@@ -368,10 +330,8 @@ function IOTOObNoteMaker() {
         return combinedContent;
       };
 
-      // 将提取的内容添加到syncData中
       for (const [key, value] of Object.entries(extractSectionFields)) {
         if (value) {
-          // 获取当前字段的值,如果不存在则初始化为空数组
           let currentFieldValue = this.syncData.fields[value] || [];
           const extracted = extractSectionContent(contentLines, key);
           const merged = [...currentFieldValue, ...extracted].filter(Boolean);
@@ -407,32 +367,28 @@ function IOTOObNoteMaker() {
     }
 
     getOutlinks() {
-      // 获取当前文件的缓存
       const fileCache = this.cache;
 
       if (!fileCache || (!fileCache.links && !fileCache.embeds)) {
         return [];
       }
 
-      // 从缓存中提取所有出链
       const links = fileCache.links || [];
       const embeds = fileCache.embeds || [];
 
       const allOutLinks = links.concat(embeds);
 
-      // 获取所有链接的目标文件
       const linkedFiles = allOutLinks
         .map((outlink) => {
-          // 处理embeds中的Link
           let link = outlink.link.split("#")[0];
-          // 尝试解析链接获取目标文件
+
           const targetFile = this.app.metadataCache.getFirstLinkpathDest(
             link,
             this.file.path
           );
           return targetFile;
         })
-        .filter((file) => file !== null); // 过滤掉无效链接
+        .filter((file) => file !== null);
 
       return linkedFiles;
     }

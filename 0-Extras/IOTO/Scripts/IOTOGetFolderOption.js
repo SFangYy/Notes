@@ -12,7 +12,7 @@ async function IOTOGetSubFolders(
   includeParent = false
 ) {
   let allSubFolders = [];
-  const ml = new (tp.user.IOTOMultiLangs())();
+  const ml = new (tp.user.IOTOMultiLangs(tp))();
 
   tp.obsidian.Vault.recurseChildren(parentFolder, (child) => {
     if (

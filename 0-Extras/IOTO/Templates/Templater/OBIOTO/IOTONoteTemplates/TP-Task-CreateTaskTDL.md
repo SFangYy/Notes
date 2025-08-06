@@ -1,7 +1,9 @@
 ---
 <%* const {LTDListInputSectionHeading, LTDListOutputSectionHeading, LTDListOutcomeSectionHeading, defaultTDLDateFormat, projectNameFormat, defaultTDLHeadingLevel} = app.plugins.plugins["ioto-settings"].settings;
 const projectName = await tp.user.IOTOCreateProjectName(tp.file.folder(true), projectNameFormat); _%>
+<%* if(projectName) { _%>
 Project: ["<% projectName %>"]
+<%* } _%>
 cssclasses: ["hideProperties"]
 ---
 <%* if(tp.file.title === `${projectName}-${tp.date.now(defaultTDLDateFormat)}`) { _%>

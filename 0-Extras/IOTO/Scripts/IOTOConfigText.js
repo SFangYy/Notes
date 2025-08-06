@@ -25,6 +25,8 @@ function IOTOConfigText() {
       extractSectionsAsText: "extractSectionsAsText",
       sectionHeadingWholeMatch: "sectionHeadingWholeMatch",
       unsyncedSubFolders: "unsyncedSubFolders",
+      useComputedTitleInDb: "useComputedTitleInDb",
+      fmFetchFieldsOverrideMode: "fmFetchFieldsOverrideMode",
     },
   };
 }

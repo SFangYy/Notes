@@ -1,6 +1,6 @@
 function IOTOVikaSyncer(tp) {
   let NocoDBSyncer = tp.user.IOTONocoDBSyncer(tp);
-  const ml = new (tp.user.IOTOMultiLangs())();
+  const ml = new (tp.user.IOTOMultiLangs(tp))();
   return class VikaSyncer extends NocoDBSyncer {
     constructor(nocodb, tp, app, updateNotesInOB = true) {
       super(nocodb, tp, app, (updateNotesInOB = true));
@@ -131,10 +131,8 @@ function IOTOVikaSyncer(tp) {
     }
 
     async updateRecordsInNocoDB(data) {
-      //console.dir(data);
       let res = false;
       try {
-        // 构建请求配置
         const url = this.nocodb.apiUrl;
         const requestConfig = this.createRequestConfig(url, "PATCH", data);
         const response = await requestUrl(requestConfig);
@@ -156,7 +154,6 @@ function IOTOVikaSyncer(tp) {
     }
 
     async deleteRecordsInNocoDB(recordID) {
-      // TODO 完善被删除的Records的生成逻辑，可以批量删除记录
       const url = this.nocodb.apiUrl + `&recordIds=${recordID}`;
       const requestConfig = this.createRequestConfig(url, "DELETE");
       try {

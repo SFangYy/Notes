@@ -12,7 +12,7 @@ async function IOTOCreateTasksList(tp, folderPath, settings) {
   // If no folder path is provided, return directly
   if (!folderPath) return;
 
-  const ml = new (tp.user.IOTOMultiLangs())();
+  const ml = new (tp.user.IOTOMultiLangs(tp))(tp);
 
   const {
     template,

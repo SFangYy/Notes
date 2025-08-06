@@ -1,5 +1,5 @@
 async function IOTOExtractKeyPoints(content, tp, tR) {
-  const ml = new (tp.user.IOTOMultiLangs())();
+  const ml = new (tp.user.IOTOMultiLangs(tp))(tp);
   const regexPatterns = {
     strong: /\*\*([^\*]+)\*\*/g,
     highlight: /\=\=([^\=]+)\=\=/g,

@@ -8,6 +8,61 @@ const isObsidianThemeDark = () =>
   document.body.classList.contains("theme-dark");
 
 async function IOTOCreateOrOpenNote(tp, tR, folderPath, settings) {
+  const ml = new (tp.user.IOTOMultiLangs(tp))(tp);
+  const {
+    addLinkToCurrentTDL,
+    taskSelectorShowOptionOrder,
+    taskSelectorShowBasePath,
+    taskSelectorExcludesPaths,
+    projectNameFormat,
+    taskFolder,
+  } = tp.app.plugins.plugins["ioto-settings"].settings;
+
+  const activeFile = tp.config.active_file;
+  const activeNote = tp.user.IOTONoteMaker(tp, activeFile);
+  const activeCache = tp.app.metadataCache.getFileCache(activeFile);
+  const activeFileFM = activeCache?.frontmatter;
+  const doNotAddToTDL = activeFileFM?.doNotAddToTDL;
+
+  if (addLinkToCurrentTDL && !doNotAddToTDL) {
+    let project = activeFileFM?.Project;
+    let message = "";
+    const missingProject = !project || !project.length;
+    if (missingProject) {
+      message = ml.t(
+        "You have not specified a project for this note. Please select a project for this note."
+      );
+      new tp.obsidian.Notice(message, 6000);
+      projectPath = await tp.user.IOTOGetFolderOption(tp, {
+        folderPath: taskFolder,
+        excludesPaths: taskSelectorExcludesPaths
+          ? taskSelectorExcludesPaths.trim().split("\n")
+          : [],
+        showBasePathInOption: taskSelectorShowBasePath,
+        optionContentTemplate: "{{folder}}",
+        showOptionOrder: taskSelectorShowOptionOrder,
+      });
+
+      if (projectPath) {
+        project = await tp.user.IOTOCreateProjectName(
+          projectPath,
+          projectNameFormat
+        );
+        let tempFMDict = Object.assign(activeNote.fmDict, {
+          Project: [project],
+          cssclasses: ["iotoTDL"],
+        });
+        await activeNote.prepareNoteFm(tempFMDict);
+        await activeNote.prepareNoteContent();
+        await tp.app.vault.modify(
+          activeNote.file,
+          activeNote.fm + "\n" + activeNote.content
+        );
+        await new Promise((r) => setTimeout(r, 100)); //wait for metadata to update, steal from obsidian excalidraw
+      }
+    }
+  }
+
   let {
     template,
     defaultNewNoteFollowUpAction,
@@ -18,8 +73,6 @@ async function IOTOCreateOrOpenNote(tp, tR, folderPath, settings) {
     fleetingNotePrefix,
     fleetingNoteDateFormat,
   } = settings;
-
-  const ml = new (tp.user.IOTOMultiLangs())();
 
   let noteName = undefined;
   let note = undefined;

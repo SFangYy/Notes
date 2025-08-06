@@ -1,5 +1,5 @@
 async function IOTOAddBlockIDs(tp, tR, settings = {}) {
-  const ml = new (tp.user.IOTOMultiLangs())();
+  const ml = new (tp.user.IOTOMultiLangs(tp))(tp);
   let { date, prefix, useSingleLineAsSeparator } = settings;
 
   const iotoSettings = app.plugins.plugins["ioto-settings"].settings;

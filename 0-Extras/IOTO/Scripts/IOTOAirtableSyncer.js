@@ -5,7 +5,7 @@
  */
 function IOTOAirtableSyncer(tp) {
   let NocoDBSyncer = tp.user.IOTONocoDBSyncer(tp);
-  const ml = new (tp.user.IOTOMultiLangs())();
+  const ml = new (tp.user.IOTOMultiLangs(tp))(tp);
   return class AirtableSyncer extends NocoDBSyncer {
     /**
      * Creates an instance of AirtableSyncer

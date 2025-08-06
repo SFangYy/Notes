@@ -6,12 +6,10 @@ function IOTOYAMLCooker() {
     }
 
     parseFmDict(fm) {
-      // 如果没有frontmatter,返回空对象
       if (!fm) {
         return {};
       }
 
-      // 需要排除的frontmatter字段
       const excludeKeys = [
         "position",
         "Tags",
@@ -21,7 +19,6 @@ function IOTOYAMLCooker() {
         "alias",
       ];
 
-      // 过滤并处理frontmatter字段
       return Object.entries(fm)
         .filter(([key]) => !excludeKeys.includes(key))
         .reduce((fmDict, [key, value]) => {
@@ -77,7 +74,6 @@ function IOTOYAMLCooker() {
       if (value instanceof Array) {
         const newValue = value
           .map((item) => {
-            // 判断item是否为对象类型
             if (typeof item === "object" && item !== null) {
               return "";
             } else {

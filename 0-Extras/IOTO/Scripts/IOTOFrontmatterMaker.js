@@ -19,7 +19,7 @@ class OBFrontmatterMaker {
     );
     this.keepOriginalValue = true;
     this.activeNote = this.tp.user.IOTONoteMaker(this.tp, this.activeFile);
-    this.ml = new (tp.user.IOTOMultiLangs())();
+    this.ml = new (tp.user.IOTOMultiLangs(tp))();
   }
 
   async startFMMaker() {

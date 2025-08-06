@@ -19,7 +19,7 @@ class OBSearchAndReplace {
       settings
     );
     this.activeNote = this.tp.user.IOTONoteMaker(this.tp, this.activeFile);
-    this.ml = new (tp.user.IOTOMultiLangs())();
+    this.ml = new (tp.user.IOTOMultiLangs(tp))();
   }
 
   async startFMMaker() {
@@ -168,7 +168,6 @@ class OBSearchAndReplace {
     const searchRules = [];
     const replaceRules = [];
 
-    // 使用正则表达式一次性匹配所有规则
     const searchPattern = /^search\d+$/i;
     const replacePattern = /^replace\d+$/i;
 

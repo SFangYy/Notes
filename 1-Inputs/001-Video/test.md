@@ -5,8 +5,8 @@ description:
 source: 
 author: 
 tags: 
-created: <% tp.date.now("YYYY-MM-DD | HH:mm") %>
+created: 2025-08-06 | 17:39
 parent: Resource
 branch: 
 ---
-# <% tp.file.folder() %>
+# 001-Video
