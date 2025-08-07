@@ -1,0 +1,13 @@
+{
+  "id": "ae585aea-cb1c-4238-a746-3db669ef1401",
+  "fields": [],
+  "actions": [
+    {
+      "id": "ff0e3c33-ba70-4b96-952c-73e42ba8d098",
+      "type": "createFile",
+      "targetFolder": "",
+      "fileName": ""
+    }
+  ],
+  "autoSubmit": false
+}

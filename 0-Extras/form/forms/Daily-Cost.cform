@@ -21,6 +21,11 @@
           "id": "ac5a10ce-9740-4917-af0e-42b53719ecc9",
           "label": "食物",
           "value": ""
+        },
+        {
+          "id": "964e45c7-0434-492b-96b1-f3e84ec97306",
+          "label": "运动",
+          "value": ""
         }
       ],
       "defaultValue": "食物"

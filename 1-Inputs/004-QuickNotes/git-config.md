@@ -24,11 +24,8 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 
 - `-t rsa` 指定密钥类型为RSA。
-    
-- `-b 4096` 指定密钥的位数为4096位，这是推荐的安全位数。
-    
+- `-b 4096` 指定密钥的位数为4096位，这是推荐的安全位数。 
 - `-C` 后面跟着你的电子邮件地址，用于标识这个密钥。
-    
 
 运行此命令后，系统会要求你输入一个文件名来保存密钥（默认为`id_rsa`），以及一个密码（可选）。强烈建议设置一个密码，以增加安全性。
 
@@ -45,7 +42,9 @@ cat ~/.ssh/id_rsa.pub
 ### 3. 将公钥添加到Git服务
 
 复制输出的公钥内容，然后登录到你的Git服务账户（如GitHub, GitLab等），user head -> settings 中找到“SSH and GPG keys”或类似的选项，然后点击“New SSH key”或“Add SSH key”，将你的公钥粘贴进去，并保存。
-
+```
+https://github.com/settings/keys
+```
 
 
 ### 5. 测试SSH连接
