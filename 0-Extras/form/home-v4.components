@@ -433,7 +433,16 @@
           "id": "fb01a203-fc78-4b28-a000-5150e902747f",
           "type": "group",
           "operator": "and",
-          "conditions": []
+          "conditions": [
+            {
+              "id": "2e6cbdad-51c7-421c-8f07-b36203e16ddc",
+              "type": "filter",
+              "operator": "not_contains",
+              "property": "${file.path}",
+              "value": "0-Extras",
+              "conditions": []
+            }
+          ]
         },
         "sort": {
           "orders": []

@@ -53,5 +53,8 @@ push:
 	@git push
 	@echo "\n==> 操作完成！"
 
+init:
+	git submodule update  --init
+
 info: 
 	@echo "commit content is $(m)"

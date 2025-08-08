@@ -26,17 +26,6 @@ const inputsNoteSettings = {
 
 const newNoteLink = await tp.user.IOTOCreateOrOpenNote(tp, tR, await tp.user.IOTOGetFolderOption(tp, inputsFolderSettings), inputsNoteSettings) + " #" + tasktag;
 
-let tFile = tp.file.find_tfile(newNoteLink.match(/\[\[(.*?)\]\]/));
-
-if (tFile) {
-    // 修改frontmatter
-    await app.fileManager.processFrontMatter(tFile, fm => {
-        fm.project = tasktag;
-    });
-    await tp.system.suggester(["完成"], [""]);
-} else {
-    tp.system.notification("错误", `未找到文件: ${filename}`);
-}
 if(addLinkToCurrentTDL){
 		const addLinkToTDLSettings = {
 			taskFolder: taskFolder,
