@@ -27,6 +27,9 @@ other script
 - < ctrl-I> navigate forward
 - < ctrl-U> navigate back  
 
+## tab navigation
+- < ctrl - H > navigate left tab 
+- < ctrl - L > navigate right tab 
 ### pane navigation
 - < ctrl-Alt-enter>*Open under link file in right
 - < alt - h > Focus on pane to the left  
