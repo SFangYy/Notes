@@ -1,5 +1,5 @@
 ---
-Project:
+Project: 
 title: 
 description: 
 source: 
@@ -8,6 +8,7 @@ tags:
 created: 2025-08-12 | 20:22
 parent: Resource
 branch: 
+url: https://blog.csdn.net/shu_ben/article/details/147965213
 ---
 # 002-Browser
 3、AXI4的工作模式

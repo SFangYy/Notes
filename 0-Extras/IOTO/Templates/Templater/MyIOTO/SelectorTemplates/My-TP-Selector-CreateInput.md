@@ -3,7 +3,7 @@ const {inputFolder, LTDListInputSectionHeading,LTDListOutputSectionHeading, task
 
 const ml = new (tp.user.IOTOMultiLangs())();
 
-let tasktag = await tp.system.prompt("任务标签为");
+
 
 const inputsFolderSettings = {
 	folderPath: inputFolder,
@@ -24,7 +24,16 @@ const inputsNoteSettings = {
     defaultExcalidrawTemplate: inputNoteDefaultExcalidrawTemplate,
 }
 
-const newNoteLink = await tp.user.IOTOCreateOrOpenNote(tp, tR, await tp.user.IOTOGetFolderOption(tp, inputsFolderSettings), inputsNoteSettings) + " #" + tasktag;
+
+let newNoteLink = await tp.user.IOTOCreateOrOpenNote(tp, tR, await tp.user.IOTOGetFolderOption(tp, inputsFolderSettings), inputsNoteSettings);
+let tasktag
+if (newNoteLink){
+		tasktag = await tp.system.prompt("任务标签为");
+		if(tasktag){
+				newNoteLink = newNoteLink + " #" + tasktag;
+		}
+}
+
 
 if(addLinkToCurrentTDL){
 		const addLinkToTDLSettings = {
