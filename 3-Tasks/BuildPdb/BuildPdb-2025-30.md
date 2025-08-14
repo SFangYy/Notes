@@ -10,10 +10,10 @@ cssclasses: []
 ---
 ## Input (LEARN)
 
-- [ ] [[compile old version gcc]]
+- [x] [[compile old version gcc]]
 - [ ] [[pdb ci]]
-- [ ] [[Makefile-规范]]
-- [ ] [[check pip]]
+- [x] [[Makefile-规范]]
+- [x] [[check pip]]
 
 ## Output (THINK)
 

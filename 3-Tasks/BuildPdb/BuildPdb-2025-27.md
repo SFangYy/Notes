@@ -11,7 +11,7 @@ cssclasses: []
 ## Input (LEARN)
 
 - [ ] [[github workflow]]
-- [ ] difftest pr
+- [x] difftest pr
 - [ ] xs pr
 
 ## Output (THINK)
