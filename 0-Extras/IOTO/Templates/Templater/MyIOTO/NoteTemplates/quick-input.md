@@ -2,7 +2,7 @@
 // 1. 定义选项
 const options = [
     { label: "1. add list after task", value: "list" },
-    { label: "2. 笔记", value: "note" },
+    { label: "2. input url", value: "note" },
     { label: "3. 任务", value: "task" }
 ];
 
@@ -19,13 +19,20 @@ switch (selected) {
         content = `\n	-  `;
         break;
     case "note":
-        content = `# 笔记\n主题: \n来源: `;
+		 let name = await tp.system.prompt("链接名称为");
+		 let url = await tp.system.prompt("链接为");
+		 if (name != null && url != null) {
+			 content = `\n- [` + name + `](` + url+ `)`;
+		 } else {
+			 content = "";
+		 }
+        
         break;
     case "task":
         content = `# 任务\n- [ ] 待办事项\n截止日期: `;
         break;
     default:
-        content = "# 默认内容";
+        content = "";
 }
 tR += content;
 _%>

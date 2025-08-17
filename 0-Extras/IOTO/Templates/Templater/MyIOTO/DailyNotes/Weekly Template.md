@@ -1,8 +1,8 @@
 ---
 tags:
   - weekly-log
-dateStart: <%moment(tp.file.title).startOf("isoWeek").format("YYYY-MM-DD")%>
-dateEnd: <%moment(tp.file.title).endOf("isoWeek").format("YYYY-MM-DD")%>
+startDate: <%moment(tp.file.title).startOf("isoWeek").format("YYYY-MM-DD")%>
+endDate: <%moment(tp.file.title).endOf("isoWeek").format("YYYY-MM-DD")%>
 week: <%moment(tp.file.title).format("gggg-[W]ww")%>
 memories: 
 moods: 

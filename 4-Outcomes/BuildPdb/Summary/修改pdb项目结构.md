@@ -13,13 +13,28 @@ branch:
 修改以后的项目结构如下
 
 ```bash
+
+xspdb/
+├── pdb-run.py
+├── Makefile
+├── xspdb/
+    └── xspdb.py
+    └── cmds/
+        ├── script1.py
+        └── script1.py
+    └── pyxscore/
+        └── libUTSimTop.so
+    └── pydifftest/
+        ├── difftest.so
+        └── difftest.py
+        
 xspdb/
 ├── .gitignore
 ├── LICENSE
 ├── pyproject.toml
 ├── README.md
 ├── pdb-run.py
-├── Make
+├── Makefile
 ├── src/
     └── xspdb/
         ├── __init__.py

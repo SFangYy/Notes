@@ -11,7 +11,11 @@ parent: Project
 branch: 
 Archived: 
 cssclasses: []
+startDate: <% tp.date.weekday("YYYY-MM-DD", 0) %>
+endDate: <% tp.date.weekday("YYYY-MM-DD", 7) %>
 ---
+## Task
+![[0-Extras/form/test.components]]
 <%* if(tp.file.title === `${projectName}-${tp.date.now(defaultTDLDateFormat)}`) { _%>
 <% defaultTDLHeadingLevel + " " + LTDListInputSectionHeading %>
 
@@ -28,3 +32,5 @@ cssclasses: []
 <%* if (tp.file.title.toLowerCase().includes("untitle")) {
 	await tp.file.rename(projectName + "-" + tp.date.now(defaultTDLDateFormat));
 } _%>
+
+![[]]
