@@ -15,10 +15,10 @@
           "componentId": "e1f30ede-6bd3-44d9-b593-b03cd7321c0c"
         },
         {
-          "componentId": "c493cbeb-b6ba-4cf2-aa85-510eeb70844d"
+          "componentId": "f1e8b913-a8b5-43ef-9913-7326ac04ab65"
         },
         {
-          "componentId": "d32fb834-1e46-406d-b9b5-5251777f7aa2"
+          "componentId": "2a094a7f-0736-430d-a2d3-cda341478765"
         }
       ],
       "layoutType": "tab",
@@ -144,10 +144,10 @@
       }
     },
     {
-      "id": "c493cbeb-b6ba-4cf2-aa85-510eeb70844d",
+      "id": "f1e8b913-a8b5-43ef-9913-7326ac04ab65",
       "type": "dynamicDataView",
       "titleAlign": "center",
-      "tabTitle": "W32",
+      "tabTitle": "XSPdb",
       "maxWidthRatio": -1,
       "showBorder": false,
       "showShadow": false,
@@ -170,11 +170,21 @@
           "isShow": true,
           "type": "formula",
           "options": {
-            "formula": "section(\"#IOTO\")",
+            "formula": "section(\"#xspdb\")",
             "width": "383",
             "renderType": "markdown"
           },
           "wrap": true
+        },
+        {
+          "id": "ccb3758c-038a-4e6a-ad4d-d0ef8742b611",
+          "name": "test",
+          "isShow": false,
+          "type": "formula",
+          "options": {
+            "formula": "prop('propertyName')",
+            "renderType": "markdown"
+          }
         }
       ],
       "templates": [],
@@ -221,29 +231,19 @@
             "conditions": []
           },
           {
-            "id": "aca200e8-0db2-43f4-a07d-d721a84ad436",
-            "type": "filter",
-            "operator": "time_after_or_equal",
-            "property": "date",
-            "value": {
-              "type": "$startOfWeek",
-              "value": "",
-              "unit": "day",
-              "direction": "before"
-            },
+            "id": "ded3f102-9067-455c-be03-7a66817ad613",
+            "type": "jsQuery",
+            "operator": "contains",
+            "property": "${file.tags}",
+            "value": "$item.frontmatter.date >= $parentFile.frontmatter.startDate&& $item.frontmatter.date <= $parentFile.frontmatter.endDate",
             "conditions": []
           },
           {
-            "id": "c0a770ca-ed32-4061-a004-7ab43ddd4697",
+            "id": "2591c05f-50c8-4048-bdbb-dce3f683ff2e",
             "type": "filter",
-            "operator": "time_before_or_equal",
-            "property": "date",
-            "value": {
-              "type": "$endOfWeek",
-              "unit": "day",
-              "direction": "before",
-              "value": ""
-            },
+            "operator": "contains",
+            "property": "",
+            "value": null,
             "conditions": []
           }
         ]
@@ -260,19 +260,120 @@
       }
     },
     {
-      "id": "d32fb834-1e46-406d-b9b5-5251777f7aa2",
-      "type": "time",
+      "id": "2a094a7f-0736-430d-a2d3-cda341478765",
+      "type": "dynamicDataView",
       "titleAlign": "center",
-      "tabTitle": "",
+      "tabTitle": "UVM",
       "maxWidthRatio": -1,
-      "showBorder": true,
+      "showBorder": false,
       "showShadow": false,
-      "createAt": "2025-07-29T20:55:44.070Z",
-      "updateAt": "2025-07-29T20:55:44.070Z",
-      "showLunar": false,
-      "hideDateInfo": false,
-      "hideSeconds": false,
-      "hideProgress": false
+      "createAt": "2025-07-29T19:41:27.219Z",
+      "updateAt": "2025-07-29T19:41:27.219Z",
+      "viewType": "gallary",
+      "newPageNameFormat": "{{date:YYYYMMDDHHmmss}} ",
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "File Basename",
+          "type": "text",
+          "isShow": true,
+          "wrap": false,
+          "options": {}
+        },
+        {
+          "id": "1d190f26-1742-47df-b664-e0cd22ab2fe5",
+          "name": "section",
+          "isShow": true,
+          "type": "formula",
+          "options": {
+            "formula": "section(\"#UVM\")",
+            "width": "383",
+            "renderType": "markdown"
+          },
+          "wrap": true
+        },
+        {
+          "id": "ccb3758c-038a-4e6a-ad4d-d0ef8742b611",
+          "name": "test",
+          "isShow": false,
+          "type": "formula",
+          "options": {
+            "formula": "prop('propertyName')",
+            "renderType": "markdown"
+          }
+        }
+      ],
+      "templates": [],
+      "groups": [],
+      "colorfulGroups": false,
+      "viewOptions": {
+        "openPageIn": "tab",
+        "openPageAfterCreate": true,
+        "itemSize": "components--page-card-small",
+        "showPropertyName": false,
+        "showAllProperties": false,
+        "items": [],
+        "cover": {
+          "type": "none",
+          "source": "default",
+          "fit": "contains",
+          "layout": "components--page-card-cover-portrait",
+          "position": "top"
+        },
+        "pinFiltersToMenuBar": false,
+        "showGrid": false,
+        "heightType": "auto",
+        "heightValue": 600
+      },
+      "groupStates": {
+        "sort": "nameAsc",
+        "format": "none",
+        "statics": [],
+        "orders": [],
+        "hiddens": [],
+        "collapseds": []
+      },
+      "filter": {
+        "id": "4b047bff-e7ba-4d8a-96f1-996e51e71056",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "5b737838-b854-4dd8-8c6a-b2dd580b2ce2",
+            "type": "filter",
+            "operator": "contains",
+            "property": "${file.path}",
+            "value": "2-Areas/009-daily",
+            "conditions": []
+          },
+          {
+            "id": "ded3f102-9067-455c-be03-7a66817ad613",
+            "type": "jsQuery",
+            "operator": "contains",
+            "property": "${file.tags}",
+            "value": "$item.frontmatter.date >= $parentFile.frontmatter.startDate&& $item.frontmatter.date <= $parentFile.frontmatter.endDate",
+            "conditions": []
+          },
+          {
+            "id": "2591c05f-50c8-4048-bdbb-dce3f683ff2e",
+            "type": "filter",
+            "operator": "contains",
+            "property": "",
+            "value": null,
+            "conditions": []
+          }
+        ]
+      },
+      "sort": {
+        "orders": [
+          {
+            "id": "97cec030-49bf-4a55-bdbd-2805e1569d42",
+            "property": "date",
+            "direction": "asc",
+            "disabled": false
+          }
+        ]
+      }
     }
   ],
   "rootComponentId": "fc58645a-3bf0-4edf-8422-2f064960779e"

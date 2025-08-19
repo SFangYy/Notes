@@ -71,3 +71,11 @@ def hello():
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
 ```
+
+## 文件映射
+- 使用`-v` 参数，宿主机路径：容器路径
+```
+docker run -d -p 51202:51202 -p 5901:5901 -p 2222:22 \
+	-v /home/sfangyy/work/9-dependency/synopsys:/home/test/synopsys \
+	--name vcs vcs_env
+```
