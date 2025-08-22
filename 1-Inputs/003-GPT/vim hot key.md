@@ -1,13 +1,11 @@
 ---
-Project: ["LearnTools"]
-title: 
-description: 
-source: 
-author: 
-tags: 
+Project:
+  - LearnTools
+description:
+tags:
+  - vim
 created: 2025-07-05 | 23:30
 parent: Resource
-branch: 
 ---
 # Resources
 ## some useful hotkey 

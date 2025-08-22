@@ -1,12 +1,13 @@
 ---
 Project:
   - BuildPdb
-title: 
-description: 
-source: 
-author: 
+title:
+description:
+source:
+author:
 tags:
   - git
+  - xspdb
 created: 2025-06-30 | 11:15
 parent: Resource
 branch:

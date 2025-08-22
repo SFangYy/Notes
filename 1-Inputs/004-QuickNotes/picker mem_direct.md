@@ -1,13 +1,13 @@
 ---
-Project: ["undefined"]
-title: 
-description: 
-source: 
-author: 
-tags: 
+Project:
+  - BuildPdb
+title:
+description:
+source:
+tags:
+  - xspdb
 created: 2025-07-31 | 10:10
 parent: Resource
-branch: 
 ---
 # 004-QuickNotes
 - 可以查看picker的makefile，先使用pciker将simtop.h文件导出(需要设置模板文件），然后进入mem_direct 执行make命令‘

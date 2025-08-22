@@ -1,13 +1,13 @@
 ---
-Project: ["BuildPdb"]
-title: 
-description: 
-source: 
-author: 
-tags: 
+Project:
+  - BuildPdb
+description:
+tags:
+  - linux
+  - xspdb
+  - command
 created: 2025-07-07 | 22:11
 parent: Resource
-branch: 
 ---
 # Resources
 makefile里这段代码是做什么的

@@ -1,13 +1,12 @@
 ---
-Project: ["LearnTools"]
-title: 
-description: 
-source: 
-author: 
-tags: 
+Project:
+  - LearnTools
+description:
+tags:
+  - linux
+  - command
 created: 2025-07-21 | 10:23
 parent: Resource
-branch: 
 ---
 # Resources
 - revise .ssh file quanx 

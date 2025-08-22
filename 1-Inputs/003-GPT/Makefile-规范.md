@@ -1,15 +1,12 @@
 ---
 Project:
   - BuildPdb
-title: 
-description: 
-source: 
-author: 
+title:
 tags:
   - Makefile
+  - xspdb
 created: 2025-07-22 | 14:37
 parent: Resource
-branch:
 ---
 # Resources
 好的，一份規範、清晰的 Makefile 能極大地提高專案的可維護性和易用性。

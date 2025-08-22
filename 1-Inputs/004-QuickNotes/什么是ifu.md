@@ -1,15 +1,12 @@
 ---
-Project: ["项目"]
-title: 
-description: 
-source: 
-author: 
-tags: 
+Project:
+  - Formal
+description:
+tags:
+  - formal
+  - riscv
 created: 2025-06-10 | 15:37
 parent: Resource
-branch: 
-cssclasses:
-  - show-property
 ---
 # 功能说明
 ## 概述

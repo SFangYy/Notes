@@ -1,15 +1,11 @@
 ---
 Project:
   - LearnIOTO
-title: 
-description: 
-source: 
-author: 
+description:
 tags:
-  - ob插件
+  - IOTO
 created: 2025-07-30 | 02:10
 parent: Resource
-branch:
 ---
 # QuickNotes
 # 基础用法

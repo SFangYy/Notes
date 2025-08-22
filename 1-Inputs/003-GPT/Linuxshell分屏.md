@@ -1,13 +1,12 @@
 ---
 Project:
-title: 
-description: 
-source: 
-author: 
-tags: 
+  - LearnTools
+description:
+tags:
+  - linux
+  - command
 created: 2025-08-13 | 10:45
 parent: Resource
-branch: 
 ---
 # 003-GPT
 ### 方法一：使用 Tmux（推荐）

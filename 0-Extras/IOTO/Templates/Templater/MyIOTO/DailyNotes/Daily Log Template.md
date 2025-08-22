@@ -47,21 +47,12 @@ if (day === lastDayOfMonth) {
 ## 3. Time Blocks
 ### 3.1 Today Cost
 - [ ] today cost is recorded
+
 ### 3.2 Habit Tracker
 - [ ] Manage Work
 - [ ] Exercise
 - [ ] Read
-### 3.3 Day Planner
-- [ ] 9:00 - 10:00 Manage Today Work
-- [ ] 10:00 - 11:30 Deep activity
-- [ ] 11:30 - 13:30 reset
-- [ ] 13:30 - 17:30 Deep activity
-- [ ] 17:30 - 18:30 Dinner
-- [ ] 18:30 - 19:00 Rest
-- [ ] 19:00 - 21:00 Shallow activity
-- [ ] 21:00 - 22:00 go home & exercise
-- [ ] 22:00 - 23:00 Shallow activity
-- [ ] 23:00 - 24:00 Tear down
+
 ## 4. Notes & ideas
 
 

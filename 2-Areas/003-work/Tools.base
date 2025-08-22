@@ -1,0 +1,39 @@
+views:
+  - type: table
+    name: docker
+    filters:
+      and:
+        - file.path.startsWith("1-Inputs")
+        - file.hasTag("docker")
+  - type: table
+    name: basic
+    filters:
+      and:
+        - file.path.startsWith("1-Inputs")
+        - '!file.hasTag("docker", "xspdb", "linux", "git", "vim", "IOTO", "UVM", "code", "formal", "up")'
+  - type: table
+    name: linux
+    filters:
+      and:
+        - file.path.startsWith("1-Inputs")
+        - file.hasTag("linux")
+    order:
+      - file.name
+      - file.tags
+      - Project
+  - type: table
+    name: git
+    filters:
+      and:
+        - file.path.startsWith("1-Inputs")
+        - file.hasTag("git")
+    order:
+      - file.name
+      - file.tags
+      - Project
+  - type: table
+    name: IOTO
+    filters:
+      and:
+        - file.path.startsWith("1-Inputs")
+        - file.hasTag("IOTO")

@@ -1,15 +1,11 @@
 ---
-Project: ["学习"]
-title: 
-description: 
-source: 
-author: 
-tags: 
+Project:
+  - 学习
+description:
+tags:
+  - up
 created: 2025-06-02 | 17:23
 parent: Resource
-branch: 
-cssclasses:
-  - show-property
 ---
 ## 常识
 - 越发重要

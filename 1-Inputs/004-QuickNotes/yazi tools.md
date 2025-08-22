@@ -1,13 +1,12 @@
 ---
-Project: ["LearnTools"]
-title: 
-description: 
-source: 
-author: 
-tags: 
+Project:
+  - LearnTools
+description:
+tags:
+  - linux
+  - command
 created: 2025-07-06 | 19:48
 parent: Resource
-branch: 
 ---
 # QuickNotes
 **2. 常用快捷键：**

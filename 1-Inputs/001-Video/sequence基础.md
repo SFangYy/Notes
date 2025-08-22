@@ -1,13 +1,15 @@
 ---
 Project:
-title: 
-description: 
-source: 
-author: 
-tags: 
+  - UVM
+title:
+description:
+source:
+author:
+tags:
+  - UVM
 created: 2025-08-11 | 15:35
 parent: Resource
-branch: 
+branch:
 ---
 # 001-Video
 “与lock操作一样,grab操作也用于暂时拥有sequencer的所有权,只是grab操作比lock操作优先级更高。lock请求是被插入 sequencer仲裁队列的最后面” ([pdf](zotero://open-pdf/library/items/BH7DPRKX?page=403&annotation=SQVRK7NY))

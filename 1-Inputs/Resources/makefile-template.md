@@ -1,13 +1,16 @@
 ---
-Project: ["BuildPdb"]
-title: 
-description: 
-source: 
-author: 
-tags: 
+Project:
+  - BuildPdb
+title:
+description:
+source:
+author:
+tags:
+  - Makefile
+  - xspdb
 created: 2025-07-29 | 20:05
 parent: Resource
-branch: 
+branch:
 ---
 # Resources
 - https://github.com/OpenXiangShan/XiangShan/commit/5c824f#diff-9bb3ef6cfa20777b1b22d65153ede84989ee3388b87f8c409a4a10568a082e12

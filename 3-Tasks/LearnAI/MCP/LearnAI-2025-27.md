@@ -10,7 +10,7 @@ cssclasses: []
 ---
 ## Input (LEARN)
 
-- [ ] config mcp env
+- [x] config mcp env
 	- [[dockerfile and compose]]
 	- [[config docer env]]
 	- [[docker-basic-function]]

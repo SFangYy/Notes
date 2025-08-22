@@ -1,15 +1,11 @@
 ---
 Project:
   - UVM
-title:
 description:
-source:
-author:
 tags:
   - UVM
 created: 2025-08-19 | 09:49
 parent: Resource
-branch:
 url: https://blog.csdn.net/weixin_43444334/article/details/147316674
 ---
 # 002-Browser
@@ -20,11 +16,8 @@ url: https://blog.csdn.net/weixin_43444334/article/details/147316674
 ```
 ### fish 配置环境变量
 - 配置vcs home,path, VCS_ARCH_OVERRIDE 
-```
-set -gx VCS_HOME "/home/sfangyy/work/9-dependency/synopsys/vcs/W-2024.09-SP1"
-set -gx PATH "$VCS_HOME/bin" $PATH
-set -gx VCS_ARCH_OVERRIDE linux
-```
+![[配置fish#配置环境变量]]
+
 
 ### 复制patch到vcs路径下
 

@@ -1,13 +1,11 @@
 ---
-Project: ["BuildPdb"]
-title: 
-description: 
-source: 
-author: 
-tags: 
+Project:
+  - BuildPdb
+description:
+tags:
+  - linux
 created: 2025-07-21 | 10:39
 parent: Resource
-branch: 
 ---
 # QuickNotes
 ## install dependency

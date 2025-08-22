@@ -1,15 +1,12 @@
 ---
 Project:
   - BuildPdb
-title: 
 description: this file tell you how set and update a submodule
-source: 
-author: 
 tags:
   - git
+  - xspdb
 created: 2025-07-07 | 22:16
 parent: Resource
-branch:
 ---
 # Resources
 ## 1. add submodules

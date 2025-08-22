@@ -1,14 +1,11 @@
 ---
 Project:
   - UVM
-title:
-description:
-source:
-author:
 tags:
+  - UVM
+  - linux
 created: 2025-08-19 | 09:23
 parent: Resource
-branch:
 ---
 # 003-GPT
 

@@ -1,13 +1,11 @@
 ---
-Project: ["BuildPdb"]
-title: 
-description: 
-source: 
-author: 
-tags: 
+Project:
+  - BuildPdb
+tags:
+  - Makefile
+  - xspdb
 created: 2025-07-07 | 22:10
 parent: Resource
-branch: 
 ---
 # Resources
 

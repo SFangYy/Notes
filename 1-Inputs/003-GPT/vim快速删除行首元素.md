@@ -1,13 +1,12 @@
 ---
-Project: ["BuildPdb"]
-title: 
-description: 
-source: 
-author: 
-tags: 
+Project:
+  - BuildPdb
+description:
+tags:
+  - vim
+  - xspdb
 created: 2025-07-31 | 21:06
 parent: Resource
-branch: 
 ---
 # 003-GPT
 在 Vim 中，要删除第10行到第43行行首的第一个字母，可以使用以下命令：

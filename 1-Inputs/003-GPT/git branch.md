@@ -1,15 +1,13 @@
 ---
 Project:
   - BuildPdb
-title: 
-description: 
-source: 
-author: 
+title:
+description:
 tags:
   - git
+  - xspdb
 created: 2025-07-08 | 11:09
 parent: Resource
-branch:
 ---
 # Resources
 在GitHub上，如果你希望将主分支（通常称为`main`或`master`，取决于你的仓库设置）上的内容同步到子分支（例如`feature`分支），有几种方法可以实现这一点。这里介绍几种常见的方法：

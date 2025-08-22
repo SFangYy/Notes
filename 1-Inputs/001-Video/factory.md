@@ -1,14 +1,12 @@
 ---
 Project:
   - UVM
-title: 
-description: 
-source: 
-author: 
-tags: 
+title:
+description:
+tags:
+  - UVM
 created: 2025-08-12 | 10:42
 parent: Resource
-branch:
 ---
 # 001-Video
 上述代码中的hungry就是虚函数,它可以被重载。但是hungry2不是虚函数,不能被重载。重载的最大优势是使得一个子类的  指针以父类的类型传递时,其表现出的行为依然是子类的行为:

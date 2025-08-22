@@ -1,15 +1,12 @@
 ---
 Project:
   - LearnTools
-title: act
-description: 
-source: 
-author: 
+description:
 tags:
   - git
+  - linux
 created: 2025-07-07 | 10:54
 parent: Resource
-branch:
 ---
 # Resources
 1. add git remote repo

@@ -1,15 +1,12 @@
 ---
 Project:
   - LearnTools
-title: 
-description: 
-source: 
-author: 
+description:
 tags:
   - git
+  - xspdb
 created: 2025-07-30 | 15:30
 parent: Resource
-branch:
 ---
 # 002-Browser
 让我们一步步操作，将 fork 的仓库与原仓库同步：

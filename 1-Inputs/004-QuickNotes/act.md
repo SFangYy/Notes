@@ -1,15 +1,12 @@
 ---
 Project:
   - LearnTools
-title: act
-description: 
-source: 
-author: 
+description:
 tags:
   - linux
+  - command
 created: 2025-07-07 | 10:54
 parent: Resource
-branch:
 ---
 # QuickNotes
 act is a debug github ci tools in your local device ,it can provide github ci env and function in its images 

@@ -1,13 +1,11 @@
 ---
-Project: ["Formal"]
-title: 
-description: 
-source: 
-author: 
-tags: 
+Project:
+  - Formal
+description:
+tags:
+  - code/sv
 created: 2025-07-09 | 15:34
 parent: Resource
-branch: 
 ---
 # Resources
 ## 1.1 概述

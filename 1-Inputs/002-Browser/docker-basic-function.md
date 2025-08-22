@@ -1,13 +1,11 @@
 ---
-Project: ["LearnAI"]
-title: 
-description: 
-source: 
-author: 
-tags: 
+Project:
+  - LearnAI
+description:
+tags:
+  - docker
 created: 2025-07-01 | 14:41
 parent: Resource
-branch: 
 ---
 # Resources
 

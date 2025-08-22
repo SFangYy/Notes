@@ -1,15 +1,12 @@
 ---
 Project:
   - LearnTools
-title: 
-description: 
-source: 
-author: 
+description:
 tags:
   - git
+  - xspdb
 created: 2025-07-02 | 10:49
 parent: Resource
-branch:
 ---
 # Resources
 if you push a error commit to  ,you can revert it first and then commit a new ,and then push it

@@ -9,7 +9,7 @@ aimAndPlan: "[[LearnIOTO-A&P]]"
 	- [x] [[Sync-and-fetch]]
 - Git
 	- [x] [[git-fetch]]
-	- [x] [[git-config]]
+	- [x] [[git-initial-config]]
 	- [x] [[git-submodule]]
 - linux
 	- [x]  [[compress]]

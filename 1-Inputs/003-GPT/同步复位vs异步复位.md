@@ -1,13 +1,11 @@
 ---
 Project:
-title: 
-description: 
-source: 
-author: 
-tags: 
+  - UVM
+description:
+tags:
+  - UVM
 created: 2025-08-12 | 17:18
 parent: Resource
-branch: 
 ---
 # 003-GPT
 ### **一、同步复位（Synchronous Reset）**

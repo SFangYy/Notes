@@ -1,13 +1,12 @@
 ---
 Project:
-title: 
-description: 
-source: 
-author: 
-tags: 
+  - BuildPdb
+title:
+tags:
+  - xspdb
+  - git
 created: 2025-08-20 | 21:47
 parent: Resource
-branch: 
 ---
 # 003-GPT
 

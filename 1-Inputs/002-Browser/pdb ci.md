@@ -1,13 +1,15 @@
 ---
-Project: ["BuildPdb"]
-title: 
-description: 
-source: 
-author: 
-tags: 
+Project:
+  - BuildPdb
+title:
+description:
+source:
+author:
+tags:
+  - xspdb
 created: 2025-07-21 | 14:21
 parent: Resource
-branch: 
+branch:
 ---
 # Resources
 ```

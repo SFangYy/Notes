@@ -66,7 +66,7 @@
       "targetFolder": "",
       "fileName": "",
       "filePath": "2-Areas/009-daily/{{date: YYYY-MM-DD}}.md",
-      "position": "bottomBelowTitle",
+      "position": "topBelowTitle",
       "heading": "### 3.1 Today Cost",
       "content": "- {{time}} {{@金额}} {{@type}} {{@tags}} {{@内容}}"
     }

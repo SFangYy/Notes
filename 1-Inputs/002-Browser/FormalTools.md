@@ -1,5 +1,8 @@
 ---
-Project: ["Formal"]
+Project:
+  - Formal
+tags:
+  - formal
 ---
 # Resources# 形式化验证工具
 

@@ -1,13 +1,11 @@
 ---
 Project:
-title: 
-description: 
-source: 
-author: 
-tags: 
+  - UVM
+description:
+tags:
+  - UVM
 created: 2025-08-11 | 16:33
 parent: Resource
-branch: 
 ---
 # 001-Video
 在一个sequence的body中,除了可以使用uvm_do宏产生transaction外,其实还可以启动其他的sequence,即一个sequence内启动另  外一个sequence

@@ -1,13 +1,11 @@
 ---
 Project:
-title: 
-description: 
-source: 
-author: 
-tags: 
+  - Formal
+tags:
+  - riscv
+  - formal
 created: 2025-08-13 | 15:30
 parent: Resource
-branch: 
 ---
 # 001-Video
 

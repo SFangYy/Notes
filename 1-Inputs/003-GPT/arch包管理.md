@@ -1,14 +1,12 @@
 ---
 Project:
-title:
+  - LearnTools
 description:
-source:
-author:
 tags:
   - linux
+  - command
 created: 2025-08-19 | 09:59
 parent: Resource
-branch:
 ---
 # 003-GPT
 

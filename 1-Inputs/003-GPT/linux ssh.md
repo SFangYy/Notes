@@ -1,13 +1,12 @@
 ---
-Project: ["LearnAI"]
-title: 
-description: 
-source: 
-author: 
-tags: 
+Project:
+  - LearnAI
+description:
+tags:
+  - linux
+  - command
 created: 2025-07-01 | 22:36
 parent: Resource
-branch: 
 ---
 # Resources
 ```

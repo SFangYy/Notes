@@ -1,13 +1,11 @@
 ---
-Project: ["LearnTools"]
-title: 
-description: 
-source: 
-author: 
-tags: 
+Project:
+  - LearnTools
+description:
+tags:
+  - linux
 created: 2025-07-02 | 19:40
 parent: Resource
-branch: 
 ---
 # QuickNotes
 ### 1. 禁用 `conform-nvim` 对 YAML 文件的格式化

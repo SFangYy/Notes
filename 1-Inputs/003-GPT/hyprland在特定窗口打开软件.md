@@ -1,13 +1,11 @@
 ---
 Project:
-title: 
-description: 
-source: 
-author: 
-tags: 
+  - LearnTools
+description:
+tags:
+  - linux
 created: 2025-08-13 | 14:15
 parent: Resource
-branch: 
 ---
 # 003-GPT
 在 Hyprland 中配置特定窗口打开应用的快捷键，需要通过 `hyprland.conf` 配置文件实现。以下是详细配置方法：

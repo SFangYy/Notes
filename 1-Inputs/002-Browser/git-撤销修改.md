@@ -1,15 +1,11 @@
 ---
 Project:
   - LearnTools
-title: 
 description: 
-source: 
-author: 
 tags:
   - git
 created: 2025-07-30 | 15:20
 parent: Resource
-branch:
 ---
 # 002-Browser
 git 撤销到某个commit

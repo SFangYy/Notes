@@ -1,0 +1,37 @@
+formulas:
+  Untitled: ""
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.path.startsWith("1-Inputs")
+        - '!file.hasTag("xspdb")'
+  - type: table
+    name: UVM
+    filters:
+      and:
+        - file.path.startsWith("1-Inputs")
+        - startDate == null
+    order:
+      - file.name
+      - formula.Untitled
+  - type: table
+    name: PDB
+    filters:
+      and:
+        - file.path.startsWith("1-Inputs")
+        - file.hasTag("xspdb")
+    order:
+      - file.name
+      - file.tags
+      - file.folder
+  - type: table
+    name: Formal
+    filters:
+      and:
+        - file.path.startsWith("1-Inputs")
+        - file.hasTag("formal")
+    order:
+      - file.name
+      - file.tags

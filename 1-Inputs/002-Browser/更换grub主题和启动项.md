@@ -1,14 +1,11 @@
 ---
-Project: 
-title: 
-description: 
-source: 
-author: 
+Project:
+  - LearnTools
+description:
 tags:
   - linux
 created: 2025-08-14 | 09:42
 parent: Resource
-branch:
 ---
 # 002-Browser
 

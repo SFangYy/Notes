@@ -1,13 +1,15 @@
 ---
-Project: ["LearnAI"]
-title: 
-description: 
-source: 
-author: 
-tags: 
+Project:
+  - LearnAI
+title:
+description:
+source:
+author:
+tags:
+  - docker
 created: 2025-07-01 | 14:40
 parent: Resource
-branch: 
+branch:
 ---
 # Resources
 1. define docker file, this file will put at last

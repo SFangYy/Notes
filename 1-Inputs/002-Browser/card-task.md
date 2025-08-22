@@ -1,13 +1,12 @@
 ---
-Project: ["undefined"]
-title: 
-description: 
-source: 
-author: 
-tags: 
+Project:
+  - LearnTools
+author:
+tags:
+  - IOTO
+  - task
 created: 2025-08-05 | 21:01
 parent: Resource
-branch: 
 ---
 # 002-Browser
 ```dataviewjs

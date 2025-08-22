@@ -1,13 +1,11 @@
 ---
-Project: ["UVM"]
-title: 
-description: 
-source: 
-author: 
-tags: 
+Project:
+  - UVM
+description:
+tags:
+  - UVM
 created: 2025-07-02 | 10:59
 parent: Resource
-branch: 
 ---
 # QuickNotes
 ## config and verify license

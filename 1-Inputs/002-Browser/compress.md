@@ -1,5 +1,10 @@
 ---
-Project: ["LearnIOTO"]
+Project:
+  - LearnIOTO
+tags:
+  - linux
+  - command
+  - IOTO
 ---
 # Resources
 

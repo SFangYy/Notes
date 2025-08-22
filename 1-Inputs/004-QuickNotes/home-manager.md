@@ -1,3 +1,13 @@
+---
+Project:
+  - LearnTools
+description:
+tags:
+  - linux
+  - command
+created: 2025-07-07 | 22:11
+parent: Resource
+---
 用于生成配置文件
 
 在nix项目的home文件夹下

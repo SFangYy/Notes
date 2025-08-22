@@ -1,3 +1,12 @@
+---
+Project:
+  - LearnTools
+description:
+tags:
+  - linux
+created: 2025-07-02 | 10:59
+parent: Resource
+---
 用于配置并管理nix系统
 
 目录结构
