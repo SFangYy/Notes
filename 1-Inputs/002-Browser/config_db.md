@@ -1,15 +1,11 @@
 ---
 Project:
   - UVM
-title:
 description:
-source:
-author:
 tags:
   - UVM
 created: 2025-06-30 | 19:41
 parent: Resource
-branch:
 ---
 # Resources
 

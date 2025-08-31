@@ -8,8 +8,8 @@ aimAndPlan: "[[LearnIOTO-A&P]]"
 	- [x] [[basic-input-hotkey]]
 	- [x] [[Sync-and-fetch]]
 - Git
-	- [x] [[git-fetch]]
-	- [x] [[git-initial-config]]
+	- [x] [[git-fetch-同步远程仓库]]
+	- [x] [[github-initial-config]]
 	- [x] [[git-submodule]]
 - linux
 	- [x]  [[compress]]

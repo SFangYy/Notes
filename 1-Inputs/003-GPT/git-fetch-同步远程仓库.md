@@ -24,7 +24,13 @@ upstream	https://github.com/EdenQwQ/nixos.git (push)
 	- `git fetch upstream`
 
 4. merge update
-	- `git merge upstream/main`
+	- `git merge upstream/main`i
+
+## 将多个远程仓库的多条commit合并为一条
+```
+git merge --squash upstream/main
+git commit -m "chore: merge upstream changes from A"
+```
 
 before merge remote version you should commit your local change first
 ## nixos 

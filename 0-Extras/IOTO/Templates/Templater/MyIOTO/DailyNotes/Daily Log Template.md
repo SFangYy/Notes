@@ -27,7 +27,7 @@ cssclasses:
 <%*
 const weekdayStr = tp.date.now("dddd", 0, tp.file.title, "YYYY-MM-DD");
 if (weekdayStr === "Sunday" || weekdayStr === "星期日") {
-	tR += "- [ ] Plan new week"
+	tR += "- [ ] record my weight"
 }
 %>
 <%*

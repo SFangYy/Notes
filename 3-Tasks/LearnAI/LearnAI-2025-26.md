@@ -5,7 +5,7 @@ aimAndPlan: "[[LearnAI-A&P]]"
 ---
 ## Input (LEARN)
 
-- [ ] [[config-gemini-cli]]
+
 
 ## Output (THINK)
 

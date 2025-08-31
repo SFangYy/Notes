@@ -9,6 +9,35 @@ created: 2025-07-01 | 22:36
 parent: Resource
 ---
 # Resources
+## 不输入密码连接远程主机
+- 本地:arch 
+```
+本地：arch
+
+$ssh-keygen -t rsa -b 4096 -C "sfangyy@163.com"
+$cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAA xxxx
+
+远程主机 
+
+```
+
+- fedora or kxy101
+```
+echo "在这里粘贴你刚刚复制的公钥内容" >> ~/.ssh/authorized_keys
+chmod 700 ~/.ssh 
+chmod 600 ~/.ssh/authorized_keys
+
+```
+
+- use 
+```
+ssh username@ip
+
+```
+
+
+
 ```
 报错ssh root@localhost -p 2222
 

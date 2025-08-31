@@ -21,6 +21,13 @@ sudo pacman -U gcc10-libs-1:10.3.0-1-x86_64.pkg.tar.zst
 
 sudo pacman -U gcc13-13.3.0-1-x86_64.pkg.tar.zst 
 ```
+
+## 更新
+```
+# 全面更新系统
+paru -Syu
+
+```
 ## 卸载
 
 ```

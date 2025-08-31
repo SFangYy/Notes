@@ -1,16 +1,12 @@
 ---
 Project:
   - BuildPdb
-title:
 description:
-source:
-author:
 tags:
   - xspdb
   - linux
 created: 2025-08-01 | 12:16
 parent: Resource
-branch:
 ---
 # 003-GPT
 怎么LD_PRELOAD两个so

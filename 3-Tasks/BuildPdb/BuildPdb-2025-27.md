@@ -12,7 +12,7 @@ cssclasses: []
 
 - [ ] [[github workflow]]
 - [x] difftest pr
-- [ ] xs pr
+- [x] xs pr
 
 ## Output (THINK)
 

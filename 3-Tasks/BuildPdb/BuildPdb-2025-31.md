@@ -1,12 +1,11 @@
 ---
 Project: ["BuildPdb"]
 cssclasses: ["iotoTDL"]
-aimAndPlan: "[[BuildPdb-A&P]]"
 tags: 
 parent: Project
 branch: 
 Archived: 
-cssclasses: []
+
 ---
 ## Input (LEARN)
 - careate a base pdb to pull request 
@@ -20,12 +19,6 @@ cssclasses: []
 		- difftest
 		- dut
 		- 
-- [ ] [[makefile-template]]
-- [ ] [[动态链接和静态链接]]
-- [ ] [[修改pdb项目结构]]
-- [ ] [[常见python项目组织形式]]
-- [ ] [[vim快速删除行首元素]]
-- [ ] [[命令进阶用法]]
 
 ## Output (THINK)
 

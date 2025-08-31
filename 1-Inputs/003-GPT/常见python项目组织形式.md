@@ -1,13 +1,12 @@
 ---
-Project: ["BuildPdb"]
-title: 
-description: 
-source: 
-author: 
-tags: 
+Project:
+  - BuildPdb
+description:
+tags:
+  - xspdb
+  - code/py
 created: 2025-07-31 | 11:17
 parent: Resource
-branch: 
 ---
 # 003-GPT
 好的，当然。
