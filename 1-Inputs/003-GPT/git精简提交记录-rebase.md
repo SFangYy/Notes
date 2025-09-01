@@ -79,7 +79,7 @@ pick c3f4e5a Final tweaks1               4
 proxychains git push --force-with-lease
 ```
 
-```
+
 ## 
 如果想要按照某种顺序将历史提交汇总起来，则可以通过使用 s 将所有的提交暂时合并为同一个提交，然后将将`HEAD` 指针指向上一次提交记录，之后重新提交每次的代码，具体操作如下
 

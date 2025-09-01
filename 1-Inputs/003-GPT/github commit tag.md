@@ -14,6 +14,24 @@ parent: Resource
 - 
 ```
 Author: SFangYy <sfangyy@163.com>
+Date:   Mon Sep 1 09:50:16 2025 +0800
+
+    feat(pdb): add batch processing mode for xspdb
+    
+    Co-Authored-By: Zhicheng Yao <yaozhicheng@ict.ac.cn>
+    Acked-by: Jiuyue Ma <majiuyue@bosc.ac.cn>
+
+commit 29fa831013833d4dc0995bc3188bcca896d4c76c
+Author: SFangYy <sfangyy@163.com>
+Date:   Mon Sep 1 09:47:35 2025 +0800
+
+    feat(pdb): add ci for build xspdb
+    
+    Co-Authored-By: Zhicheng Yao <yaozhicheng@ict.ac.cn>
+    Acked-by: Jiuyue Ma <majiuyue@bosc.ac.cn>
+    
+    
+Author: SFangYy <sfangyy@163.com>
 Date:   Wed Aug 20 21:13:51 2025 +0800
 
     docs(pdb): update README with xspdb project overview and CODEOWNERS files

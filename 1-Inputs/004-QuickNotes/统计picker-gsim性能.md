@@ -9,13 +9,13 @@ parent: Resource
 
 ## xiangshan
 
-| 指标             | gsim       | verilator |
-| -------------- | ---------- | --------- |
-| picker  export | 39 min 17s | x s       |
-| picker make    | 14:18:42   | 3h+       |
-| xspdb run      |            |           |
-| VIRT           | 122.7g     | 128.4g    |
-| RES            | 7.5g       | 7.6g      |
+| 指标             | gsimi+picker | verilator + picker | gsim                 |
+| -------------- | ------------ | ------------------ | -------------------- |
+| picker  export | 39 min 17s   | x s                |                      |
+| picker make    | 14:18:42     | 3h+                | 4194.150<br>4328.759 |
+| xspdb run      |              |                    |                      |
+| VIRT           | 122.7g       | 128.4g             |                      |
+| RES            | 7.5g         | 7.6g               |                      |
 
 ## error info
 ```
