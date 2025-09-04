@@ -9,13 +9,25 @@ parent: Resource
 
 ## xiangshan
 
-| 指标             | gsimi+picker | verilator + picker | gsim                 |
-| -------------- | ------------ | ------------------ | -------------------- |
-| picker  export | 39 min 17s   | x s                |                      |
-| picker make    | 14:18:42     | 3h+                | 4194.150<br>4328.759 |
-| xspdb run      |              |                    |                      |
-| VIRT           | 122.7g       | 128.4g             |                      |
-| RES            | 7.5g         | 7.6g               |                      |
+| 指标             | gsimi+picker | verilator + picker | gsim                             |
+| -------------- | ------------ | ------------------ | -------------------------------- |
+| picker  export | 2308.116     | x s                |                                  |
+| picker make    | 14:18:42     | 3h+                | 4194.150<br>4328.759<br>4006.115 |
+| xspdb run      |              |                    |                                  |
+| VIRT           | 122.7g       | 128.4g             |                                  |
+| RES            | 7.5g         | 7.6g               |                                  |
+
+## cache
+
+
+|                           | gsim             | verilator      |
+| ------------------------- | ---------------- | -------------- |
+| make                      | 25.328           | 24.863         |
+| run 100000                | 2.653            | 3.343          |
+| run 1000000               | 21.740           | 28.877         |
+| run with set value 100000 | 10.336<br>10.787 | 8.556<br>8.201 |
+| run with set value 100000 | 102.088          | 82.507         |
+
 
 ## error info
 ```

@@ -18,6 +18,7 @@ act is a debug github ci tools in your local device ,it can provide github ci en
 
 ```
 act --pull=false -W .github/workflows/release_pdb1.yml -P bosc=hcr.io/openxiangshan/xspdb:build-latest --network host
+
 ```
 
 
