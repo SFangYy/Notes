@@ -11,7 +11,9 @@ parent: Resource
 ## some useful hotkey 
 - `:bd`: delete current buffer 
 - `Ctrl + h/l`: move a shiftwidth
-- 
+- 匹配模式下
+	- `n`: 跳转到下一个匹配项
+	- `shift + n`: 跳转到上一个匹配项
 ```
 { config, pkgs, lib, ... }:
 

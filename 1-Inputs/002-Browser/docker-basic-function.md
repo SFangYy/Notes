@@ -21,6 +21,11 @@ docker build -t myapp:dev -f Dockerfile.dev .
 docker run -it --network host 镜像名
 
 docker run -d -p 51202:51202 -p 5901:5901 --name my-remote-desktop ubuntu-desktop-vnc
+
+# 后台创建然后进入容器
+# 进入容器
+docker run -d --network host --name my_ubuntu ubuntu:latest tail -f /dev/null
+docker exec -it my_ubuntu /bin/bash
 ```
 ## 容器的管理
 ```

@@ -6,6 +6,8 @@ created: 2025-09-01 | 09:12
 parent: Resource
 ---
 # 004-QuickNotes---
+给文件配置环境变量时不能有空格，否则会找不到文件
+
 ```
           echo "NOOP_HOME=$GITHUB_WORKSPACE" >> $GITHUB_ENV
           echo "PDB_HOME=$GITHUB_WORKSPACE/build/xspdb" >> $GITHUB_ENV
