@@ -36,7 +36,31 @@ ssh username@ip
 
 ```
 
+## 配置在登录到远程之后执行source .bashrc命令
+```
+# 创建 .bash_profile 文件， 添加如下内容 
+if [ -f ~/.bashrc ]; then
+    source ~/.bashrc
+fi
 
+```
+
+
+## kitty终端ssh后不支持tmux 
+1. 修改本地ssh配置文件
+2. 为服务器添加环境变量
+```
+# 1. `~/.ssh/config`
+Host your-server
+    HostName your-server.com
+    User your-username
+    SendEnv TERM
+    # 或者强制设置 TERM
+    SetEnv TERM=xterm-256color
+
+# 2. 修改.bashrc
+export TERM=xterm-256color
+```
 
 ```
 报错ssh root@localhost -p 2222

@@ -26,6 +26,12 @@ sudo nixos-rebuild switch --flake .#inspiron
 home-manager switch --flake .
 ```
 
+## 生成flake lock
+```
+	若lock文件冲突，则可以删除flake.lock文件然后
+	nix flake lock --extra-experimental-features 'nix-command flakes'
+```
+
 ### 附：nixos项目结构
 ```
 ~/nixos/ (or /etc/nixos/)

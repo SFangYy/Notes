@@ -21,6 +21,8 @@ git remote -v
 git remote add upstream https://github.com/原作者/仓库名.git
 # 或使用 SSH
 git remote add upstream git@github.com:原作者/仓库名.git
+
+git remote add upstream https://github.com/EdenQwQ/nixos.git
 ```
 
 
