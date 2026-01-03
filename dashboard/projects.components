@@ -1,0 +1,159 @@
+{
+  "components": [
+    {
+      "id": "fa291740-6713-4688-bb46-47abf37a01a3",
+      "type": "multi",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showTitle": true,
+      "showShadow": false,
+      "createAt": "2025-10-20T07:31:18.579Z",
+      "updateAt": "2025-10-20T07:31:18.579Z",
+      "components": [
+        {
+          "componentId": "b1bb4a41-7295-4b55-9a45-0d0a4fedcd17"
+        }
+      ],
+      "layoutType": "tab",
+      "locked": false,
+      "layoutOptions": {}
+    },
+    {
+      "id": "b1bb4a41-7295-4b55-9a45-0d0a4fedcd17",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showTitle": true,
+      "showShadow": false,
+      "createAt": "2025-10-20T07:31:21.891Z",
+      "updateAt": "2025-10-30T03:42:10.841Z",
+      "viewType": "table",
+      "newPageNameFormat": "{{date:YYYYMMDDHHmmss}} ",
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "文件名",
+          "type": "text",
+          "isShow": true,
+          "wrap": false,
+          "options": {}
+        },
+        {
+          "id": "1b43014d-f456-4d9a-b784-730309296372",
+          "name": "area",
+          "type": "link",
+          "isShow": true,
+          "wrap": false,
+          "options": {}
+        },
+        {
+          "id": "f1591fae-6f6d-4bb3-9f46-dac88da142fc",
+          "name": "status",
+          "type": "select",
+          "isShow": true,
+          "wrap": false,
+          "options": {}
+        },
+        {
+          "id": "1cda5d9e-260e-4f7a-aa85-0b20b7331a69",
+          "name": "createTime",
+          "type": "datetime",
+          "isShow": true,
+          "wrap": false,
+          "options": {}
+        },
+        {
+          "id": "f0dc0a54-4070-4624-ae62-e049709c201f",
+          "name": "doneTime",
+          "type": "datetime",
+          "isShow": true,
+          "wrap": false,
+          "options": {}
+        },
+        {
+          "id": "f55ecbe3-0b24-4b05-bb76-67d3cac9785f",
+          "name": "tags",
+          "type": "multiSelect",
+          "isShow": true,
+          "wrap": false,
+          "options": {}
+        },
+        {
+          "id": "6824cc96-d41e-4dc1-8942-99688d766d14",
+          "name": "archived",
+          "type": "checkbox",
+          "isShow": true,
+          "wrap": false,
+          "options": {}
+        },
+        {
+          "id": "dd83706f-2ce0-4254-8869-5605ebdb7247",
+          "name": "issueType",
+          "type": "text",
+          "isShow": true,
+          "wrap": false,
+          "options": {}
+        }
+      ],
+      "templates": [
+        {
+          "id": "2b542113-aed1-482c-abd8-914175582e07",
+          "path": "assets/form-flow/form/🚀 Project.cform",
+          "name": "🚀 Project.cform",
+          "type": "normal"
+        }
+      ],
+      "groups": [],
+      "colorfulGroups": false,
+      "viewOptions": {
+        "openPageIn": "tab",
+        "openPageAfterCreate": true,
+        "items": [],
+        "pinFiltersToMenuBar": false,
+        "hideHeaderMenu": false,
+        "showGrid": false,
+        "heightType": "auto",
+        "heightValue": 600
+      },
+      "groupStates": {
+        "sort": "nameAsc",
+        "statics": [],
+        "orders": [],
+        "hiddens": [],
+        "collapseds": []
+      },
+      "filter": {
+        "id": "ea4d61b4-6594-417f-8d65-5a252edab298",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "60736e9f-91b1-4050-8914-570016796adc",
+            "type": "filter",
+            "operator": "contains",
+            "property": "tags",
+            "value": "project",
+            "conditions": []
+          },
+          {
+            "id": "5f4c2f9c-f10b-41d7-b600-5666053cacf8",
+            "type": "filter",
+            "operator": "contains",
+            "property": "status",
+            "value": "TODO",
+            "conditions": []
+          }
+        ]
+      },
+      "title": "需求池",
+      "defaultTemplate": "2b542113-aed1-482c-abd8-914175582e07"
+    }
+  ],
+  "rootComponentId": "fa291740-6713-4688-bb46-47abf37a01a3",
+  "version": 3,
+  "modified": 1761465618124
+}

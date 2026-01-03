@@ -1,0 +1,1650 @@
+{
+  "components": [
+    {
+      "id": "23239889-5997-490f-aa87-1343790e24e4",
+      "type": "multi",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "createAt": "2024-04-25T14:22:24.230Z",
+      "updateAt": "2024-04-25T14:22:24.230Z",
+      "backgroundStyle": "none",
+      "widgets": [],
+      "components": [
+        {
+          "componentId": "8eaeb04f-23b9-40fb-be18-f378181561cc",
+          "layout": {
+            "mobile": {
+              "x": 0,
+              "y": 34,
+              "w": 4,
+              "h": 34
+            },
+            "laptop": {
+              "x": 3,
+              "y": 0,
+              "w": 9,
+              "h": 43
+            }
+          }
+        },
+        {
+          "componentId": "d69a7d54-5e3f-408f-95c2-3d2ca81b7272",
+          "layout": {
+            "mobile": {
+              "x": 0,
+              "y": 5,
+              "w": 4,
+              "h": 4
+            },
+            "laptop": {
+              "x": 0,
+              "y": 0,
+              "w": 3,
+              "h": 43
+            }
+          }
+        }
+      ],
+      "layoutType": "grid",
+      "activeComponentId": "d18f0366-7249-43ea-be76-da6878ee7160",
+      "locked": true,
+      "showBorder": false
+    },
+    {
+      "id": "d18f0366-7249-43ea-be76-da6878ee7160",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "项目看板",
+      "maxWidthRatio": -1,
+      "createAt": "2024-04-25T14:22:41.630Z",
+      "updateAt": "2025-10-30T03:40:11.850Z",
+      "backgroundStyle": "none",
+      "viewType": "kanban",
+      "datasource": {
+        "filter": {
+          "id": "59ff06dd-9dd9-4af7-beea-c47d344ff032",
+          "type": "group",
+          "operator": "and",
+          "conditions": [
+            {
+              "id": "8fb53e69-db29-4e5e-9837-115c463ff603",
+              "type": "filter",
+              "operator": "contains",
+              "property": "area",
+              "value": "[[Work]]",
+              "conditions": []
+            }
+          ]
+        },
+        "dataLimit": 10,
+        "storage": {
+          "location": ""
+        },
+        "sort": {
+          "orders": []
+        }
+      },
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "文件名",
+          "type": "text",
+          "isShow": true,
+          "wrap": true,
+          "options": {}
+        },
+        {
+          "id": "97fffbcc-6343-4e39-8828-7eb8480cba7a",
+          "name": "createTime",
+          "isShow": true,
+          "defaultValue": "",
+          "type": "datetime"
+        },
+        {
+          "id": "dc920362-59bd-4039-a879-a624ed6fae1f",
+          "name": "任务完成",
+          "isShow": false,
+          "type": "formula",
+          "options": {
+            "formula": "fixed(countCompletedTasks()/countTotalTasks(), 2) * 100 +\"%\""
+          }
+        },
+        {
+          "id": "22805497-8ae5-4327-985d-6482e2b772c0",
+          "name": "tags",
+          "isShow": false,
+          "defaultValue": [],
+          "type": "multiSelect"
+        },
+        {
+          "id": "4c3584f4-ccf8-4412-9249-484b48745a30",
+          "name": "doneTime",
+          "isShow": false,
+          "type": "datetime",
+          "options": {}
+        },
+        {
+          "id": "44d52434-c600-41ac-8ada-1410e2bb79f2",
+          "name": "完成任务",
+          "isShow": true,
+          "type": "button",
+          "options": {
+            "name": "完成",
+            "action": {
+              "type": "updateProperty",
+              "properties": [
+                {
+                  "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                  "name": "doneTime",
+                  "type": "datetime",
+                  "value": "$now"
+                },
+                {
+                  "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                  "name": "status",
+                  "type": "string",
+                  "value": "DONE"
+                },
+                {
+                  "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                  "name": "archived",
+                  "type": "boolean",
+                  "value": true
+                }
+              ],
+              "action": {
+                "type": "updateProperty",
+                "properties": [
+                  {
+                    "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                    "name": "doneTime",
+                    "type": "datetime",
+                    "value": "$now"
+                  },
+                  {
+                    "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                    "name": "status",
+                    "type": "string",
+                    "value": "DONE"
+                  }
+                ],
+                "action": {
+                  "type": "updateProperty",
+                  "properties": [
+                    {
+                      "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                      "name": "doneTime",
+                      "type": "datetime",
+                      "value": "$now"
+                    },
+                    {
+                      "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                      "name": "archived",
+                      "type": "boolean",
+                      "value": true
+                    }
+                  ],
+                  "action": {
+                    "type": "updateProperty",
+                    "properties": [
+                      {
+                        "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                        "name": "status",
+                        "type": "string",
+                        "value": "DONE"
+                      },
+                      {
+                        "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                        "name": "archived",
+                        "type": "boolean",
+                        "value": true
+                      }
+                    ],
+                    "action": {
+                      "type": "updateProperty",
+                      "properties": [
+                        {
+                          "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                          "name": "status",
+                          "type": "string",
+                          "value": "DONE"
+                        },
+                        {
+                          "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                          "name": "archived",
+                          "type": "boolean",
+                          "value": true
+                        }
+                      ],
+                      "action": {
+                        "type": "updateProperty",
+                        "properties": [
+                          {
+                            "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                            "name": "doneTime",
+                            "type": "datetime",
+                            "value": "$now"
+                          },
+                          {
+                            "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                            "name": "archived",
+                            "type": "boolean",
+                            "value": true
+                          }
+                        ],
+                        "action": {
+                          "type": "updateProperty",
+                          "properties": [
+                            {
+                              "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                              "name": "doneTime",
+                              "type": "datetime",
+                              "value": "$now"
+                            },
+                            {
+                              "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                              "name": "status",
+                              "type": "string",
+                              "value": "DONE"
+                            }
+                          ],
+                          "action": {
+                            "type": "updateProperty",
+                            "properties": [
+                              {
+                                "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                                "name": "doneTime",
+                                "type": "datetime",
+                                "value": "$now"
+                              },
+                              {
+                                "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                                "name": "status",
+                                "type": "string",
+                                "value": "DONE"
+                              }
+                            ],
+                            "action": {
+                              "type": "updateProperty",
+                              "properties": [
+                                {
+                                  "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                                  "name": "doneTime",
+                                  "type": "datetime",
+                                  "value": "$now"
+                                },
+                                {
+                                  "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                                  "name": "status",
+                                  "type": "string",
+                                  "value": "DONE"
+                                }
+                              ],
+                              "action": {
+                                "type": "updateProperty",
+                                "properties": [
+                                  {
+                                    "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                                    "name": "doneTime",
+                                    "type": "datetime",
+                                    "value": "$now"
+                                  },
+                                  {
+                                    "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                                    "name": "status",
+                                    "type": "string",
+                                    "value": "DONE"
+                                  }
+                                ],
+                                "action": {
+                                  "type": "updateProperty",
+                                  "properties": [
+                                    {
+                                      "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                                      "name": "doneTime",
+                                      "type": "datetime",
+                                      "value": "$now"
+                                    },
+                                    {
+                                      "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                                      "name": "archived",
+                                      "type": "boolean",
+                                      "value": true
+                                    }
+                                  ],
+                                  "action": {
+                                    "type": "updateProperty",
+                                    "properties": [
+                                      {
+                                        "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                                        "name": "status",
+                                        "type": "string",
+                                        "value": "DONE"
+                                      },
+                                      {
+                                        "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                                        "name": "archived",
+                                        "type": "boolean",
+                                        "value": true
+                                      }
+                                    ],
+                                    "action": {
+                                      "type": "updateProperty",
+                                      "properties": [
+                                        {
+                                          "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                                          "name": "status",
+                                          "type": "string",
+                                          "value": "DONE"
+                                        },
+                                        {
+                                          "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                                          "name": "archived",
+                                          "type": "boolean",
+                                          "value": true
+                                        }
+                                      ],
+                                      "action": {
+                                        "type": "updateProperty",
+                                        "properties": [
+                                          {
+                                            "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                                            "name": "status",
+                                            "type": "string",
+                                            "value": "DONE"
+                                          },
+                                          {
+                                            "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                                            "name": "archived",
+                                            "type": "boolean",
+                                            "value": true
+                                          }
+                                        ],
+                                        "action": {
+                                          "type": "updateProperty",
+                                          "properties": [
+                                            {
+                                              "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                                              "name": "status",
+                                              "type": "string",
+                                              "value": "DONE"
+                                            },
+                                            {
+                                              "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                                              "name": "archived",
+                                              "type": "boolean",
+                                              "value": true
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "filePath": "resource/property-template/project-complete.md"
+            }
+          }
+        },
+        {
+          "id": "df72b872-4920-40a3-a50d-5aad9f5b2e83",
+          "name": "取消",
+          "isShow": true,
+          "type": "button",
+          "options": {
+            "name": "取消",
+            "action": {
+              "type": "updateProperty",
+              "properties": [
+                {
+                  "id": "0293c9fe-f549-453a-8c43-386722999ac9",
+                  "name": "status",
+                  "type": "string",
+                  "value": "CANCELED",
+                  "valueSource": "constant",
+                  "modifier": "replaceValue"
+                },
+                {
+                  "id": "3b6b162e-b856-42ad-988e-600751b6b557",
+                  "name": "doneTime",
+                  "type": "datetime",
+                  "value": "$now",
+                  "valueSource": "constant",
+                  "modifier": "replaceValue"
+                }
+              ],
+              "filePath": "resource/property-template/project-cancel.md"
+            }
+          }
+        },
+        {
+          "id": "133f7851-51e2-4b84-b737-7ea53a1dcf16",
+          "name": "jiraLink",
+          "isShow": true,
+          "type": "link",
+          "options": {}
+        },
+        {
+          "id": "7c332ac7-a825-4494-958a-dd516e4dec30",
+          "name": "tasks",
+          "isShow": true,
+          "type": "taskList",
+          "options": {
+            "showTaskList": true,
+            "showAllTasks": false,
+            "hideTaskFields": false,
+            "timeRecordStyle": "none",
+            "insertPosition": {
+              "position": "BottomOfNote",
+              "headingLine": ""
+            }
+          }
+        },
+        {
+          "id": "d25b6b5d-f35c-46f2-afe1-bac2c6071a35",
+          "name": "status",
+          "isShow": false,
+          "type": "select",
+          "options": {
+            "items": [
+              {
+                "id": "c7b2c9c8-3b89-4fa4-9655-dd93e6a82565",
+                "value": "DOING",
+                "color": "components--color-green"
+              },
+              {
+                "id": "3a773368-e2a7-4912-9678-aee6e992deab",
+                "value": "DONE",
+                "color": "components--color-light-gray"
+              }
+            ]
+          }
+        }
+      ],
+      "templates": [
+        {
+          "id": "47106b32-af2c-43b3-87ce-3bc5add3b948",
+          "path": "assets/form-flow/form/🚀 Project.cform",
+          "name": "🚀 Project.cform",
+          "type": "normal"
+        }
+      ],
+      "groups": [
+        {
+          "id": "DOING",
+          "name": "DOING",
+          "items": [
+            "project/CNLB-2218 支持JD TMALL 积分兑换券（10.14上线）.md",
+            "project/CNLB-2220 积分商城后台支持基于券码检索商品.md",
+            "project/CNLB-2219 兑换补签卡减积分时没有减少过期积分数.md",
+            "project/250828 oneid-gradle-template 升级到 java17.md",
+            "project/[CNLB-1986] 订阅列表 API.md"
+          ]
+        }
+      ],
+      "viewOptions": {
+        "openPageIn": "modal",
+        "openPageAfterCreate": false,
+        "itemSize": "components--page-card-medium",
+        "showPropertyName": false,
+        "showAllProperties": false,
+        "items": [],
+        "cover": {
+          "type": "none",
+          "value": "",
+          "fit": "contains",
+          "layout": "components--page-card-cover-landscape"
+        },
+        "pinFiltersToMenuBar": true
+      },
+      "groupBy": "status",
+      "filter": {
+        "id": "9f633d54-2f34-424e-93d4-a1efa04569cc",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "523d4a5f-9383-40ef-a566-ec580e5dfa1f",
+            "type": "filter",
+            "operator": "contains",
+            "property": "area",
+            "value": "[[工作]]",
+            "conditions": []
+          },
+          {
+            "id": "0ca8d7f6-9042-42ed-8a12-24a723ef2de0",
+            "type": "filter",
+            "operator": "contains",
+            "property": "tags",
+            "value": "project",
+            "conditions": []
+          }
+        ]
+      },
+      "newPageNameFormat": "{{date: YYMMDD}} ",
+      "defaultTemplate": "47106b32-af2c-43b3-87ce-3bc5add3b948",
+      "newPageLocation": {
+        "location": "/"
+      },
+      "sort": {
+        "orders": []
+      },
+      "loadLimitPerPage": 10,
+      "colorfulGroups": true,
+      "groupStates": {
+        "sort": "manual",
+        "format": "none",
+        "statics": [],
+        "orders": [
+          "__$uncategorizedGroup",
+          "TODO",
+          "DOING",
+          "DONE",
+          "CANCELED"
+        ],
+        "hiddens": [],
+        "collapseds": [
+          "__$uncategorizedGroup"
+        ]
+      }
+    },
+    {
+      "id": "e7072c9a-74b4-403a-b4bf-c1a5f2ff467f",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "项目表格",
+      "maxWidthRatio": -1,
+      "createAt": "2024-04-25T14:22:41.630Z",
+      "updateAt": "2025-10-30T03:40:54.888Z",
+      "backgroundStyle": "none",
+      "viewType": "table",
+      "datasource": {
+        "filter": {
+          "id": "59ff06dd-9dd9-4af7-beea-c47d344ff032",
+          "type": "group",
+          "operator": "and",
+          "conditions": [
+            {
+              "id": "8fb53e69-db29-4e5e-9837-115c463ff603",
+              "type": "filter",
+              "operator": "contains",
+              "property": "area",
+              "value": "[[Work]]",
+              "conditions": []
+            }
+          ]
+        },
+        "dataLimit": 10,
+        "storage": {
+          "location": ""
+        },
+        "sort": {
+          "orders": []
+        }
+      },
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "文件名",
+          "type": "text",
+          "isShow": true,
+          "wrap": false,
+          "options": {
+            "width": "379"
+          },
+          "alias": ""
+        },
+        {
+          "id": "48b14e11-dcf2-496a-b63e-e1cb59c37d0f",
+          "name": "status",
+          "type": "select",
+          "isShow": true,
+          "wrap": false,
+          "options": {
+            "items": [
+              {
+                "id": "26ca9ec9-6835-4160-8751-4e0165527cdc",
+                "value": "BACKLOG",
+                "color": "components--color-blue"
+              },
+              {
+                "id": "2b57c13b-a129-43e4-a867-9cf35b676069",
+                "value": "CANCELED",
+                "color": "components--color-gray"
+              },
+              {
+                "id": "a91952bd-d7aa-4949-80e6-47dfae3c0680",
+                "value": "DOING",
+                "color": "components--color-red"
+              },
+              {
+                "id": "923df0ef-d408-4cea-b43e-f55f76a23f75",
+                "value": "DONE",
+                "color": "components--color-light-gray"
+              },
+              {
+                "id": "579be705-9867-4198-804f-3fa1c27a1eec",
+                "value": "TODO",
+                "color": "components--color-green"
+              }
+            ],
+            "width": "190"
+          },
+          "alias": ""
+        },
+        {
+          "id": "bb9ec189-63a7-402e-b46c-988fd11eee06",
+          "name": "doneTime",
+          "type": "datetime",
+          "isShow": true,
+          "wrap": false,
+          "options": {
+            "width": "325"
+          },
+          "alias": ""
+        },
+        {
+          "id": "97fffbcc-6343-4e39-8828-7eb8480cba7a",
+          "name": "createTime",
+          "isShow": true,
+          "defaultValue": "",
+          "type": "datetime",
+          "options": {
+            "width": "271"
+          }
+        },
+        {
+          "id": "61001df2-8b0f-4cba-a691-4fc39d1d19b1",
+          "name": "${file.ctime}",
+          "isShow": true,
+          "defaultValue": "",
+          "type": "datetime",
+          "options": {},
+          "alias": ""
+        },
+        {
+          "id": "44d52434-c600-41ac-8ada-1410e2bb79f2",
+          "name": "完成任务",
+          "isShow": true,
+          "type": "button",
+          "options": {
+            "name": "完成",
+            "action": {
+              "type": "updateProperty",
+              "properties": [
+                {
+                  "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                  "name": "doneTime",
+                  "type": "datetime",
+                  "value": "$now"
+                },
+                {
+                  "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                  "name": "status",
+                  "type": "string",
+                  "value": "DONE"
+                },
+                {
+                  "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                  "name": "archived",
+                  "type": "boolean",
+                  "value": true
+                }
+              ],
+              "action": {
+                "type": "updateProperty",
+                "properties": [
+                  {
+                    "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                    "name": "doneTime",
+                    "type": "datetime",
+                    "value": "$now"
+                  },
+                  {
+                    "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                    "name": "status",
+                    "type": "string",
+                    "value": "DONE"
+                  }
+                ],
+                "action": {
+                  "type": "updateProperty",
+                  "properties": [
+                    {
+                      "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                      "name": "doneTime",
+                      "type": "datetime",
+                      "value": "$now"
+                    },
+                    {
+                      "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                      "name": "archived",
+                      "type": "boolean",
+                      "value": true
+                    }
+                  ],
+                  "action": {
+                    "type": "updateProperty",
+                    "properties": [
+                      {
+                        "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                        "name": "status",
+                        "type": "string",
+                        "value": "DONE"
+                      },
+                      {
+                        "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                        "name": "archived",
+                        "type": "boolean",
+                        "value": true
+                      }
+                    ],
+                    "action": {
+                      "type": "updateProperty",
+                      "properties": [
+                        {
+                          "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                          "name": "status",
+                          "type": "string",
+                          "value": "DONE"
+                        },
+                        {
+                          "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                          "name": "archived",
+                          "type": "boolean",
+                          "value": true
+                        }
+                      ],
+                      "action": {
+                        "type": "updateProperty",
+                        "properties": [
+                          {
+                            "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                            "name": "doneTime",
+                            "type": "datetime",
+                            "value": "$now"
+                          },
+                          {
+                            "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                            "name": "archived",
+                            "type": "boolean",
+                            "value": true
+                          }
+                        ],
+                        "action": {
+                          "type": "updateProperty",
+                          "properties": [
+                            {
+                              "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                              "name": "doneTime",
+                              "type": "datetime",
+                              "value": "$now"
+                            },
+                            {
+                              "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                              "name": "status",
+                              "type": "string",
+                              "value": "DONE"
+                            }
+                          ],
+                          "action": {
+                            "type": "updateProperty",
+                            "properties": [
+                              {
+                                "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                                "name": "doneTime",
+                                "type": "datetime",
+                                "value": "$now"
+                              },
+                              {
+                                "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                                "name": "status",
+                                "type": "string",
+                                "value": "DONE"
+                              }
+                            ],
+                            "action": {
+                              "type": "updateProperty",
+                              "properties": [
+                                {
+                                  "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                                  "name": "doneTime",
+                                  "type": "datetime",
+                                  "value": "$now"
+                                },
+                                {
+                                  "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                                  "name": "status",
+                                  "type": "string",
+                                  "value": "DONE"
+                                }
+                              ],
+                              "action": {
+                                "type": "updateProperty",
+                                "properties": [
+                                  {
+                                    "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                                    "name": "doneTime",
+                                    "type": "datetime",
+                                    "value": "$now"
+                                  },
+                                  {
+                                    "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                                    "name": "status",
+                                    "type": "string",
+                                    "value": "DONE"
+                                  }
+                                ],
+                                "action": {
+                                  "type": "updateProperty",
+                                  "properties": [
+                                    {
+                                      "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                                      "name": "doneTime",
+                                      "type": "datetime",
+                                      "value": "$now"
+                                    },
+                                    {
+                                      "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                                      "name": "archived",
+                                      "type": "boolean",
+                                      "value": true
+                                    }
+                                  ],
+                                  "action": {
+                                    "type": "updateProperty",
+                                    "properties": [
+                                      {
+                                        "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                                        "name": "status",
+                                        "type": "string",
+                                        "value": "DONE"
+                                      },
+                                      {
+                                        "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                                        "name": "archived",
+                                        "type": "boolean",
+                                        "value": true
+                                      }
+                                    ],
+                                    "action": {
+                                      "type": "updateProperty",
+                                      "properties": [
+                                        {
+                                          "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                                          "name": "status",
+                                          "type": "string",
+                                          "value": "DONE"
+                                        },
+                                        {
+                                          "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                                          "name": "archived",
+                                          "type": "boolean",
+                                          "value": true
+                                        }
+                                      ],
+                                      "action": {
+                                        "type": "updateProperty",
+                                        "properties": [
+                                          {
+                                            "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                                            "name": "status",
+                                            "type": "string",
+                                            "value": "DONE"
+                                          },
+                                          {
+                                            "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                                            "name": "archived",
+                                            "type": "boolean",
+                                            "value": true
+                                          }
+                                        ],
+                                        "action": {
+                                          "type": "updateProperty",
+                                          "properties": [
+                                            {
+                                              "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                                              "name": "status",
+                                              "type": "string",
+                                              "value": "DONE"
+                                            },
+                                            {
+                                              "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                                              "name": "archived",
+                                              "type": "boolean",
+                                              "value": true
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "filePath": "config/property-template/project-complete.md"
+            }
+          }
+        },
+        {
+          "id": "df72b872-4920-40a3-a50d-5aad9f5b2e83",
+          "name": "取消",
+          "isShow": true,
+          "type": "button",
+          "options": {
+            "name": "取消",
+            "action": {
+              "type": "applyPropertyTepmlate",
+              "properties": [],
+              "filePath": "config/property-template/project-cancel.md"
+            }
+          }
+        }
+      ],
+      "templates": [
+        {
+          "id": "579c1972-b787-4467-bb92-327ac819dd92",
+          "path": "assets/form-flow/form/🚀 Project.cform",
+          "name": "🚀 Project.cform",
+          "type": "normal"
+        }
+      ],
+      "groups": [],
+      "viewOptions": {
+        "openPageIn": "tab",
+        "itemSize": "components--page-card-medium",
+        "showPropertyName": false,
+        "cover": {
+          "type": "none",
+          "value": "",
+          "fit": "contains",
+          "layout": "components--page-card-cover-landscape"
+        },
+        "pinFiltersToMenuBar": true
+      },
+      "filter": {
+        "id": "9f633d54-2f34-424e-93d4-a1efa04569cc",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "523d4a5f-9383-40ef-a566-ec580e5dfa1f",
+            "type": "filter",
+            "operator": "contains",
+            "property": "area",
+            "value": "[[工作]]",
+            "conditions": []
+          },
+          {
+            "id": "6fe4e1cc-bb2a-4261-9b24-9dbb2b7c5014",
+            "type": "filter",
+            "operator": "contains",
+            "property": "tags",
+            "value": "project",
+            "conditions": []
+          }
+        ]
+      },
+      "newPageNameFormat": "{{date: YYMMDD}} new",
+      "defaultTemplate": "579c1972-b787-4467-bb92-327ac819dd92",
+      "newPageLocation": {
+        "location": "system/area/work/project"
+      },
+      "sort": {
+        "orders": [
+          {
+            "id": "2e28aaca-dab0-44e2-8693-0a9aefcb7647",
+            "property": "${file.ctime}",
+            "direction": "desc"
+          }
+        ]
+      },
+      "loadLimitPerPage": "50",
+      "colorfulGroups": true
+    },
+    {
+      "id": "8eaeb04f-23b9-40fb-be18-f378181561cc",
+      "type": "multi",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showShadow": true,
+      "createAt": "2024-10-16T12:36:18.703Z",
+      "updateAt": "2024-10-16T12:36:18.703Z",
+      "components": [
+        {
+          "componentId": "d18f0366-7249-43ea-be76-da6878ee7160"
+        },
+        {
+          "componentId": "dbbd7e01-b289-4e19-afd0-68338d1882aa"
+        },
+        {
+          "componentId": "e7072c9a-74b4-403a-b4bf-c1a5f2ff467f"
+        }
+      ],
+      "layoutType": "tab",
+      "activeComponentId": "d18f0366-7249-43ea-be76-da6878ee7160"
+    },
+    {
+      "id": "dbbd7e01-b289-4e19-afd0-68338d1882aa",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "项目看板",
+      "maxWidthRatio": -1,
+      "createAt": "2024-04-25T14:22:41.630Z",
+      "updateAt": "2025-10-30T03:40:38.069Z",
+      "backgroundStyle": "none",
+      "viewType": "timeline",
+      "datasource": {
+        "filter": {
+          "id": "59ff06dd-9dd9-4af7-beea-c47d344ff032",
+          "type": "group",
+          "operator": "and",
+          "conditions": [
+            {
+              "id": "8fb53e69-db29-4e5e-9837-115c463ff603",
+              "type": "filter",
+              "operator": "contains",
+              "property": "area",
+              "value": "[[Work]]",
+              "conditions": []
+            }
+          ]
+        },
+        "dataLimit": 10,
+        "storage": {
+          "location": ""
+        },
+        "sort": {
+          "orders": []
+        }
+      },
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "文件名",
+          "type": "text",
+          "isShow": true,
+          "wrap": true,
+          "options": {}
+        },
+        {
+          "id": "97fffbcc-6343-4e39-8828-7eb8480cba7a",
+          "name": "createTime",
+          "isShow": true,
+          "defaultValue": "",
+          "type": "datetime"
+        },
+        {
+          "id": "dc920362-59bd-4039-a879-a624ed6fae1f",
+          "name": "任务完成",
+          "isShow": false,
+          "type": "formula",
+          "options": {
+            "formula": "fixed(countCompletedTasks()/countTotalTasks(), 2) * 100 +\"%\""
+          }
+        },
+        {
+          "id": "22805497-8ae5-4327-985d-6482e2b772c0",
+          "name": "tags",
+          "isShow": false,
+          "defaultValue": [],
+          "type": "multiSelect"
+        },
+        {
+          "id": "4c3584f4-ccf8-4412-9249-484b48745a30",
+          "name": "doneTime",
+          "isShow": false,
+          "type": "datetime",
+          "options": {}
+        },
+        {
+          "id": "44d52434-c600-41ac-8ada-1410e2bb79f2",
+          "name": "完成任务",
+          "isShow": true,
+          "type": "button",
+          "options": {
+            "name": "完成",
+            "action": {
+              "type": "updateProperty",
+              "properties": [
+                {
+                  "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                  "name": "doneTime",
+                  "type": "datetime",
+                  "value": "$now"
+                },
+                {
+                  "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                  "name": "status",
+                  "type": "string",
+                  "value": "DONE"
+                },
+                {
+                  "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                  "name": "archived",
+                  "type": "boolean",
+                  "value": true
+                }
+              ],
+              "action": {
+                "type": "updateProperty",
+                "properties": [
+                  {
+                    "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                    "name": "doneTime",
+                    "type": "datetime",
+                    "value": "$now"
+                  },
+                  {
+                    "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                    "name": "status",
+                    "type": "string",
+                    "value": "DONE"
+                  }
+                ],
+                "action": {
+                  "type": "updateProperty",
+                  "properties": [
+                    {
+                      "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                      "name": "doneTime",
+                      "type": "datetime",
+                      "value": "$now"
+                    },
+                    {
+                      "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                      "name": "archived",
+                      "type": "boolean",
+                      "value": true
+                    }
+                  ],
+                  "action": {
+                    "type": "updateProperty",
+                    "properties": [
+                      {
+                        "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                        "name": "status",
+                        "type": "string",
+                        "value": "DONE"
+                      },
+                      {
+                        "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                        "name": "archived",
+                        "type": "boolean",
+                        "value": true
+                      }
+                    ],
+                    "action": {
+                      "type": "updateProperty",
+                      "properties": [
+                        {
+                          "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                          "name": "status",
+                          "type": "string",
+                          "value": "DONE"
+                        },
+                        {
+                          "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                          "name": "archived",
+                          "type": "boolean",
+                          "value": true
+                        }
+                      ],
+                      "action": {
+                        "type": "updateProperty",
+                        "properties": [
+                          {
+                            "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                            "name": "doneTime",
+                            "type": "datetime",
+                            "value": "$now"
+                          },
+                          {
+                            "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                            "name": "archived",
+                            "type": "boolean",
+                            "value": true
+                          }
+                        ],
+                        "action": {
+                          "type": "updateProperty",
+                          "properties": [
+                            {
+                              "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                              "name": "doneTime",
+                              "type": "datetime",
+                              "value": "$now"
+                            },
+                            {
+                              "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                              "name": "status",
+                              "type": "string",
+                              "value": "DONE"
+                            }
+                          ],
+                          "action": {
+                            "type": "updateProperty",
+                            "properties": [
+                              {
+                                "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                                "name": "doneTime",
+                                "type": "datetime",
+                                "value": "$now"
+                              },
+                              {
+                                "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                                "name": "status",
+                                "type": "string",
+                                "value": "DONE"
+                              }
+                            ],
+                            "action": {
+                              "type": "updateProperty",
+                              "properties": [
+                                {
+                                  "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                                  "name": "doneTime",
+                                  "type": "datetime",
+                                  "value": "$now"
+                                },
+                                {
+                                  "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                                  "name": "status",
+                                  "type": "string",
+                                  "value": "DONE"
+                                }
+                              ],
+                              "action": {
+                                "type": "updateProperty",
+                                "properties": [
+                                  {
+                                    "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                                    "name": "doneTime",
+                                    "type": "datetime",
+                                    "value": "$now"
+                                  },
+                                  {
+                                    "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                                    "name": "status",
+                                    "type": "string",
+                                    "value": "DONE"
+                                  }
+                                ],
+                                "action": {
+                                  "type": "updateProperty",
+                                  "properties": [
+                                    {
+                                      "id": "bfb6ae93-3de6-4848-9823-51db70d427bb",
+                                      "name": "doneTime",
+                                      "type": "datetime",
+                                      "value": "$now"
+                                    },
+                                    {
+                                      "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                                      "name": "archived",
+                                      "type": "boolean",
+                                      "value": true
+                                    }
+                                  ],
+                                  "action": {
+                                    "type": "updateProperty",
+                                    "properties": [
+                                      {
+                                        "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                                        "name": "status",
+                                        "type": "string",
+                                        "value": "DONE"
+                                      },
+                                      {
+                                        "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                                        "name": "archived",
+                                        "type": "boolean",
+                                        "value": true
+                                      }
+                                    ],
+                                    "action": {
+                                      "type": "updateProperty",
+                                      "properties": [
+                                        {
+                                          "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                                          "name": "status",
+                                          "type": "string",
+                                          "value": "DONE"
+                                        },
+                                        {
+                                          "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                                          "name": "archived",
+                                          "type": "boolean",
+                                          "value": true
+                                        }
+                                      ],
+                                      "action": {
+                                        "type": "updateProperty",
+                                        "properties": [
+                                          {
+                                            "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                                            "name": "status",
+                                            "type": "string",
+                                            "value": "DONE"
+                                          },
+                                          {
+                                            "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                                            "name": "archived",
+                                            "type": "boolean",
+                                            "value": true
+                                          }
+                                        ],
+                                        "action": {
+                                          "type": "updateProperty",
+                                          "properties": [
+                                            {
+                                              "id": "37ef8f99-70db-4517-b69e-e3ada5042ac7",
+                                              "name": "status",
+                                              "type": "string",
+                                              "value": "DONE"
+                                            },
+                                            {
+                                              "id": "cdff679f-28c5-4a8e-b1b0-6b4bdd3ee90c",
+                                              "name": "archived",
+                                              "type": "boolean",
+                                              "value": true
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "filePath": "resource/property-template/project-complete.md"
+            }
+          }
+        },
+        {
+          "id": "df72b872-4920-40a3-a50d-5aad9f5b2e83",
+          "name": "取消",
+          "isShow": true,
+          "type": "button",
+          "options": {
+            "name": "取消",
+            "action": {
+              "type": "applyPropertyTepmlate",
+              "properties": [],
+              "filePath": "resource/property-template/project-cancel.md"
+            }
+          }
+        },
+        {
+          "id": "133f7851-51e2-4b84-b737-7ea53a1dcf16",
+          "name": "jiraLink",
+          "isShow": true,
+          "type": "link",
+          "options": {}
+        },
+        {
+          "id": "7c332ac7-a825-4494-958a-dd516e4dec30",
+          "name": "tasks",
+          "isShow": true,
+          "type": "taskList",
+          "options": {
+            "showTaskList": false,
+            "showAllTasks": false,
+            "hideTaskFields": false,
+            "timeRecordStyle": "none",
+            "insertPosition": {
+              "position": "BottomOfNote",
+              "headingLine": ""
+            }
+          }
+        }
+      ],
+      "templates": [
+        {
+          "id": "5dd4c2fc-0ee5-4479-acd3-fc0221280a42",
+          "path": "assets/form-flow/form/🚀 Project.cform",
+          "name": "🚀 Project.cform",
+          "type": "normal"
+        }
+      ],
+      "groups": [],
+      "viewOptions": {
+        "openPageIn": "modal",
+        "openPageAfterCreate": false,
+        "itemSize": "components--page-card-medium",
+        "showPropertyName": false,
+        "showAllProperties": false,
+        "items": [],
+        "cover": {
+          "type": "none",
+          "value": "",
+          "fit": "contains",
+          "layout": "components--page-card-cover-landscape"
+        },
+        "pinFiltersToMenuBar": true,
+        "dateProperty": "createTime",
+        "endDateProperty": "doneTime",
+        "hideTable": false
+      },
+      "groupBy": "",
+      "filter": {
+        "id": "9f633d54-2f34-424e-93d4-a1efa04569cc",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "523d4a5f-9383-40ef-a566-ec580e5dfa1f",
+            "type": "filter",
+            "operator": "contains",
+            "property": "area",
+            "value": "[[工作]]",
+            "conditions": []
+          },
+          {
+            "id": "d3c28d85-0c48-4831-9a71-4e2649e684c2",
+            "type": "filter",
+            "operator": "contains",
+            "property": "tags",
+            "value": "project",
+            "conditions": []
+          },
+          {
+            "id": "580a9add-6e29-461a-a0de-54b99168c84f",
+            "type": "filter",
+            "operator": "contains_any",
+            "property": "status",
+            "value": [
+              "BACKLOG",
+              "DOING",
+              "TODO"
+            ],
+            "conditions": []
+          }
+        ]
+      },
+      "newPageNameFormat": "{{date: YYMMDD}} ",
+      "defaultTemplate": "5dd4c2fc-0ee5-4479-acd3-fc0221280a42",
+      "newPageLocation": {
+        "location": "area/work/project"
+      },
+      "sort": {
+        "orders": [
+          {
+            "id": "22f4aa1a-1580-4223-8868-b042242d2611",
+            "property": "doneTime",
+            "direction": "desc",
+            "disabled": false
+          },
+          {
+            "id": "341defd1-4a4e-4a5f-b1fe-acb9592d547a",
+            "property": "createTime",
+            "direction": "desc",
+            "disabled": false
+          }
+        ]
+      },
+      "loadLimitPerPage": "25",
+      "colorfulGroups": true,
+      "groupStates": {
+        "sort": "nameAsc",
+        "format": "none",
+        "statics": [],
+        "orders": [],
+        "hiddens": [],
+        "collapseds": []
+      },
+      "title": "项目时间轴",
+      "icon": "ChartNoAxesGantt"
+    },
+    {
+      "id": "d69a7d54-5e3f-408f-95c2-3d2ca81b7272",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "资源表格",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showShadow": false,
+      "createAt": "2024-08-03T12:45:12.118Z",
+      "updateAt": "2025-10-30T03:41:18.136Z",
+      "viewType": "list",
+      "newPageNameFormat": "{{date:YYYYMMDDHHmmss}} new",
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "文件名",
+          "type": "text",
+          "isShow": true,
+          "wrap": false,
+          "options": {
+            "width": "439"
+          }
+        },
+        {
+          "id": "5f077915-4dd0-4523-ae21-49724d51fc0e",
+          "name": "area",
+          "type": "link",
+          "isShow": false,
+          "wrap": false,
+          "options": {}
+        },
+        {
+          "id": "a94d5c91-ef09-4fdb-a6fa-da87980cfd5c",
+          "name": "tags",
+          "isShow": false,
+          "type": "multiSelect",
+          "options": {}
+        },
+        {
+          "id": "e9f56acf-ec47-40ec-a9ad-0951c8b92a27",
+          "name": "createTime",
+          "type": "datetime",
+          "isShow": true,
+          "wrap": false,
+          "options": {
+            "formatType": "datetime",
+            "format": "yyyy-MM-dd"
+          }
+        },
+        {
+          "id": "78c09516-26b1-475f-afee-f6b6c2df7b34",
+          "name": "status",
+          "isShow": true,
+          "type": "select",
+          "options": {}
+        }
+      ],
+      "templates": [
+        {
+          "id": "aec9c307-342b-4dd5-b095-de0b09d47eff",
+          "path": "assets/form-flow/form/🏃‍♂️Meeting.cform",
+          "name": "🏃‍♂️Meeting.cform",
+          "type": "normal"
+        }
+      ],
+      "groups": [],
+      "colorfulGroups": false,
+      "viewOptions": {
+        "openPageIn": "modal",
+        "openPageAfterCreate": false,
+        "itemSize": "components--page-card-medium",
+        "showPropertyName": false,
+        "showAllProperties": false,
+        "items": [],
+        "cover": {
+          "type": "textContent",
+          "source": "default",
+          "fit": "contains",
+          "layout": "components--page-card-cover-landscape",
+          "position": "top"
+        },
+        "showGrid": false,
+        "heightType": "auto",
+        "pinFiltersToMenuBar": true,
+        "hideHeaderMenu": false
+      },
+      "filter": {
+        "id": "ae7b4b06-29db-4675-988c-80e25d17a6d5",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "304fdb99-f0b5-4ff4-bfa3-8849084543c2",
+            "type": "filter",
+            "operator": "contains",
+            "property": "tags",
+            "value": "meeting",
+            "conditions": []
+          },
+          {
+            "id": "421faf4e-db2e-4059-bc56-b15c33c3afea",
+            "type": "filter",
+            "operator": "contains",
+            "property": "area",
+            "value": "[[工作]]",
+            "conditions": []
+          }
+        ]
+      },
+      "sort": {
+        "orders": [
+          {
+            "id": "2eff4117-621a-4711-9a1a-4e84eda19ef8",
+            "property": "createTime",
+            "direction": "desc",
+            "disabled": false
+          }
+        ]
+      },
+      "title": "会议记录",
+      "defaultTemplate": "aec9c307-342b-4dd5-b095-de0b09d47eff"
+    }
+  ],
+  "rootComponentId": "23239889-5997-490f-aa87-1343790e24e4",
+  "modified": 1760943611724,
+  "version": 3
+}

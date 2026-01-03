@@ -1,0 +1,397 @@
+{
+  "components": [
+    {
+      "id": "6cb69320-75e9-41da-881a-dfe6a307496a",
+      "type": "multi",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showShadow": false,
+      "createAt": "2025-07-29T13:39:32.046Z",
+      "updateAt": "2025-11-30T12:40:00.705Z",
+      "components": [
+        {
+          "componentId": "12ba2769-759c-4917-b386-b6254abb280c"
+        }
+      ],
+      "layoutType": "column",
+      "locked": false,
+      "layoutOptions": {}
+    },
+    {
+      "id": "12ba2769-759c-4917-b386-b6254abb280c",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "项目看板",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showShadow": false,
+      "createAt": "2025-07-29T13:39:35.409Z",
+      "updateAt": "2025-12-01T03:03:37.073Z",
+      "viewType": "kanban",
+      "newPageNameFormat": "{{date:YYYYMMDDHHmmss}} ",
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "文件名",
+          "type": "text",
+          "isShow": true,
+          "wrap": true,
+          "options": {}
+        },
+        {
+          "id": "99428b90-8b95-43e8-966a-4d546cdfff31",
+          "name": "createTime",
+          "isShow": false,
+          "type": "datetime",
+          "options": {}
+        },
+        {
+          "id": "fa8f0344-bd44-4fb8-8eea-3617ffc168ea",
+          "name": "✅ done",
+          "isShow": false,
+          "type": "button",
+          "options": {
+            "action": {
+              "type": "updateProperty",
+              "properties": [
+                {
+                  "id": "ba39f0b9-7cf9-4784-8c62-3bea41d182c3",
+                  "name": "status",
+                  "type": "string",
+                  "value": "DONE",
+                  "valueSource": "constant",
+                  "modifier": "replaceValue"
+                },
+                {
+                  "id": "3ca7a0bf-40ac-4f60-bf1a-a647eee96f73",
+                  "name": "doneTime",
+                  "type": "datetime",
+                  "value": "$now",
+                  "valueSource": "constant",
+                  "modifier": "replaceValue"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "33d61015-d15c-4f59-a985-e15ee4741bfb",
+          "name": "❌ cancel",
+          "isShow": false,
+          "type": "button",
+          "options": {
+            "action": {
+              "type": "updateProperty",
+              "properties": [
+                {
+                  "id": "b9f2a34f-a9db-4832-86f1-7ecc0d86f8d9",
+                  "name": "status",
+                  "type": "string",
+                  "value": "CANCELED",
+                  "valueSource": "constant",
+                  "modifier": "replaceValue"
+                },
+                {
+                  "id": "1e5b9d3c-71d0-49ad-bb02-4e8f193617f6",
+                  "name": "doneTime",
+                  "type": "datetime",
+                  "value": "$now",
+                  "valueSource": "constant",
+                  "modifier": "replaceValue"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "599b85f6-1986-40ce-9445-92b698a41935",
+          "name": "status",
+          "isShow": false,
+          "type": "select",
+          "options": {
+            "items": [
+              {
+                "id": "e08d7f66-9434-4f04-9579-377871fafc1e",
+                "value": "BACKLOG",
+                "color": "components--color-gray"
+              },
+              {
+                "id": "decbb66a-2b78-4ca0-89c5-6d19bd0acd40",
+                "value": "TODO",
+                "color": "components--color-blue"
+              },
+              {
+                "id": "38a249a1-add7-480a-91b7-c513e2ae32b8",
+                "value": "DOING",
+                "color": "components--color-green"
+              },
+              {
+                "id": "d4ea9d52-62cb-4c74-bf48-37b399a62b98",
+                "value": "CANCELED",
+                "color": "components--color-light-gray"
+              },
+              {
+                "id": "03fd012d-1d4e-4140-b2df-a96befb3c33f",
+                "value": "DONE",
+                "color": "components--color-purple"
+              }
+            ]
+          }
+        },
+        {
+          "id": "5e3c6d7e-0d3c-470a-89ac-4df3a1c71a88",
+          "name": "parent",
+          "isShow": false,
+          "type": "link",
+          "options": {}
+        },
+        {
+          "id": "ec8c8648-b5a0-4980-b923-1a394cd6df66",
+          "name": "${file.backlinks}",
+          "isShow": false,
+          "type": "text",
+          "options": {}
+        },
+        {
+          "id": "888b5f50-96ac-4eae-b885-ed769dfb185c",
+          "name": "Duration",
+          "isShow": false,
+          "type": "formula",
+          "options": {
+            "formula": "['TODO','DOING'].includes(prop('status')) ? fixed(duration(prop('createTime'),now(), 'day'),2) +\"天\" : fixed(duration(prop('createTime'),prop('doneTime'), 'day'),2) +\"天\""
+          }
+        },
+        {
+          "id": "26712597-2b24-41ec-9230-8c2dfd4ca85e",
+          "name": "tasks",
+          "isShow": true,
+          "type": "taskList",
+          "options": {
+            "showTaskList": true,
+            "showAllTasks": false,
+            "hideTaskFields": false,
+            "timeRecordStyle": "none",
+            "insertPosition": {
+              "position": "BottomOfNote",
+              "headingLine": ""
+            }
+          }
+        }
+      ],
+      "templates": [
+        {
+          "id": "18352105-4530-43f9-be92-e57073356b3b",
+          "path": "assets/form-flow/form/🚀 Project.cform",
+          "name": "🚀 Project.cform",
+          "type": "normal"
+        }
+      ],
+      "groups": [
+        {
+          "id": "DOING",
+          "name": "DOING",
+          "items": [
+            "project/250915 250915 FY26新会员权益配置.md",
+            "project/250828 oneid-gradle-template 升级到 java17.md",
+            "project/CNLB-2183 全屋设计精选晒单赠送积分.md",
+            "project/[CNLB-1986] 订阅列表 API.md"
+          ]
+        },
+        {
+          "id": "TODO",
+          "name": "TODO",
+          "items": [
+            "pages/250729 数据视图文件名属性支持引用其他属性值作为名称展示.md",
+            "pages/250721 支持内部链接上触发右键菜单.md",
+            "pages/250720 支持视图继承.md",
+            "pages/250720 优化列表视图：属性值顶端对齐.md",
+            "pages/250711 统计数字组件支持自定义展示规则.md",
+            "pages/250528 数据视图一键将数据视图中的数据转换成 canvas 卡片.md",
+            "pages/250526 表单表单文件路径设置项无法重置为空.md",
+            "pages/250331 「日历视图」启用卡片颜色以后，文件名的字体在正常模式和紧凑模式下不一致.md",
+            "pages/250522 表单文本类型字段支持设置候选值.md",
+            "pages/250520 表单增加标签字段类型.md",
+            "pages/250514 「数据视图」迁移 FullCalendar V6 到 V7.md",
+            "pages/250425 「图表」饼图和圆环图的数据标签显示百分比而非数值.md",
+            "pages/250421 「图表」热力图图表对齐方式优化.md",
+            "pages/250420  调研 markdown 的任务状态完成和未完成的设计规范.md",
+            "pages/250410 「数据视图」按钮的移动文件功能支持引用公式，就像更新属性一样.md",
+            "pages/250410 「倒计时」支持重置计时，实现类似于时间沙漏的效果.md",
+            "pages/240916 附件库图片瀑布流支持点击图片放大预览.md",
+            "pages/240811 统计数字支持设置图标.md",
+            "assets/templates/components-promotion-template.md",
+            "assets/templates/components-project-template.md",
+            "assets/templates/components-doc.md",
+            "pages/250731 数据视图未分类的组无法手动排序.md",
+            "pages/250729 筛选中的操作符支持「与当前文件」匹配.md",
+            "pages/250725 新增一种标签页分组视图.md",
+            "pages/250724 支持配置多个筛选条件组，点击可以切换.md",
+            "pages/250719 新增「计算属性」类型，可用于排序.md",
+            "pages/250514 V3 组件交互重构.md",
+            "pages/250331 「数据视图」支持拖拽文件名到笔记中生成链接.md",
+            "pages/250331 支持 ctrl+z 撤销操作.md",
+            "pages/250326 升级 React19.md",
+            "pages/250326 「性能优化」优化排序算法，减少大数据量下的加载速度.md",
+            "pages/250325 「数据视图」Navigator 视图.md",
+            "pages/250324 日历列表视图支持显示所有日期.md",
+            "pages/250320 游戏化模板库.md",
+            "pages/250318 同类插件对比.md",
+            "pages/250316 统一所有组件的标题字段.md",
+            "pages/250315 与其他平台进行数据联动同步.md",
+            "pages/250313 3.0 重构备忘录.md",
+            "pages/250313 自动更新时会导致固定在侧边栏的组件页面被关闭.md",
+            "pages/250312 表格视图支持设置 4 个级别的行高.md",
+            "pages/250311 任务视图.md",
+            "pages/250301 设计 PARA 模板库 V3.md",
+            "pages/250301 组件文件顶栏增加快捷设置菜单.md",
+            "pages/250228 支持嵌入其他插件注册的视图.md",
+            "pages/250228 统计数字的数据面板在页面缩放比例较大的情况下数据列表显示不完整.md",
+            "pages/250227 重新设计打卡组件.md",
+            "pages/250226 数据视图在移动端点击不存在的链接属性时会导致 ob 重启.md",
+            "pages/250220 设置页面支持直接查看更新日志.md",
+            "pages/250217 新增 AI 属性类型.md",
+            "pages/250216 分组支持基于文件数量来排序.md",
+            "pages/250210 「数据视图」按钮属性更新列表值时支持追加、移除操作.md",
+            "pages/250131 支持将某个 components 文件设置为 command 或 ribbon 打开.md",
+            "pages/250127 数据视图导出支持任务清单属性.md",
+            "pages/250123 卡片组件支持自定义标题和描述的对齐方式.md",
+            "pages/250116 优化数据视图大量分组下的首屏加载速度.md",
+            "pages/250116 支持为组件设置自定义 CSS.md",
+            "pages/250110 重构筛选功能.md",
+            "pages/250110 待办事项组件.md",
+            "pages/250107 表格视图在鼠标悬浮到单元格上时，若没有启用换行则通过气泡显示全部文字.md",
+            "pages/250107 数据视图页面锁定后，新页面设置为分屏在没有其他 Tab 页的情况下会无法打开.md",
+            "pages/250105 支持在编辑器中引用某个数据视图的行记录.md",
+            "pages/241223 统计数字支持按逗号分隔展示数值.md",
+            "pages/241219 表格视图启用了自动换行后切换 Tab 页会导致表格页面被刷新.md",
+            "pages/241217 数据视图支持多级分组.md",
+            "pages/241213 倒计时&正计时支持将时间单位配置展示到数字后面.md",
+            "database/components/doc/241206 图表 - 热力图使用教程.md",
+            "database/components/doc/其他/241201 数据视图和 Notion 数据库、飞书多维表的区别.md",
+            "pages/241128 公式支持构建可视化的参数表单.md",
+            "database/components/doc/241123 使用 components 联动飞书多维表.md",
+            "pages/241121 支持通过标签筛选 canvas.md",
+            "pages/241108 「SPIKE」基于 AI 来生成布局和配色.md",
+            "pages/241021 组合组件支持启用边框.md",
+            "pages/241021 暴露 Obsidian Component 对象到脚本运行上下文中.md",
+            "pages/241018 规划免费版.md",
+            "pages/241007 数据视图支持属性改名.md",
+            "pages/241002 圆环图显示总值在圆环中间.md",
+            "pages/240927 图表支持配置多属性.md",
+            "pages/240919 循环任务设计调研.md",
+            "pages/240912 堆叠图表的浮动数据框增加总值数据.md",
+            "pages/240911 数据视图图片属性支持点击放大查看.md",
+            "pages/240901 重构脚本功能执行逻辑.md",
+            "pages/240828 合并 markdown 和 dataview 组件.md",
+            "pages/240812 支持为组件文件设置图标.md",
+            "pages/240807 优化附件库与样式设计的兼容性.md",
+            "pages/240802 谈谈 components 插件的设计理念.md",
+            "pages/240726 数据视图基于文件添加添加属性的弹框可能会出现闪烁.md",
+            "pages/240722 数据视图支持配置为只读模式.md",
+            "pages/240718 数据视图增加一个 link 函数.md",
+            "pages/240716 增加一个 React Component 组件类型.md",
+            "pages/240715 支持用快捷键打开「组件」文件.md",
+            "pages/240709 重构数据视图的公式求值.md",
+            "pages/240709 Components 数据视图 Relation 设计.md",
+            "pages/240620 数据视图右键可以展开上下文菜单.md",
+            "pages/240617 统计数字组件面板支持自定义展示属性.md",
+            "pages/240607 支持基于文件生成倒计时.md",
+            "pages/240606 如何复用筛选逻辑.md",
+            "pages/240605 按钮打开文件支持配置双联语法.md",
+            "pages/240604 修改属性名和删除属性同步到 ob 文档中.md",
+            "pages/240603 扩展按钮组件，支持按钮集合配置.md",
+            "pages/240502 新增模板查看和下载功能.md",
+            "pages/240404 数据视图支持与 notion 联动.md"
+          ]
+        }
+      ],
+      "colorfulGroups": true,
+      "viewOptions": {
+        "openPageIn": "tab",
+        "openPageAfterCreate": true,
+        "itemSize": "components--page-card-medium",
+        "showPropertyName": false,
+        "showAllProperties": false,
+        "items": [],
+        "cover": {
+          "type": "none",
+          "source": "default",
+          "fit": "contains",
+          "layout": "components--page-card-cover-landscape",
+          "position": "top"
+        },
+        "pinFiltersToMenuBar": false,
+        "showGrid": false,
+        "heightType": "auto",
+        "heightValue": 600,
+        "hideHeaderMenu": false
+      },
+      "groupStates": {
+        "sort": "manual",
+        "format": "none",
+        "statics": [
+          "TODO",
+          "DOING",
+          "DONE",
+          "CANCELED"
+        ],
+        "orders": [
+          "__$uncategorizedGroup",
+          "TODO",
+          "DOING",
+          "DONE",
+          "CANCELED"
+        ],
+        "hiddens": [],
+        "collapseds": []
+      },
+      "filter": {
+        "id": "57cd044b-4b31-47ba-8fd7-bebf5835c767",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "c1131cbd-19ed-4476-9559-da8a7a9daabf",
+            "type": "filter",
+            "operator": "contains",
+            "property": "tags",
+            "value": "project",
+            "conditions": []
+          },
+          {
+            "id": "539bc45f-3dbf-4667-99d2-0980c82bbd3a",
+            "type": "filter",
+            "operator": "contains",
+            "property": "taskStatus",
+            "value": null,
+            "conditions": []
+          }
+        ]
+      },
+      "groupBy": "status",
+      "sort": {
+        "orders": [
+          {
+            "id": "bc2deef3-64f0-4215-8c92-a10faf1c1670",
+            "property": "doneTime",
+            "direction": "desc",
+            "disabled": false
+          },
+          {
+            "id": "5ea5d2b3-bfec-4af0-8ddd-22621b178425",
+            "property": "createTime",
+            "direction": "desc",
+            "disabled": false
+          }
+        ]
+      },
+      "defaultTemplate": "18352105-4530-43f9-be92-e57073356b3b",
+      "title": "看板"
+    }
+  ],
+  "rootComponentId": "6cb69320-75e9-41da-881a-dfe6a307496a",
+  "modified": 1761307700580,
+  "version": 3.1
+}

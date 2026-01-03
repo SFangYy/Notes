@@ -1,0 +1,47 @@
+{
+  "id": "b0120671-ce2e-4b46-bffc-ee3b2abf50d4",
+  "fields": [
+    {
+      "id": "a5b0bbb0-e26e-4b9c-81fb-7be3ce182dfd",
+      "label": "会议主题",
+      "type": "text",
+      "required": true,
+      "defaultValue": [],
+      "enableDescription": true,
+      "description": "要做什么？一句话说清楚"
+    },
+    {
+      "id": "4493a638-d8c4-489d-ba98-750879b4a3d5",
+      "label": "status",
+      "type": "property_value_suggestion",
+      "propertyName": "status",
+      "defaultValue": "TODO"
+    },
+    {
+      "id": "f9193cf5-057f-43ff-be68-9eff6afde808",
+      "label": "area",
+      "type": "radio",
+      "defaultValue": "工作",
+      "options": [
+        {
+          "id": "77af25cd-edd8-442b-a64b-b34e3ab88cd8",
+          "label": "工作",
+          "value": "[[工作]]"
+        }
+      ],
+      "enableCustomValue": true
+    }
+  ],
+  "actions": [
+    {
+      "type": "createFile",
+      "targetFolder": "",
+      "fileName": "",
+      "id": "44313f26-24e2-4a8a-aa80-9f433ebfc3e8",
+      "filePath": "project/{{date:YYMMDD}} {{@会议主题}}.md",
+      "content": "---\narea: \"[[{{@area}}]]\"\nstatus: {{@status}}\ncreateTime: {{date:YYYY-MM-DDTHH:mm:ss}}\ndoneTime:\ntags:\n  - project\n  - meeting\n---\n",
+      "openPageIn": "tab"
+    }
+  ],
+  "autoSubmit": false
+}

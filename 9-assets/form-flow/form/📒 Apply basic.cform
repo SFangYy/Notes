@@ -1,0 +1,85 @@
+{
+  "id": "3b1cce3a-c714-481b-a4a5-ff2accbcf729",
+  "fields": [
+    {
+      "id": "88d06eec-eec7-4f6e-ace5-0ec23201b590",
+      "label": "类型",
+      "type": "select",
+      "options": [
+        {
+          "id": "0210cd60-3e72-4b07-b6b2-94dd7c74d179",
+          "label": "project",
+          "value": ""
+        },
+        {
+          "id": "82af9579-efc9-47c8-8ec3-9a96eb8a56ef",
+          "label": "meeting",
+          "value": ""
+        },
+        {
+          "id": "897c57a5-9832-4af3-b9d8-b7a4d6e6a5e5",
+          "label": "knowledge",
+          "value": ""
+        }
+      ],
+      "defaultValue": "project",
+      "enableDescription": false,
+      "required": true,
+      "multiple": true
+    }
+  ],
+  "actions": [
+    {
+      "type": "suggestModal",
+      "targetFolder": "",
+      "fileName": "",
+      "id": "3fcf84d5-f29f-44fd-8ef4-8f7f9a0bc7ff",
+      "suggestSource": "script",
+      "code": "/**\n* app: obsidian App instance\n* form: use form.fieldName to get field value\n* Notice: toast message, \"new Notice('Hello world')\"\n*/\nasync function entry() {\n  const { app, form, requestUrl, obsidian, Notice, $selection } = this.$context;\n  // write code here...\n  return app.vault.getMarkdownFiles()\n    .filter(f => {\n      const cache = app.metadataCache.getFileCache(f)\n      if (!cache) {\n        return  false;\n      }\n      if (!cache.frontmatter) {\n        return false;\n      }\n      if (!cache.frontmatter.tags) {\n        return false;\n      }\n      return cache.frontmatter.tags.includes('area')\n      \n    })\n    .map(f => {\n      return {label: f.basename, value: f.basename}\n    })\n}\n\n/**\n * Must reserve export.default and set a entry function\n */\nexports.default = {\n  entry: entry\n}\n",
+      "fieldName": "area",
+      "condition": {
+        "id": "e2ac2eca-18f9-45bc-a0ad-fe35a2450f25",
+        "type": "group",
+        "operator": "and",
+        "conditions": []
+      }
+    },
+    {
+      "id": "84543b85-3f15-4ac8-81aa-7c3e9ff55402",
+      "type": "updateFrontmatter",
+      "targetFolder": "",
+      "fileName": "",
+      "targetFileType": "current_file",
+      "propertyUpdates": [
+        {
+          "id": "d7afbc8a-911b-4215-afbb-b6c2369fc502",
+          "name": "createTime",
+          "value": "{{date:YYYY-MM-DDTHH:mm:ss}}"
+        },
+        {
+          "id": "42cf7878-5f0a-41d8-877d-89d954c2ade6",
+          "name": "area",
+          "value": "{{@area}}"
+        },
+        {
+          "id": "746ef76d-fed3-482d-a6a4-d8b640130dc1",
+          "name": "tags",
+          "value": [
+            "{{@类型}}"
+          ]
+        },
+        {
+          "id": "02ad1bd8-b20b-4e5f-95dc-743383c58a64",
+          "name": "status",
+          "value": "DOING"
+        },
+        {
+          "id": "6396b02d-004f-4939-8400-46c4ba9e9d30",
+          "name": "doneTime",
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "autoSubmit": false
+}

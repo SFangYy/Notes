@@ -1,6 +1,6 @@
 [submodule ".obsidian"]
 	path = .obsidian
 	url = git@github.com:SFangYy/obconfig.git
-[submodule "2-Areas/009-daily"]
-	path = 2-Areas/009-daily
+[submodule "2-area/journal"]
+	path = 2-area/journal
 	url = git@github.com:SFangYy/Daily-Notes.git

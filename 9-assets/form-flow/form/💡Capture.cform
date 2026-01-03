@@ -1,0 +1,45 @@
+{
+  "id": "0ad5d138-cad2-49fc-8813-3de2d38d2d78",
+  "fields": [
+    {
+      "id": "c0bcc7c7-af0e-4e00-b213-22cd1bed106a",
+      "label": "在想什么？",
+      "type": "textarea",
+      "multiple": true
+    },
+    {
+      "id": "ab2c5d5c-eb4f-452f-af4e-98f508e0595a",
+      "label": "类型",
+      "type": "radio",
+      "options": [
+        {
+          "id": "20d80ad4-60a9-4f18-a7a1-39661973485b",
+          "label": "文本",
+          "value": " "
+        },
+        {
+          "id": "1345f160-2208-4b3d-8939-818c1ae2e409",
+          "label": "任务",
+          "value": " [ ] "
+        }
+      ],
+      "enableCustomValue": true,
+      "defaultValue": " "
+    }
+  ],
+  "title": "🕙 时间日志",
+  "actions": [
+    {
+      "id": "60d79da7-9fdd-4aea-bf9d-e626fdc4ce08",
+      "type": "insertText",
+      "targetFolder": "area/journal",
+      "fileName": "{{date:YYYY-MM-DD}}",
+      "position": "bottomBelowTitle",
+      "content": "-{{@类型}}{{time}} {{@在想什么？}}",
+      "heading": "## 日志",
+      "createFileIfNotExist": true,
+      "filePath": "area/journal/{{date:YYYY-MM-DD}}.md",
+      "newFileTemplate": "assets/templates/journal-template.md"
+    }
+  ]
+}

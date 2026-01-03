@@ -1,0 +1,24 @@
+{
+  "id": "b3a3f936-05d3-4db8-95e8-eebeb710dde3",
+  "fields": [
+    {
+      "id": "010ca0a6-6ae4-40b2-9554-04c20feeb9c8",
+      "label": "name",
+      "type": "text",
+      "required": true,
+      "description": "领域的名称"
+    }
+  ],
+  "actions": [
+    {
+      "id": "150169fc-e96f-4339-b93b-b99cce04d78d",
+      "type": "createFile",
+      "targetFolder": "area/{{@name}}",
+      "fileName": "{{@name}}",
+      "openPageIn": "tab",
+      "content": "---\ntags: area\ncreateTime: {{date: YYYY-MM-DDTHH:mm}}\ncssclasses:\n  - editor-full\n---\n\n![[area-dashboard.components]]",
+      "filePath": "area/{{@name}}.md"
+    }
+  ],
+  "autoSubmit": false
+}

@@ -1,0 +1,1393 @@
+{
+  "components": [
+    {
+      "id": "8d9a6084-c0af-4659-8989-230037544449",
+      "type": "multi",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showTitle": true,
+      "showShadow": false,
+      "createAt": "2025-08-20T06:48:31.383Z",
+      "updateAt": "2025-12-31T06:13:35.066Z",
+      "components": [
+        {
+          "componentId": "bc52602d-ca3a-4140-864b-ed6891c92552",
+          "layout": {
+            "mobile": {
+              "x": 2,
+              "y": 4,
+              "w": 2,
+              "h": 4
+            },
+            "laptop": {
+              "x": 0,
+              "y": 8,
+              "w": 1,
+              "h": 3
+            }
+          }
+        },
+        {
+          "componentId": "644324e2-732e-4090-9329-3985cd771527",
+          "layout": {
+            "mobile": {
+              "x": 2,
+              "y": 8,
+              "w": 2,
+              "h": 4
+            },
+            "laptop": {
+              "x": 1,
+              "y": 8,
+              "w": 1,
+              "h": 3
+            }
+          }
+        },
+        {
+          "componentId": "efc63e9f-5ecb-455a-aab5-1881abbc8d06",
+          "layout": {
+            "mobile": {
+              "x": 0,
+              "y": 8,
+              "w": 2,
+              "h": 4
+            },
+            "laptop": {
+              "x": 1,
+              "y": 11,
+              "w": 1,
+              "h": 4
+            }
+          }
+        },
+        {
+          "componentId": "9009fc43-cbfa-49b8-8de1-974c3c9dc95c",
+          "layout": {
+            "mobile": {
+              "x": 0,
+              "y": 4,
+              "w": 2,
+              "h": 4
+            },
+            "laptop": {
+              "x": 0,
+              "y": 11,
+              "w": 1,
+              "h": 4
+            }
+          }
+        },
+        {
+          "componentId": "dc8d2cf0-e8fc-4d03-93f1-fa0ed7312814",
+          "layout": {
+            "mobile": {
+              "x": 0,
+              "y": 27,
+              "w": 4,
+              "h": 32
+            },
+            "laptop": {
+              "x": 2,
+              "y": 15,
+              "w": 10,
+              "h": 45
+            }
+          }
+        },
+        {
+          "componentId": "1d18469a-49c2-4763-a448-403dd6dda2fd",
+          "layout": {
+            "mobile": {
+              "x": 0,
+              "y": 12,
+              "w": 4,
+              "h": 11
+            },
+            "laptop": {
+              "x": 0,
+              "y": 15,
+              "w": 2,
+              "h": 41
+            }
+          }
+        },
+        {
+          "componentId": "520fc096-2887-476c-96d9-03ccec80f498",
+          "layout": {
+            "mobile": {
+              "x": 0,
+              "y": 0,
+              "w": 4,
+              "h": 4
+            },
+            "laptop": {
+              "x": 2,
+              "y": 0,
+              "w": 10,
+              "h": 15
+            }
+          }
+        },
+        {
+          "componentId": "b0a104d3-96ff-4e39-a6b4-e4fc8bf190d3",
+          "layout": {
+            "mobile": {
+              "x": 0,
+              "y": 23,
+              "w": 4,
+              "h": 4
+            },
+            "laptop": {
+              "x": 0,
+              "y": 0,
+              "w": 2,
+              "h": 8
+            }
+          }
+        }
+      ],
+      "layoutType": "grid",
+      "locked": true,
+      "layoutOptions": {}
+    },
+    {
+      "id": "bc52602d-ca3a-4140-864b-ed6891c92552",
+      "type": "count",
+      "titleAlign": "left",
+      "tabTitle": "🗓 今日日记",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showTitle": true,
+      "showShadow": true,
+      "createAt": "2025-08-20T06:48:35.376Z",
+      "updateAt": "2025-08-20T06:48:35.376Z",
+      "countValueAlign": "left",
+      "contentPrefix": "",
+      "contentSuffix": "",
+      "countType": "number",
+      "precision": 0,
+      "query": {
+        "valueType": "totalRecords",
+        "value": 100,
+        "filter": {
+          "id": "b677c207-3e01-4b37-b07b-5e30ffc8cc47",
+          "type": "group",
+          "operator": "and",
+          "conditions": [
+            {
+              "id": "ca8563b2-6ac2-42d8-ba84-a4c26be24859",
+              "type": "filter",
+              "operator": "contains",
+              "property": "tags",
+              "value": "journal",
+              "conditions": []
+            },
+            {
+              "id": "aba709c3-1058-4edd-a75b-bcf6a474fd67",
+              "type": "filter",
+              "operator": "time_after_or_equal",
+              "property": "createTime",
+              "value": {
+                "type": "$startOfToday",
+                "unit": "day",
+                "direction": "before",
+                "value": ""
+              },
+              "conditions": []
+            }
+          ]
+        },
+        "sort": {
+          "orders": []
+        }
+      },
+      "totalQuery": {
+        "valueType": "constant",
+        "value": 100,
+        "filter": {
+          "id": "0c0160db-402e-484e-b40d-982fedb698b8",
+          "type": "group",
+          "operator": "and",
+          "conditions": []
+        },
+        "sort": {
+          "orders": []
+        }
+      },
+      "title": "🗓 今日日记",
+      "countValueStyle": "thousands"
+    },
+    {
+      "id": "ebfa8517-d3e9-49ba-bdca-4d28a21a223f",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showTitle": true,
+      "showShadow": false,
+      "createAt": "2025-08-20T06:51:00.138Z",
+      "updateAt": "2025-10-24T12:07:04.408Z",
+      "viewType": "kanban",
+      "newPageNameFormat": "{{date: YYMMDD}}",
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "文件名",
+          "type": "text",
+          "isShow": true,
+          "wrap": true,
+          "options": {}
+        },
+        {
+          "id": "036a9b15-2594-4cc6-b922-9d6a4d5744dd",
+          "name": "createTime",
+          "isShow": true,
+          "type": "datetime",
+          "options": {}
+        },
+        {
+          "id": "46c52ab1-f772-4898-818d-4dec9d414af7",
+          "name": "status",
+          "isShow": true,
+          "type": "select",
+          "options": {
+            "items": [
+              {
+                "id": "1856cd84-5b58-4708-b8c8-1921fd13a631",
+                "value": "DOING",
+                "color": "components--color-red"
+              },
+              {
+                "id": "dd27464d-ac3e-4d34-8fc0-39e3cdd02ea7",
+                "value": "TODO",
+                "color": "components--color-blue"
+              }
+            ]
+          }
+        },
+        {
+          "id": "eaa35569-cadf-42f5-a875-f7478d9c2439",
+          "name": "完成",
+          "isShow": true,
+          "type": "button",
+          "options": {
+            "action": {
+              "type": "updateProperty",
+              "properties": [
+                {
+                  "id": "bb4e32d9-1e37-44c2-8bb5-47330aa8cc4a",
+                  "name": "doneTime",
+                  "type": "datetime",
+                  "value": "$now",
+                  "valueSource": "constant",
+                  "modifier": "replaceValue"
+                },
+                {
+                  "id": "a7f4714e-5cf8-4697-adf2-ffa2ff7e3039",
+                  "name": "status",
+                  "type": "string",
+                  "value": "DONE",
+                  "valueSource": "constant",
+                  "modifier": "replaceValue"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "ad2ccb02-d23a-42d4-98ea-222701a39a96",
+          "name": "task",
+          "isShow": true,
+          "type": "taskList",
+          "options": {}
+        },
+        {
+          "id": "ced94b84-eddc-4b7b-a979-b35f67767956",
+          "name": "area",
+          "isShow": true,
+          "type": "link",
+          "options": {}
+        }
+      ],
+      "templates": [
+        {
+          "id": "f1838114-c0df-463b-89b2-5cdb4fa9e75c",
+          "path": "assets/form-flow/form/🚀 Project.cform",
+          "name": "🚀 Project.cform",
+          "type": "normal"
+        }
+      ],
+      "groups": [],
+      "colorfulGroups": false,
+      "viewOptions": {
+        "openPageIn": "modal",
+        "openPageAfterCreate": true,
+        "itemSize": "components--page-card-medium",
+        "showPropertyName": false,
+        "showAllProperties": false,
+        "items": [],
+        "cover": {
+          "type": "none",
+          "source": "default",
+          "fit": "contains",
+          "layout": "components--page-card-cover-landscape",
+          "position": "top"
+        },
+        "pinFiltersToMenuBar": true,
+        "hideHeaderMenu": false,
+        "showGrid": false,
+        "heightType": "auto",
+        "heightValue": 600
+      },
+      "groupStates": {
+        "sort": "manual",
+        "format": "none",
+        "statics": [],
+        "orders": [
+          "__$uncategorizedGroup",
+          "TODO",
+          "DOING",
+          "DONE"
+        ],
+        "hiddens": [],
+        "collapseds": []
+      },
+      "filter": {
+        "id": "dbaf3ccc-8709-45cb-a680-2c9f0ad0aae2",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "d04bf0f8-5eea-473b-b1d7-27f2c62f18ac",
+            "type": "filter",
+            "operator": "contains",
+            "property": "tags",
+            "value": "project",
+            "conditions": []
+          }
+        ]
+      },
+      "sort": {
+        "orders": [
+          {
+            "id": "642682c0-2d08-4091-8557-2ca5d02192e7",
+            "property": "createTime",
+            "direction": "desc",
+            "disabled": false
+          }
+        ]
+      },
+      "groupBy": "status",
+      "loadLimitPerPage": "5",
+      "title": "项目",
+      "icon": "Columns3",
+      "defaultTemplate": "f1838114-c0df-463b-89b2-5cdb4fa9e75c",
+      "newPageLocation": {
+        "location": "project"
+      }
+    },
+    {
+      "id": "644324e2-732e-4090-9329-3985cd771527",
+      "type": "count",
+      "titleAlign": "left",
+      "tabTitle": "🏠 领域数",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showTitle": true,
+      "showShadow": true,
+      "createAt": "2025-08-20T06:48:35.376Z",
+      "updateAt": "2025-08-20T06:48:35.376Z",
+      "countValueAlign": "left",
+      "contentPrefix": "",
+      "contentSuffix": "",
+      "countType": "number",
+      "precision": 0,
+      "query": {
+        "valueType": "totalRecords",
+        "value": 100,
+        "filter": {
+          "id": "b677c207-3e01-4b37-b07b-5e30ffc8cc47",
+          "type": "group",
+          "operator": "and",
+          "conditions": [
+            {
+              "id": "ca8563b2-6ac2-42d8-ba84-a4c26be24859",
+              "type": "filter",
+              "operator": "contains",
+              "property": "tags",
+              "value": "area",
+              "conditions": []
+            }
+          ]
+        },
+        "sort": {
+          "orders": []
+        }
+      },
+      "totalQuery": {
+        "valueType": "constant",
+        "value": 100,
+        "filter": {
+          "id": "0c0160db-402e-484e-b40d-982fedb698b8",
+          "type": "group",
+          "operator": "and",
+          "conditions": []
+        },
+        "sort": {
+          "orders": []
+        }
+      },
+      "title": "🏠 领域数"
+    },
+    {
+      "id": "efc63e9f-5ecb-455a-aab5-1881abbc8d06",
+      "type": "count",
+      "titleAlign": "left",
+      "tabTitle": "🔥 执行中项目",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showTitle": true,
+      "showShadow": true,
+      "createAt": "2025-08-20T06:48:35.376Z",
+      "updateAt": "2025-08-20T06:48:35.376Z",
+      "countValueAlign": "left",
+      "contentPrefix": "",
+      "contentSuffix": "",
+      "countType": "number",
+      "precision": 0,
+      "query": {
+        "valueType": "totalRecords",
+        "value": 100,
+        "filter": {
+          "id": "b677c207-3e01-4b37-b07b-5e30ffc8cc47",
+          "type": "group",
+          "operator": "and",
+          "conditions": [
+            {
+              "id": "ca8563b2-6ac2-42d8-ba84-a4c26be24859",
+              "type": "filter",
+              "operator": "contains",
+              "property": "tags",
+              "value": "project",
+              "conditions": []
+            },
+            {
+              "id": "2e3b68d4-5257-473f-9d5f-d3d6badb14e6",
+              "type": "filter",
+              "operator": "contains",
+              "property": "status",
+              "value": "DOING",
+              "conditions": []
+            }
+          ]
+        },
+        "sort": {
+          "orders": []
+        }
+      },
+      "totalQuery": {
+        "valueType": "constant",
+        "value": 100,
+        "filter": {
+          "id": "0c0160db-402e-484e-b40d-982fedb698b8",
+          "type": "group",
+          "operator": "and",
+          "conditions": []
+        },
+        "sort": {
+          "orders": []
+        }
+      },
+      "title": "🔥 执行中项目"
+    },
+    {
+      "id": "9009fc43-cbfa-49b8-8de1-974c3c9dc95c",
+      "type": "count",
+      "titleAlign": "left",
+      "tabTitle": "📚 内容输出",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showTitle": true,
+      "showShadow": true,
+      "createAt": "2025-08-20T06:48:35.376Z",
+      "updateAt": "2025-08-20T06:48:35.376Z",
+      "countValueAlign": "left",
+      "contentPrefix": "",
+      "contentSuffix": "",
+      "countType": "number",
+      "query": {
+        "valueType": "totalRecords",
+        "value": 100,
+        "filter": {
+          "id": "b677c207-3e01-4b37-b07b-5e30ffc8cc47",
+          "type": "group",
+          "operator": "and",
+          "conditions": [
+            {
+              "id": "ca8563b2-6ac2-42d8-ba84-a4c26be24859",
+              "type": "filter",
+              "operator": "contains",
+              "property": "tags",
+              "value": "output",
+              "conditions": []
+            }
+          ]
+        },
+        "sort": {
+          "orders": []
+        }
+      },
+      "totalQuery": {
+        "valueType": "totalRecords",
+        "value": 1,
+        "filter": {
+          "id": "0c0160db-402e-484e-b40d-982fedb698b8",
+          "type": "group",
+          "operator": "and",
+          "conditions": []
+        },
+        "sort": {
+          "orders": []
+        }
+      },
+      "title": "📚 内容输出"
+    },
+    {
+      "id": "dc8d2cf0-e8fc-4d03-93f1-fa0ed7312814",
+      "type": "multi",
+      "titleAlign": "center",
+      "tabTitle": "组合",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showTitle": true,
+      "showShadow": false,
+      "createAt": "2025-08-20T07:10:27.734Z",
+      "updateAt": "2025-08-20T07:10:27.734Z",
+      "components": [
+        {
+          "componentId": "ebfa8517-d3e9-49ba-bdca-4d28a21a223f"
+        },
+        {
+          "componentId": "12e542fd-473f-4e4d-9831-79c17944850d"
+        },
+        {
+          "componentId": "f74353fb-597d-4cdd-8ab4-ba97dd8dc91f"
+        },
+        {
+          "componentId": "b3310b47-cd6a-4f57-8465-9c7ef6726c11"
+        }
+      ],
+      "layoutType": "tab",
+      "locked": false,
+      "layoutOptions": {}
+    },
+    {
+      "id": "f74353fb-597d-4cdd-8ab4-ba97dd8dc91f",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showTitle": true,
+      "showShadow": false,
+      "createAt": "2025-08-20T06:51:00.138Z",
+      "updateAt": "2025-08-20T06:51:00.138Z",
+      "viewType": "timeline",
+      "newPageNameFormat": "{{date:YYYYMMDDHHmmss}} ",
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "文件名",
+          "type": "text",
+          "isShow": true,
+          "wrap": false,
+          "options": {}
+        },
+        {
+          "id": "036a9b15-2594-4cc6-b922-9d6a4d5744dd",
+          "name": "createTime",
+          "isShow": true,
+          "type": "datetime",
+          "options": {}
+        },
+        {
+          "id": "46c52ab1-f772-4898-818d-4dec9d414af7",
+          "name": "status",
+          "isShow": true,
+          "type": "select",
+          "options": {}
+        },
+        {
+          "id": "e4c316b6-ee25-4c54-91bd-85c9e263392f",
+          "name": "tasks",
+          "isShow": false,
+          "type": "taskList",
+          "options": {
+            "showTaskList": false,
+            "showAllTasks": false,
+            "hideTaskFields": false,
+            "timeRecordStyle": "none",
+            "insertPosition": {
+              "position": "BottomOfNote",
+              "headingLine": ""
+            }
+          }
+        }
+      ],
+      "templates": [],
+      "groups": [],
+      "colorfulGroups": false,
+      "viewOptions": {
+        "openPageIn": "tab",
+        "openPageAfterCreate": true,
+        "itemSize": "components--page-card-medium",
+        "showPropertyName": false,
+        "showAllProperties": false,
+        "items": [],
+        "cover": {
+          "type": "none",
+          "source": "default",
+          "fit": "contains",
+          "layout": "components--page-card-cover-landscape",
+          "position": "top"
+        },
+        "pinFiltersToMenuBar": false,
+        "hideHeaderMenu": false,
+        "showGrid": false,
+        "heightType": "auto",
+        "heightValue": 600,
+        "dateProperty": "createTime",
+        "endDateProperty": "doneTime",
+        "tableWidthRatio": 18.090795647399432,
+        "colorProperty": "issueType",
+        "hideTable": true
+      },
+      "groupStates": {
+        "sort": "nameAsc",
+        "format": "none",
+        "statics": [],
+        "orders": [],
+        "hiddens": [],
+        "collapseds": []
+      },
+      "filter": {
+        "id": "dbaf3ccc-8709-45cb-a680-2c9f0ad0aae2",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "d04bf0f8-5eea-473b-b1d7-27f2c62f18ac",
+            "type": "filter",
+            "operator": "contains",
+            "property": "tags",
+            "value": "project",
+            "conditions": []
+          },
+          {
+            "id": "a044b53d-c598-4e7d-997b-ebb04fd65d86",
+            "type": "group",
+            "operator": "or",
+            "conditions": [
+              {
+                "id": "9bb5ebe3-06d9-4823-a21b-3c539abf0d11",
+                "type": "filter",
+                "operator": "contains",
+                "property": "status",
+                "value": "DOING",
+                "conditions": []
+              },
+              {
+                "id": "557549f7-07fd-4c6f-b34d-1d4dd5cda694",
+                "type": "filter",
+                "operator": "contains",
+                "property": "status",
+                "value": "TODO",
+                "conditions": []
+              }
+            ]
+          },
+          {
+            "id": "88c62089-fe2f-496e-9d23-e7f13e963772",
+            "type": "filter",
+            "operator": "equals",
+            "property": "${file.parent}",
+            "value": "project",
+            "conditions": []
+          }
+        ]
+      },
+      "sort": {
+        "orders": [
+          {
+            "id": "80815c20-b590-4456-9dbc-29638102ac58",
+            "property": "status",
+            "direction": "asc",
+            "disabled": false
+          },
+          {
+            "id": "642682c0-2d08-4091-8557-2ca5d02192e7",
+            "property": "createTime",
+            "direction": "desc",
+            "disabled": false
+          }
+        ]
+      },
+      "groupBy": "",
+      "loadLimitPerPage": "50",
+      "title": "进行中",
+      "icon": "ChartNoAxesGantt"
+    },
+    {
+      "id": "520fc096-2887-476c-96d9-03ccec80f498",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showTitle": true,
+      "showShadow": false,
+      "createAt": "2025-08-20T07:13:28.823Z",
+      "updateAt": "2025-10-30T03:37:08.990Z",
+      "viewType": "calendar",
+      "newPageNameFormat": "{{date: YYYY-MM-DD}}",
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "文件名",
+          "type": "text",
+          "isShow": true,
+          "wrap": false,
+          "options": {}
+        },
+        {
+          "id": "af83c2e0-bcf1-40c1-87b8-d45a2aec1120",
+          "name": "tasks",
+          "isShow": true,
+          "type": "taskList",
+          "options": {
+            "showTaskList": true,
+            "showAllTasks": false,
+            "hideTaskFields": false,
+            "timeRecordStyle": "none",
+            "insertPosition": {
+              "position": "BottomOfNote",
+              "headingLine": ""
+            }
+          }
+        }
+      ],
+      "templates": [
+        {
+          "id": "00c56120-ab85-4f52-8eb7-2d9c6ff64af7",
+          "path": "assets/templates/journal-template.md",
+          "name": "journal-template.md",
+          "type": "normal"
+        }
+      ],
+      "groups": [],
+      "colorfulGroups": false,
+      "viewOptions": {
+        "openPageIn": "tab",
+        "openPageAfterCreate": true,
+        "itemSize": "components--page-card-medium",
+        "showPropertyName": false,
+        "showAllProperties": false,
+        "items": [],
+        "cover": {
+          "type": "none",
+          "source": "specifySectionContent",
+          "fit": "contains",
+          "layout": "components--page-card-cover-landscape",
+          "position": "top",
+          "sourceValue": "## 今日总结"
+        },
+        "pinFiltersToMenuBar": false,
+        "hideHeaderMenu": true,
+        "showGrid": false,
+        "heightType": "auto",
+        "heightValue": 600,
+        "dateProperty": "${file.basename}",
+        "calendarViewType": "week"
+      },
+      "groupStates": {
+        "sort": "nameAsc",
+        "statics": [],
+        "orders": [],
+        "hiddens": [],
+        "collapseds": []
+      },
+      "filter": {
+        "id": "dbaf3ccc-8709-45cb-a680-2c9f0ad0aae2",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "ada51983-9a48-43a6-ab72-1624333c357f",
+            "type": "filter",
+            "operator": "contains",
+            "property": "tags",
+            "value": "journal",
+            "conditions": []
+          }
+        ]
+      },
+      "newPageLocation": {
+        "location": "area/journal"
+      },
+      "defaultTemplate": "00c56120-ab85-4f52-8eb7-2d9c6ff64af7",
+      "title": "数据视图"
+    },
+    {
+      "id": "1d18469a-49c2-4763-a448-403dd6dda2fd",
+      "type": "multi",
+      "titleAlign": "center",
+      "tabTitle": "组合",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showTitle": true,
+      "showShadow": false,
+      "createAt": "2025-08-20T13:22:34.473Z",
+      "updateAt": "2025-08-20T13:22:34.473Z",
+      "components": [
+        {
+          "componentId": "e0c76698-0db4-4a91-88cf-b292cc0b044e"
+        },
+        {
+          "componentId": "b63d2ba8-83b6-4bcc-b25a-8bcf010a3c89"
+        }
+      ],
+      "layoutType": "tab",
+      "locked": false,
+      "layoutOptions": {}
+    },
+    {
+      "id": "b63d2ba8-83b6-4bcc-b25a-8bcf010a3c89",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showTitle": true,
+      "showShadow": false,
+      "createAt": "2025-08-20T13:22:46.896Z",
+      "updateAt": "2025-08-20T13:22:46.896Z",
+      "viewType": "list",
+      "newPageNameFormat": "{{date:YYYYMMDDHHmmss}} ",
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "文件名",
+          "type": "text",
+          "isShow": true,
+          "wrap": false,
+          "options": {}
+        },
+        {
+          "id": "86cce4d1-34c0-4020-9aa4-93b70238773d",
+          "name": "${file.mtime}",
+          "isShow": false,
+          "type": "datetime",
+          "options": {
+            "formatType": "datetime",
+            "format": "yyyy-MM-dd"
+          }
+        },
+        {
+          "id": "0a9d3fee-5119-4f66-af3a-2cdb15086c70",
+          "name": "tags",
+          "isShow": true,
+          "type": "multiSelect",
+          "options": {}
+        }
+      ],
+      "templates": [],
+      "groups": [],
+      "colorfulGroups": false,
+      "viewOptions": {
+        "openPageIn": "tab",
+        "openPageAfterCreate": true,
+        "items": [],
+        "pinFiltersToMenuBar": true,
+        "hideHeaderMenu": true,
+        "showGrid": false,
+        "heightType": "auto",
+        "heightValue": 600
+      },
+      "groupStates": {
+        "sort": "nameAsc",
+        "format": "none",
+        "statics": [],
+        "orders": [],
+        "hiddens": [],
+        "collapseds": []
+      },
+      "sort": {
+        "orders": [
+          {
+            "id": "ffb9b654-f60a-4b4d-a5b2-77ed8fcdaf74",
+            "property": "${file.mtime}",
+            "direction": "desc",
+            "disabled": false
+          }
+        ]
+      },
+      "filter": {
+        "id": "b83167da-e25c-4ae7-95bb-660b229a48a8",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "a74d9dd2-a505-4dfc-b917-0abcc5bfed36",
+            "type": "filter",
+            "operator": "equals",
+            "property": "${file.extension}",
+            "value": "md",
+            "conditions": []
+          },
+          {
+            "id": "2afb850f-f647-420b-8adf-3dee84564cd0",
+            "type": "filter",
+            "operator": "contains_any",
+            "property": "tags",
+            "value": [
+              "project",
+              "output",
+              "meeting",
+              "knowledge"
+            ],
+            "conditions": []
+          }
+        ]
+      },
+      "title": "最近修改",
+      "groupBy": ""
+    },
+    {
+      "id": "12e542fd-473f-4e4d-9831-79c17944850d",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showTitle": true,
+      "showShadow": false,
+      "createAt": "2025-08-20T06:51:00.138Z",
+      "updateAt": "2025-10-30T03:42:53.704Z",
+      "viewType": "gallary",
+      "newPageNameFormat": "{{date:YYMMDD}} ",
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "文件名",
+          "type": "text",
+          "isShow": true,
+          "wrap": false,
+          "options": {
+            "width": "417"
+          }
+        },
+        {
+          "id": "1041ccb9-3ee1-4ba4-8610-38bd61246615",
+          "name": "area",
+          "isShow": true,
+          "type": "link",
+          "options": {}
+        },
+        {
+          "id": "46c52ab1-f772-4898-818d-4dec9d414af7",
+          "name": "status",
+          "isShow": true,
+          "type": "select",
+          "options": {
+            "items": [
+              {
+                "id": "0fb4d023-e3ca-4e13-8898-268e4d902b18",
+                "value": "DOING",
+                "color": "components--color-green"
+              },
+              {
+                "id": "cb4678ea-cd02-40ca-8302-f73be2b86b09",
+                "value": "DONE",
+                "color": "components--color-gray"
+              }
+            ]
+          }
+        },
+        {
+          "id": "036a9b15-2594-4cc6-b922-9d6a4d5744dd",
+          "name": "createTime",
+          "isShow": true,
+          "type": "datetime",
+          "options": {}
+        }
+      ],
+      "templates": [
+        {
+          "id": "333f8364-c194-418e-bc3f-7a94229a7090",
+          "path": "assets/form-flow/form/🚀 Project.cform",
+          "name": "🚀 Project.cform",
+          "type": "normal"
+        }
+      ],
+      "groups": [],
+      "colorfulGroups": false,
+      "viewOptions": {
+        "openPageIn": "tab",
+        "openPageAfterCreate": true,
+        "itemSize": "components--page-card-small",
+        "showPropertyName": false,
+        "showAllProperties": false,
+        "items": [],
+        "cover": {
+          "type": "image",
+          "source": "firstImageInNote",
+          "fit": "cover",
+          "layout": "components--page-card-cover-landscape",
+          "position": "top"
+        },
+        "pinFiltersToMenuBar": false,
+        "hideHeaderMenu": false,
+        "showGrid": false,
+        "heightType": "fixed",
+        "heightValue": 600,
+        "dateProperty": "doneTime",
+        "endDateProperty": "",
+        "tableWidthRatio": 25,
+        "calendarViewType": "listWeek"
+      },
+      "groupStates": {
+        "sort": "nameAsc",
+        "format": "none",
+        "statics": [],
+        "orders": [],
+        "hiddens": [],
+        "collapseds": []
+      },
+      "filter": {
+        "id": "dbaf3ccc-8709-45cb-a680-2c9f0ad0aae2",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "d04bf0f8-5eea-473b-b1d7-27f2c62f18ac",
+            "type": "filter",
+            "operator": "contains",
+            "property": "tags",
+            "value": "output",
+            "conditions": []
+          }
+        ]
+      },
+      "sort": {
+        "orders": [
+          {
+            "id": "642682c0-2d08-4091-8557-2ca5d02192e7",
+            "property": "createTime",
+            "direction": "desc",
+            "disabled": false
+          }
+        ]
+      },
+      "groupBy": "",
+      "loadLimitPerPage": "25",
+      "title": "输出",
+      "icon": "PenLine",
+      "newPageLocation": {
+        "location": "output"
+      },
+      "defaultTemplate": "333f8364-c194-418e-bc3f-7a94229a7090"
+    },
+    {
+      "id": "e0c76698-0db4-4a91-88cf-b292cc0b044e",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showTitle": true,
+      "showShadow": false,
+      "createAt": "2025-08-20T08:55:46.327Z",
+      "updateAt": "2025-08-20T08:55:46.327Z",
+      "viewType": "list",
+      "newPageNameFormat": "{{date:YYYYMMDDHHmmss}} ",
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "文件名",
+          "type": "text",
+          "isShow": true,
+          "wrap": true,
+          "options": {}
+        },
+        {
+          "id": "3bc17774-e9ca-4e3f-980e-43332f744e22",
+          "name": "duration",
+          "isShow": true,
+          "type": "formula",
+          "options": {
+            "formula": "fixed(duration(prop('doneTime') , now(), 'day'), 2)+\"天\""
+          }
+        },
+        {
+          "id": "bac90beb-19f3-4f0f-999c-daf9c279f7ff",
+          "name": "删除",
+          "isShow": false,
+          "type": "button",
+          "options": {
+            "action": {
+              "type": "deleteFile",
+              "properties": []
+            }
+          }
+        }
+      ],
+      "templates": [],
+      "groups": [],
+      "colorfulGroups": false,
+      "viewOptions": {
+        "openPageIn": "tab",
+        "openPageAfterCreate": true,
+        "itemSize": "components--page-card-small",
+        "showPropertyName": false,
+        "showAllProperties": false,
+        "items": [],
+        "cover": {
+          "type": "none",
+          "source": "default",
+          "fit": "contains",
+          "layout": "components--page-card-cover-landscape",
+          "position": "top"
+        },
+        "pinFiltersToMenuBar": false,
+        "hideHeaderMenu": true,
+        "showGrid": false,
+        "heightType": "auto",
+        "heightValue": 600
+      },
+      "groupStates": {
+        "sort": "nameAsc",
+        "statics": [],
+        "orders": [],
+        "hiddens": [],
+        "collapseds": []
+      },
+      "title": "已过期",
+      "filter": {
+        "id": "dbaf3ccc-8709-45cb-a680-2c9f0ad0aae2",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "c22a8f7c-b6f0-4bb9-babf-2845e4494416",
+            "type": "filter",
+            "operator": "equals",
+            "property": "tags",
+            "value": "project",
+            "conditions": []
+          },
+          {
+            "id": "bd3da265-2a60-473f-9310-3c812aff5d07",
+            "type": "filter",
+            "operator": "equals",
+            "property": "status",
+            "value": "DOING",
+            "conditions": []
+          },
+          {
+            "id": "e15bd910-bc99-4f19-86c7-77e25b00212d",
+            "type": "filter",
+            "operator": "time_before",
+            "property": "doneTime",
+            "value": {
+              "type": "$now",
+              "unit": "day",
+              "direction": "before",
+              "value": ""
+            },
+            "conditions": []
+          }
+        ]
+      },
+      "sort": {
+        "orders": [
+          {
+            "id": "12d470d5-2586-4a2a-9429-dc19b8e217cc",
+            "property": "createTime",
+            "direction": "desc",
+            "disabled": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "b3310b47-cd6a-4f57-8465-9c7ef6726c11",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showTitle": true,
+      "showShadow": false,
+      "createAt": "2025-10-16T06:24:44.870Z",
+      "updateAt": "2025-10-30T03:43:19.749Z",
+      "viewType": "gallary",
+      "newPageNameFormat": "{{date:YYYYMMDDHHmmss}} ",
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "文件名",
+          "type": "text",
+          "isShow": true,
+          "wrap": false,
+          "options": {}
+        },
+        {
+          "id": "d05eda21-199e-44d0-b68d-2a64c9a34225",
+          "name": "tags",
+          "type": "multiSelect",
+          "isShow": true,
+          "wrap": false,
+          "options": {}
+        },
+        {
+          "id": "e22a3988-a150-4878-a978-459ea54d91e0",
+          "name": "createTime",
+          "type": "datetime",
+          "isShow": true,
+          "wrap": false,
+          "options": {}
+        }
+      ],
+      "templates": [
+        {
+          "id": "9aae87bd-8d34-45f6-a75a-aacd06761af7",
+          "path": "assets/form-flow/form/🌍 Area.cform",
+          "name": "🌍 Area.cform",
+          "type": "normal"
+        }
+      ],
+      "groups": [],
+      "colorfulGroups": false,
+      "viewOptions": {
+        "openPageIn": "tab",
+        "openPageAfterCreate": true,
+        "itemSize": "components--page-card-medium",
+        "showPropertyName": false,
+        "showAllProperties": false,
+        "items": [],
+        "cover": {
+          "type": "none",
+          "source": "default",
+          "fit": "contains",
+          "layout": "components--page-card-cover-landscape",
+          "position": "top"
+        },
+        "pinFiltersToMenuBar": false,
+        "hideHeaderMenu": true,
+        "showGrid": false,
+        "heightType": "auto",
+        "heightValue": 600
+      },
+      "groupStates": {
+        "sort": "nameAsc",
+        "statics": [],
+        "orders": [],
+        "hiddens": [],
+        "collapseds": []
+      },
+      "filter": {
+        "id": "7a157e3a-b600-4cd8-b9b8-e54ea1c088e6",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "34038b02-4159-4591-a056-76487295f9d0",
+            "type": "filter",
+            "operator": "contains",
+            "property": "tags",
+            "value": "area",
+            "conditions": []
+          }
+        ]
+      },
+      "title": "领域",
+      "defaultTemplate": "9aae87bd-8d34-45f6-a75a-aacd06761af7"
+    },
+    {
+      "id": "b0a104d3-96ff-4e39-a6b4-e4fc8bf190d3",
+      "type": "chart",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showTitle": true,
+      "showShadow": true,
+      "createAt": "2025-10-20T07:48:13.613Z",
+      "updateAt": "2025-10-20T08:00:16.254Z",
+      "chartType": "heatmap",
+      "filter": {
+        "id": "463bffc9-fc50-46d6-96e5-50d1e36eb9c8",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "9e15380d-ec3c-442d-b3d1-79d953efc973",
+            "type": "filter",
+            "operator": "contains",
+            "property": "tags",
+            "value": "project",
+            "conditions": []
+          }
+        ]
+      },
+      "labelProperty": "doneTime",
+      "labelFormat": "$none",
+      "valueProperty": "$file_count",
+      "valuePrecision": 0,
+      "sortField": "xAxisValue",
+      "sortOrder": "asc",
+      "maxHeight": 300,
+      "chartColorSet": "default",
+      "chartLabelPosition": "hidden",
+      "enableMarkLine": false,
+      "markLineValue": 20,
+      "showDataValue": true,
+      "valueScaleStartFromZero": true,
+      "smoothLine": false,
+      "fillArea": false,
+      "options": {
+        "minValue": 1,
+        "maxValue": 10,
+        "cellSize": 12,
+        "numberOfSegments": 4,
+        "fullWidth": false,
+        "showSplitLine": false,
+        "hideChartLabel": true,
+        "firstDayOfWeek": 1,
+        "dateRange": {
+          "type": "latest",
+          "latestValue": "90",
+          "latestUnit": "day"
+        }
+      },
+      "title": "长期价值主义",
+      "chartLabelFormat": "{b}: {d}%",
+      "categoryProperty": "doneTime",
+      "categoryFormatPattern": null,
+      "series": [
+        {
+          "id": "b23acbf2-3b3c-41d0-aee3-dba0e899bc1f",
+          "name": "$file_count",
+          "precision": 0
+        }
+      ]
+    }
+  ],
+  "rootComponentId": "8d9a6084-c0af-4659-8989-230037544449",
+  "modified": 1761465455213,
+  "version": 3.1
+}

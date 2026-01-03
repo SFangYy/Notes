@@ -1,0 +1,15 @@
+- Basic bullets
+	- [/] incomplete (half completed) (- [/])
+	- [x] done (- [x])
+	- [-] canceled (- [-])
+	 - [I] idea (- [I])
+	 - [*] Events (- [\*])
+- Migration bullets
+	 - [>] forward (to Future Log) (- [>])
+	 - [<] re-scheduling (reschedule to the next day's Daily Log) (- [<])
+- Extended bullets
+	- [i] important (- [i])
+	- [u] up (- [u])
+	- [d] down (- [d])
+	- ["] quote (- ["])
+	- [l] location (- [l])

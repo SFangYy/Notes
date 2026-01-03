@@ -1,0 +1,26 @@
+{
+  "id": "27aeeaa6-d0e9-45e6-b93d-5f14ec4cf5a6",
+  "fields": [],
+  "actions": [
+    {
+      "id": "6d7ef961-e20b-4bdc-9cbd-dbb2ea0d0b69",
+      "type": "updateFrontmatter",
+      "targetFolder": "",
+      "fileName": "",
+      "targetFileType": "current_file",
+      "propertyUpdates": [
+        {
+          "id": "b3f9f210-1f2f-44d7-8825-c0fc372836fd",
+          "name": "status",
+          "value": "DONE"
+        },
+        {
+          "id": "69da482c-3155-4c10-8c48-adb4e80cd8cf",
+          "name": "doneTime",
+          "value": "{{date:YYYY-MM-DDTHH:mm:ss}}"
+        }
+      ]
+    }
+  ],
+  "autoSubmit": true
+}
