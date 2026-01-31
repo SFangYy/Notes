@@ -1,10 +1,10 @@
 ---
 Project:
-  - LearnTools
-title: 
-description: 
-source: 
-author: 
+  - Tools
+title:
+description:
+source:
+author:
 tags:
   - ob插件
 created: 2025-06-30 | 15:29

@@ -6,6 +6,7 @@ Status: Ongoing
 - [[My-TP-Task-CreateTaskTDL]]
 - [[My-TP-Input-CreateInputNote]]
 	- [[My-TP-Input-Browser]]
+	- [[My-TP-Input-SystematicNote]]
 - [[My-TP-Quick-Note-QuickInput]]
 - [[journal-template]]
 

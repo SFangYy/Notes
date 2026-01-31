@@ -11,3 +11,8 @@ if (prefix.includes("browser")) { _%>
 if (prefix.includes("QuickNotes")) { _%>
 <%- tp.file.include("[[My-TP-Input-FragsNote]]") -%>
 <%* } _%>
+
+<%*
+if (prefix.includes("AI")) { _%>
+<%- tp.file.include("[[My-TP-Input-SystematicNote]]") -%>
+<%* } _%>

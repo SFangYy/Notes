@@ -1,5 +1,8 @@
 ---
-Project: ["XSPdb"]
+Project:
+  - XSPdb
+tags:
+  - git
 ---
 # browser
 ```

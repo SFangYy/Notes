@@ -1,4 +1,4 @@
-# nix Os clean generation history
+
 
 1.  刪除舊的系統配置文件記錄
     運行以下命令來刪除除了最近5個版本之外的所有系統生成記錄。這一步是安全的，它只會修改 Nix 的配置文件，不會立即刪除硬盤上的數據。
@@ -17,3 +17,5 @@
     我將使用 run_shell_command 來重新構建系統。
 
     sudo nixos-rebuild switch --flake .#inspiron
+
+使用nh工具管理
