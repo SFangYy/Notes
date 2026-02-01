@@ -3,6 +3,7 @@ Project:
   - Unitychip
 tags:
   - git
+area: "[[工作]]"
 ---
 # browser
 ### 1. 查看当前的远程仓库

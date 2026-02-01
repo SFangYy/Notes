@@ -1,7 +1,15 @@
 ---
-Project: ["Unitychip"]
-Status: Ongoing
+Project:
+  - Unitychip
+description:
+tags:
+  - git
+parent: Resource
+area: "[[工作]]"
 ---
+# AI
+
+## 想要撤销本次merge
 ```
 ### 方案 A：完成这次合并（推荐）
 

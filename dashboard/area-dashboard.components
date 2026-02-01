@@ -463,7 +463,7 @@
       "showBorder": false,
       "showShadow": false,
       "createAt": "2025-07-29T13:39:35.409Z",
-      "updateAt": "2025-07-29T13:39:35.409Z",
+      "updateAt": "2026-02-01T14:02:36.276Z",
       "viewType": "table",
       "newPageNameFormat": "{{date:YYYYMMDDHHmmss}} ",
       "properties": [
@@ -480,8 +480,15 @@
         {
           "id": "99428b90-8b95-43e8-966a-4d546cdfff31",
           "name": "createTime",
-          "isShow": true,
+          "isShow": false,
           "type": "datetime",
+          "options": {}
+        },
+        {
+          "id": "cd5e8eb4-416e-4cfb-958c-5f57bb6487c5",
+          "name": "tags",
+          "isShow": true,
+          "type": "multiSelect",
           "options": {}
         },
         {
@@ -493,13 +500,6 @@
             "width": "320"
           },
           "alias": ""
-        },
-        {
-          "id": "cd5e8eb4-416e-4cfb-958c-5f57bb6487c5",
-          "name": "tags",
-          "isShow": true,
-          "type": "multiSelect",
-          "options": {}
         }
       ],
       "templates": [],
@@ -541,8 +541,8 @@
             "id": "c1131cbd-19ed-4476-9559-da8a7a9daabf",
             "type": "filter",
             "operator": "contains",
-            "property": "tags",
-            "value": "knowledge",
+            "property": "${file.path}",
+            "value": "1-base",
             "conditions": []
           },
           {
@@ -583,7 +583,7 @@
       "showBorder": false,
       "showShadow": false,
       "createAt": "2025-07-29T13:39:35.409Z",
-      "updateAt": "2025-07-29T13:39:35.409Z",
+      "updateAt": "2026-02-01T14:13:32.656Z",
       "viewType": "table",
       "newPageNameFormat": "{{date:YYYYMMDDHHmmss}} ",
       "properties": [
@@ -594,18 +594,17 @@
           "isShow": true,
           "wrap": true,
           "options": {
-            "width": "480",
+            "width": "241",
             "statisticType": "count"
           }
         },
         {
-          "id": "99428b90-8b95-43e8-966a-4d546cdfff31",
-          "name": "createTime",
+          "id": "32e95b13-e186-48d7-a446-956005e1fde9",
+          "name": "tags",
+          "type": "multiSelect",
           "isShow": true,
-          "type": "datetime",
-          "options": {
-            "width": "216"
-          }
+          "wrap": false,
+          "options": {}
         },
         {
           "id": "593f11df-c297-4335-b747-8de37304a58f",
@@ -624,18 +623,19 @@
           "options": {}
         },
         {
+          "id": "99428b90-8b95-43e8-966a-4d546cdfff31",
+          "name": "createTime",
+          "isShow": true,
+          "type": "datetime",
+          "options": {
+            "width": "216"
+          }
+        },
+        {
           "id": "1d343cf7-674d-4873-ba8c-1dd8009e07c0",
           "name": "status",
           "type": "select",
           "isShow": false,
-          "wrap": false,
-          "options": {}
-        },
-        {
-          "id": "32e95b13-e186-48d7-a446-956005e1fde9",
-          "name": "tags",
-          "type": "multiSelect",
-          "isShow": true,
           "wrap": false,
           "options": {}
         },
@@ -694,8 +694,8 @@
             "id": "c1131cbd-19ed-4476-9559-da8a7a9daabf",
             "type": "filter",
             "operator": "contains",
-            "property": "tags",
-            "value": "output",
+            "property": "${file.path}",
+            "value": "4-output",
             "conditions": []
           },
           {

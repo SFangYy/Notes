@@ -5,5 +5,6 @@ _%>
 <%* if(projectName) { _%>
 Project: ["<% projectName %>"]
 <%* } _%>
+area:
 ---
 # <% tp.file.folder() %>

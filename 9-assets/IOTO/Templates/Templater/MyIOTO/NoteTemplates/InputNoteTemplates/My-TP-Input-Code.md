@@ -5,8 +5,9 @@ _%>
 <%* if(projectName) { _%>
 Project: ["<% projectName %>"]
 <%* } _%>
-area:
+description:
+area: 工作
+tags: code
+parent: Resource
 ---
 # <% tp.file.folder() %>
-
-

@@ -10,6 +10,7 @@ createTime: <% tp.file.creation_date("YYYY-MM-DDTHH:mm:ss") %>
 status: TODO
 tags:
   - project
+area: 
 ---
 <%* if(tp.file.title === `${projectName}-${tp.date.now(defaultTDLDateFormat)}`) { _%>
 <% defaultTDLHeadingLevel + " " + LTDListInputSectionHeading %>

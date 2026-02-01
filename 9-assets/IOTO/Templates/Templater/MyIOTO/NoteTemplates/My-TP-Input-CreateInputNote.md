@@ -16,3 +16,8 @@ if (prefix.includes("QuickNotes")) { _%>
 if (prefix.includes("AI")) { _%>
 <%- tp.file.include("[[My-TP-Input-SystematicNote]]") -%>
 <%* } _%>
+
+<%*
+if (prefix.includes("Code")) { _%>
+<%- tp.file.include("[[My-TP-Input-Code]]") -%>
+<%* } _%>

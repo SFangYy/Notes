@@ -6,6 +6,7 @@ _%>
 Project: ["<% projectName %>"]
 <%* } _%>
 description:
+area:
 tags:
 parent: Resource
 ---
